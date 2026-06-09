@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="에이펙스라이트 — 무대조명 디자인 & 렌탈 전문기업. 뮤지컬, 콘서트, 기업행사, Netflix 드라마 조명 디자인.">
+<meta property="og:title" content="APEX LITE — Stage Lighting Design & Rental">
+<meta property="og:description" content="무대조명 디자인 & 렌탈 전문기업">
+<meta property="og:type" content="website">
+<title>APEX LITE — Stage Lighting Design & Rental</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #080808;
+    --black2: #111111;
+    --black3: #1a1a1a;
+    --black4: #242424;
+    --gold: #C9A84C;
+    --gold-dim: #8a6e30;
+    --white: #ffffff;
+    --gray1: #f0f0f0;
+    --gray2: #aaaaaa;
+    --gray3: #666666;
+    --gray4: #333333;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(8,8,8,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(201,168,76,0.15);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--gray2);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: none;
+    border: 0.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--white);
+    transition: 0.3s;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-slides {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+  .hero-slide.active { opacity: 1; }
+  .hero-slide-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.35);
+  }
+  /* 이미지 없을 때 배경 */
+  .hero-slide-bg-fallback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a0a12 0%, #1a1020 50%, #0a0808 100%);
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(8,8,8,0.7) 0%,
+      rgba(8,8,8,0.2) 60%,
+      transparent 100%
+    );
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 48px;
+    max-width: 800px;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+  }
+  .hero-title em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: clamp(14px, 1.5vw, 17px);
+    color: var(--gray2);
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 14px 36px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-outline {
+    border: 0.5px solid rgba(255,255,255,0.4);
+    color: var(--white);
+    padding: 14px 36px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover {
+    border-color: var(--white);
+    color: var(--white);
+  }
+  /* 슬라이드 도트 */
+  .hero-dots {
+    position: absolute;
+    bottom: 36px;
+    left: 48px;
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+  }
+  .hero-dot {
+    width: 24px;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+  }
+  .hero-dot.active {
+    background: var(--gold);
+    width: 40px;
+  }
+  /* 스크롤 인디케이터 */
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    right: 48px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray3);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .hero-scroll::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, var(--gray3), transparent);
+    animation: scrollLine 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ─── STATS ─── */
+  #stats {
+    background: var(--black2);
+    border-top: 0.5px solid rgba(201,168,76,0.2);
+    border-bottom: 0.5px solid rgba(201,168,76,0.2);
+    padding: 48px;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .stat-item {
+    text-align: center;
+    padding: 24px 16px;
+    border-right: 0.5px solid var(--black4);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+  .stat-unit {
+    font-size: 20px;
+    color: var(--gold-dim);
+  }
+  .stat-label {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--gray3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ─── SECTION COMMON ─── */
+  section { padding: 100px 48px; }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+  .section-sub {
+    font-size: 15px;
+    color: var(--gray2);
+    font-weight: 300;
+    max-width: 560px;
+    line-height: 1.8;
+  }
+
+  /* ─── SERVICES ─── */
+  #services { background: var(--black); }
+  .services-header { margin-bottom: 64px; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--black4);
+  }
+  .service-card {
+    background: var(--black2);
+    padding: 48px 36px;
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .service-card:hover { background: var(--black3); }
+  .service-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: var(--black4);
+    line-height: 1;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+  }
+  .service-card:hover .service-num { color: var(--gold-dim); }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+  .service-name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .service-name-en {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .service-desc {
+    font-size: 14px;
+    color: var(--gray3);
+    line-height: 1.8;
+  }
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 24px;
+  }
+  .service-tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--gray3);
+    border: 0.5px solid var(--black4);
+    padding: 4px 10px;
+  }
+
+  /* ─── PORTFOLIO ─── */
+  #portfolio { background: var(--black2); }
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .portfolio-filters {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    background: none;
+    border: 0.5px solid var(--black4);
+    color: var(--gray3);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Pretendard', sans-serif;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--black);
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .portfolio-item {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--black3);
+  }
+  .portfolio-item.featured {
+    grid-column: span 2;
+    aspect-ratio: 16/9;
+  }
+  .portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.4s;
+    filter: brightness(0.7);
+  }
+  .portfolio-item:hover .portfolio-img {
+    transform: scale(1.05);
+    filter: brightness(0.5);
+  }
+  /* 이미지 없을때 플레이스홀더 */
+  .portfolio-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--black3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .portfolio-info {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(8,8,8,0.9) 0%, transparent 100%);
+    transform: translateY(8px);
+    transition: transform 0.3s;
+  }
+  .portfolio-item:hover .portfolio-info { transform: translateY(0); }
+  .portfolio-cat {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .portfolio-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .portfolio-venue {
+    font-size: 12px;
+    color: var(--gray2);
+    margin-top: 4px;
+  }
+  .portfolio-year {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.5);
+    background: rgba(8,8,8,0.6);
+    padding: 3px 8px;
+  }
+  /* Netflix 배지 */
+  .netflix-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #E50914;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+  }
+  .portfolio-more {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  /* ─── CLIENT LOGOS ─── */
+  #clients {
+    background: var(--black);
+    padding: 64px 48px;
+    border-top: 0.5px solid var(--black4);
+    border-bottom: 0.5px solid var(--black4);
+  }
+  .clients-label {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray3);
+    margin-bottom: 40px;
+  }
+  .clients-track-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .clients-track-wrap::before,
+  .clients-track-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 120px;
+    z-index: 2;
+  }
+  .clients-track-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, var(--black), transparent);
+  }
+  .clients-track-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, var(--black), transparent);
+  }
+  .clients-track {
+    display: flex;
+    gap: 0;
+    animation: scrollTrack 28s linear infinite;
+    width: max-content;
+  }
+  .clients-track:hover { animation-play-state: paused; }
+  @keyframes scrollTrack {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .client-item {
+    padding: 0 40px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--gray3);
+    white-space: nowrap;
+    border-right: 0.5px solid var(--black4);
+    transition: color 0.2s;
+  }
+  .client-item:hover { color: var(--gray1); }
+  .client-item.netflix { color: #E50914; }
+  .client-item.netflix:hover { color: #ff2020; }
+
+  /* ─── ABOUT ─── */
+  #about { background: var(--black3); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-left .section-sub { max-width: 100%; margin-bottom: 40px; }
+  .about-highlight {
+    padding: 28px 32px;
+    border-left: 2px solid var(--gold);
+    background: rgba(201,168,76,0.05);
+    margin-bottom: 32px;
+  }
+  .about-highlight-text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--gray1);
+  }
+  .about-history {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .history-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 0.5px solid var(--black4);
+    align-items: start;
+  }
+  .history-item:first-child { padding-top: 0; }
+  .history-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    padding-top: 2px;
+  }
+  .history-content { font-size: 14px; color: var(--gray2); line-height: 1.7; }
+  .history-content strong { color: var(--white); font-weight: 500; display: block; margin-bottom: 4px; }
+  /* 프로필 */
+  .profile-card {
+    background: var(--black2);
+    border: 0.5px solid var(--black4);
+  }
+  .profile-img-wrap {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: var(--black4);
+    max-height: 360px;
+  }
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(20%);
+  }
+  .profile-info { padding: 32px; }
+  .profile-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .profile-name-en {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .profile-role {
+    font-size: 13px;
+    color: var(--gray3);
+    margin-bottom: 24px;
+  }
+  .profile-edu {
+    font-size: 12px;
+    color: var(--gray3);
+    margin-bottom: 6px;
+  }
+  .profile-career-list {
+    list-style: none;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .profile-career-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid var(--black4);
+  }
+  .profile-career-item:last-child { border-bottom: none; }
+  .career-org { color: var(--gray2); }
+  .career-period { color: var(--gray3); font-size: 11px; white-space: nowrap; }
+
+  /* ─── EQUIPMENT ─── */
+  #equipment { background: var(--black); }
+  .equipment-header { margin-bottom: 56px; }
+  .equipment-cats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--black4);
+    margin-bottom: 1px;
+  }
+  .equipment-cat-btn {
+    background: var(--black2);
+    border: none;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Pretendard', sans-serif;
+    transition: background 0.2s;
+  }
+  .equipment-cat-btn:hover,
+  .equipment-cat-btn.active { background: var(--black3); }
+  .equipment-cat-btn.active .eq-cat-name { color: var(--gold); }
+  .eq-cat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--black4);
+    line-height: 1;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+  }
+  .equipment-cat-btn.active .eq-cat-num { color: var(--gold-dim); }
+  .eq-cat-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray2);
+    margin-bottom: 4px;
+    transition: color 0.2s;
+  }
+  .eq-cat-count {
+    font-size: 11px;
+    color: var(--gray3);
+  }
+  .equipment-panel {
+    display: none;
+    background: var(--black2);
+    padding: 40px;
+  }
+  .equipment-panel.active { display: block; }
+  .eq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--black4);
+  }
+  .eq-card {
+    background: var(--black3);
+    padding: 24px;
+    transition: background 0.2s;
+  }
+  .eq-card:hover { background: var(--black4); }
+  .eq-brand {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .eq-model {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .eq-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .eq-spec {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--gray3);
+    padding: 4px 0;
+    border-bottom: 0.5px solid var(--black4);
+  }
+  .eq-spec:last-child { border-bottom: none; }
+  .eq-spec span:last-child { color: var(--gray2); }
+  .eq-qty {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--gold-dim);
+    border: 0.5px solid var(--gold-dim);
+    padding: 3px 10px;
+  }
+
+  /* ─── INSTAGRAM ─── */
+  #instagram {
+    background: var(--black2);
+    padding: 80px 48px;
+  }
+  .insta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .insta-handle {
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+  }
+  .insta-placeholder {
+    aspect-ratio: 1;
+    background: var(--black3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray3);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    overflow: hidden;
+    position: relative;
+  }
+  .insta-placeholder:hover { background: var(--black4); }
+  .insta-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  /* 인스타 임베드 안내 */
+  .insta-embed-notice {
+    grid-column: 1 / -1;
+    padding: 40px;
+    background: var(--black3);
+    text-align: center;
+    color: var(--gray3);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .insta-embed-notice code {
+    color: var(--gold);
+    font-size: 12px;
+    background: var(--black4);
+    padding: 2px 8px;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--black); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+  .contact-left .section-sub { max-width: 100%; margin-bottom: 48px; }
+  .contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact-info-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 0.5px solid var(--black4);
+  }
+  .contact-info-item:last-child { border-bottom: none; }
+  .contact-info-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    width: 80px;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .contact-info-value {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.7;
+  }
+  .contact-info-value a {
+    color: var(--gray2);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-info-value a:hover { color: var(--white); }
+  /* 폼 */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray3);
+  }
+  .form-input, .form-select, .form-textarea {
+    background: var(--black2);
+    border: 0.5px solid var(--black4);
+    color: var(--white);
+    padding: 14px 16px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus { border-color: var(--gold); }
+  .form-input::placeholder,
+  .form-textarea::placeholder { color: var(--gray3); }
+  .form-select option { background: var(--black2); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-submit {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 16px 40px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+  }
+  .form-submit:hover { opacity: 0.85; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black2);
+    border-top: 0.5px solid var(--black4);
+    padding: 48px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    color: var(--white);
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-copy {
+    font-size: 12px;
+    color: var(--gray3);
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+  .footer-links a {
+    font-size: 12px;
+    color: var(--gray3);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-sns {
+    display: flex;
+    gap: 16px;
+  }
+  .footer-sns a {
+    width: 36px;
+    height: 36px;
+    border: 0.5px solid var(--black4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray3);
+    text-decoration: none;
+    font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .footer-sns a:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-item.featured { grid-column: span 1; aspect-ratio: 4/3; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .equipment-cats { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .insta-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links, .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+    section { padding: 72px 24px; }
+    #stats { padding: 32px 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-content { padding: 0 24px; }
+    .hero-dots { left: 24px; }
+    .hero-scroll { right: 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-item.featured { grid-column: span 1; }
+    .about-grid { grid-template-columns: 1fr; }
+    .equipment-cats { grid-template-columns: 1fr 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    footer { padding: 32px 24px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    #clients { padding: 48px 24px; }
+    #instagram { padding: 60px 24px; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+  /* ─── LIGHTBOX ─── */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 24px; right: 32px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .lightbox-caption {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--gray2);
+    font-size: 13px;
+  }
+
+  /* mobile nav menu */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 28px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── MOBILE MENU ─── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <a href="#portfolio" onclick="closeMobileMenu()">Projects</a>
+  <a href="#equipment" onclick="closeMobileMenu()">Equipment</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">APEX<span>|</span>LITE</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Projects</a></li>
+    <li><a href="#equipment">Equipment</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">견적 문의</a>
+  <button class="nav-hamburger" onclick="openMobileMenu()" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-slides">
+    <!-- 슬라이드 1 — 콘서트 빔라이트 -->
+    <div class="hero-slide active">
+      <img class="hero-slide-bg"
+        src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1920&q=80&fit=crop"
+        alt="콘서트 무대 조명"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 60% 40%, #1a0a2e 0%, #080808 60%);"></div>
+    </div>
+    <!-- 슬라이드 2 — 스테이지 스팟라이트 -->
+    <div class="hero-slide">
+      <img class="hero-slide-bg"
+        src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=1920&q=80&fit=crop"
+        alt="무대 스팟라이트"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 40% 60%, #0a1a2e 0%, #080808 60%);"></div>
+    </div>
+    <!-- 슬라이드 3 — 공연장 조명 -->
+    <div class="hero-slide">
+      <img class="hero-slide-bg"
+        src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1920&q=80&fit=crop"
+        alt="공연장 무대 조명"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 70% 30%, #1a1500 0%, #080808 60%);"></div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Stage Lighting Design & Rental</p>
+    <h1 class="hero-title">
+      LIGHT<br>THAT<br><em>MOVES</em><br>THE STAGE
+    </h1>
+    <p class="hero-sub">무대 위 빛으로 공연의 감동을 완성합니다.<br>뮤지컬, 콘서트, 기업행사, 방송까지 — 2018년부터 300개 이상의 무대를 밝혀온 에이펙스라이트.</p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn-primary">포트폴리오 보기</a>
+      <a href="#contact" class="btn-outline">견적 문의</a>
+    </div>
+  </div>
+  <div class="hero-dots">
+    <div class="hero-dot active" onclick="goToSlide(0)"></div>
+    <div class="hero-dot" onclick="goToSlide(1)"></div>
+    <div class="hero-dot" onclick="goToSlide(2)"></div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ─── STATS ─── -->
+<div id="stats">
+  <div class="stats-grid">
+    <div class="stat-item fade-up">
+      <div class="stat-num">7<span class="stat-unit">+</span></div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">300<span class="stat-unit">+</span></div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">20<span class="stat-unit">억</span></div>
+      <div class="stat-label">Annual Revenue</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">1<span class="stat-unit">개</span></div>
+      <div class="stat-label">Netflix Drama Credit</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="services-header">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">SERVICES</h2>
+    <p class="section-sub">조명 기획부터 현장 운영까지, 공연의 모든 빛을 책임집니다.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <div class="service-num">01</div>
+      <div class="service-name-en">Concert & Festival</div>
+      <div class="service-name">콘서트 조명 디자인</div>
+      <p class="service-desc">K-POP, 밴드, 클래식, 재즈까지. 아티스트의 무대를 가장 빛나게 하는 조명 디자인과 현장 오퍼레이팅.</p>
+      <div class="service-tags">
+        <span class="service-tag">무빙라이트</span>
+        <span class="service-tag">레이저</span>
+        <span class="service-tag">Beam</span>
+        <span class="service-tag">Strobe</span>
+        <span class="service-tag">MA 콘솔</span>
+      </div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">02</div>
+      <div class="service-name-en">Musical & Theatre</div>
+      <div class="service-name">뮤지컬 조명 디자인</div>
+      <p class="service-desc">서사를 빛으로 풀어내는 연출. 국립극단, 정동극장, 세종문화회관 등 전국 주요 공연장 경험 보유.</p>
+      <div class="service-tags">
+        <span class="service-tag">조명디자인</span>
+        <span class="service-tag">프로파일</span>
+        <span class="service-tag">Wash</span>
+        <span class="service-tag">고보</span>
+        <span class="service-tag">포그</span>
+      </div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">03</div>
+      <div class="service-name-en">Corporate & Broadcast</div>
+      <div class="service-name">기업행사 & 방송</div>
+      <p class="service-desc">기업 행사, TV 드라마, OTT 콘텐츠 등 방송 조명까지. Netflix XO, KITTY 시즌2 콘서트씬 조명 담당.</p>
+      <div class="service-tags">
+        <span class="service-tag">Netflix</span>
+        <span class="service-tag">드라마 조명</span>
+        <span class="service-tag">기업행사</span>
+        <span class="service-tag">컨퍼런스</span>
+      </div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">04</div>
+      <div class="service-name-en">Equipment Rental</div>
+      <div class="service-name">장비 렌탈</div>
+      <p class="service-desc">ROBE, Clay Paky, Ayrton, JB Lighting 등 최상급 유럽 브랜드 장비 보유. MA3/MA2 콘솔 운영.</p>
+      <div class="service-tags">
+        <span class="service-tag">ROBE</span>
+        <span class="service-tag">Clay Paky</span>
+        <span class="service-tag">Ayrton</span>
+        <span class="service-tag">grandMA3</span>
+      </div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">05</div>
+      <div class="service-name-en">Traditional & Dance</div>
+      <div class="service-name">전통공연 & 무용</div>
+      <p class="service-desc">국악, 전통무용, 현대무용까지. 한국 공연예술 전반에 걸친 깊은 조명 디자인 경험.</p>
+      <div class="service-tags">
+        <span class="service-tag">국악당</span>
+        <span class="service-tag">전통무용</span>
+        <span class="service-tag">현대무용</span>
+        <span class="service-tag">무용극</span>
+      </div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">06</div>
+      <div class="service-name-en">Media Art & Installation</div>
+      <div class="service-name">미디어아트 & 설치</div>
+      <p class="service-desc">야외 미디어파사드, 빛 축제, 설치예술 조명. 안산 대부광산 미디어파사드 "하늘에서 떨어지는 별똥별" 등.</p>
+      <div class="service-tags">
+        <span class="service-tag">미디어파사드</span>
+        <span class="service-tag">빛축제</span>
+        <span class="service-tag">야외조명</span>
+        <span class="service-tag">설치예술</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CLIENT LOGOS ─── -->
+<div id="clients">
+  <div class="clients-label">주요 납품처 & 협력 기관</div>
+  <div class="clients-track-wrap">
+    <div class="clients-track" id="clientsTrack">
+      <span class="client-item netflix">Netflix Korea</span>
+      <span class="client-item">국립중앙박물관</span>
+      <span class="client-item">정동극장</span>
+      <span class="client-item">세종문화회관</span>
+      <span class="client-item">부천아트센터</span>
+      <span class="client-item">수원시립공연단</span>
+      <span class="client-item">노들섬 라이브하우스</span>
+      <span class="client-item">강원도립극단</span>
+      <span class="client-item">남산국악당</span>
+      <span class="client-item">한국콘텐츠진흥원</span>
+      <span class="client-item">BV Entertainment</span>
+      <span class="client-item">서초문화재단</span>
+      <span class="client-item">전남문화재단</span>
+      <span class="client-item">KT&G 상상마당</span>
+      <span class="client-item">김천대극장</span>
+      <span class="client-item">전북콘텐츠융합진흥원</span>
+      <!-- 복제 (무한 루프) -->
+      <span class="client-item netflix">Netflix Korea</span>
+      <span class="client-item">국립중앙박물관</span>
+      <span class="client-item">정동극장</span>
+      <span class="client-item">세종문화회관</span>
+      <span class="client-item">부천아트센터</span>
+      <span class="client-item">수원시립공연단</span>
+      <span class="client-item">노들섬 라이브하우스</span>
+      <span class="client-item">강원도립극단</span>
+      <span class="client-item">남산국악당</span>
+      <span class="client-item">한국콘텐츠진흥원</span>
+      <span class="client-item">BV Entertainment</span>
+      <span class="client-item">서초문화재단</span>
+      <span class="client-item">전남문화재단</span>
+      <span class="client-item">KT&G 상상마당</span>
+      <span class="client-item">김천대극장</span>
+      <span class="client-item">전북콘텐츠융합진흥원</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PORTFOLIO ─── -->
+<section id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <div class="section-eyebrow">Our Work</div>
+      <h2 class="section-title">PROJECTS</h2>
+    </div>
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="concert">Concert</button>
+      <button class="filter-btn" data-filter="musical">Musical</button>
+      <button class="filter-btn" data-filter="traditional">Traditional</button>
+      <button class="filter-btn" data-filter="media">Media Art</button>
+      <button class="filter-btn" data-filter="broadcast">Broadcast</button>
+    </div>
+  </div>
+  <div class="portfolio-grid" id="portfolioGrid">
+
+    <!-- Netflix XO KITTY — featured -->
+    <div class="portfolio-item featured" data-cat="broadcast" onclick="openLightbox('Netflix XO, KITTY Season 2', '콘서트씬 조명디자인 | Netflix | 2025.01')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=1200&q=80&fit=crop"
+        alt="Netflix XO KITTY 콘서트씬 조명"
+        onerror="this.style.display='none'">
+      <span class="netflix-badge">NETFLIX</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Broadcast · Drama</div>
+        <div class="portfolio-title">Netflix XO, KITTY Season 2</div>
+        <div class="portfolio-venue">콘서트씬 조명디자인 · 2025</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="concert" onclick="openLightbox('브로큰 발렌타인 FIVE', '단독 콘서트 | 노들섬 라이브하우스 | 2023.11')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80&fit=crop"
+        alt="브로큰 발렌타인 FIVE 콘서트 조명"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2023</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Concert</div>
+        <div class="portfolio-title">브로큰 발렌타인 단독콘서트 FIVE</div>
+        <div class="portfolio-venue">노들섬 라이브하우스</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 반쪽이전', '국립중앙박물관 극장 용 | 2022.04')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80&fit=crop"
+        alt="뮤지컬 반쪽이전 무대"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2022</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Musical</div>
+        <div class="portfolio-title">가족뮤지컬 반쪽이전</div>
+        <div class="portfolio-venue">국립중앙박물관 극장 용</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인간탐구생활', '국립정동극장 세실 | 2022.08')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80&fit=crop"
+        alt="뮤지컬 인간탐구생활"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2022</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Musical</div>
+        <div class="portfolio-title">뮤지컬 인간탐구생활</div>
+        <div class="portfolio-venue">국립정동극장 세실</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인현왕후', '김천대극장 | 2022.09')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=800&q=80&fit=crop"
+        alt="뮤지컬 인현왕후"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2022</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Musical</div>
+        <div class="portfolio-title">뮤지컬 인현왕후</div>
+        <div class="portfolio-venue">김천대극장</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item featured" data-cat="concert" onclick="openLightbox('손에손에 뮤직페스타', '노들섬 라이브하우스, KT&G 상상마당 | 2022')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1501386761578-eaa54b9f4a75?w=1200&q=80&fit=crop"
+        alt="손에손에 뮤직페스타"
+        onerror="this.style.display='none'">
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Concert · Festival</div>
+        <div class="portfolio-title">손에손에 뮤직페스타 IN 서울 · 부산</div>
+        <div class="portfolio-venue">노들섬 라이브하우스 · KT&G 상상마당</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="media" onclick="openLightbox('안산 미디어파사드', '대부광산 빛축제 | 2024')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=800&q=80&fit=crop"
+        alt="안산 미디어파사드"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2024</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Media Art</div>
+        <div class="portfolio-title">안산 대부광산 미디어파사드</div>
+        <div class="portfolio-venue">하늘에서 떨어지는 별똥별</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 메밀꽃 필 무렵', '대전시립연정국악원 · 강원도립극단 | 2023')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=800&q=80&fit=crop"
+        alt="뮤지컬 메밀꽃 필 무렵"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2023</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Musical</div>
+        <div class="portfolio-title">뮤지컬 메밀꽃 필 무렵</div>
+        <div class="portfolio-venue">강원도립극단 · 대전시립연정국악원</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="traditional" onclick="openLightbox('전통무용 추는사람 남산', '남산국악당 | 2022')">
+      <img class="portfolio-img"
+        src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&q=80&fit=crop"
+        alt="전통무용 추는사람 남산"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2022</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Traditional</div>
+        <div class="portfolio-title">전통무용 추는사람, 남산</div>
+        <div class="portfolio-venue">남산국악당</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="portfolio-more">
+    <p style="font-size:13px; color:var(--gray3); margin-bottom:20px;">300개 이상의 프로젝트 중 일부입니다</p>
+    <a href="#contact" class="btn-outline">전체 이력 문의하기</a>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title">APEX LITE</h2>
+      <div class="about-highlight">
+        <p class="about-highlight-text">"빛으로 완성하는 무대 — 단순히 조명을 켜는 것이 아니라, 공연의 감동을 설계합니다."</p>
+      </div>
+      <p class="section-sub">에이펙스라이트는 2018년 설립 이후 뮤지컬, 콘서트, 전통공연, 기업행사, 드라마 등 다양한 무대에서 조명 디자인과 렌탈 서비스를 제공해왔습니다. ROBE, Clay Paky, Ayrton 등 세계 최고 수준의 장비와 grandMA3 콘솔 시스템을 기반으로, 소규모 소극장부터 Netflix 드라마 세트까지 어떤 무대도 책임집니다.</p>
+      <div style="margin-top: 48px;">
+        <div class="section-eyebrow" style="margin-bottom: 24px;">연혁</div>
+        <div class="about-history">
+          <div class="history-item">
+            <div class="history-year">2018</div>
+            <div class="history-content"><strong>에이펙스라이트 설립</strong>조명디자인 및 렌탈 전문기업으로 출발</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2022</div>
+            <div class="history-content"><strong>대형 뮤지컬 본격 진입</strong>국립중앙박물관, 정동극장, 세종문화회관 등 주요 공연장 다수 작업</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2023</div>
+            <div class="history-content"><strong>ROBE · Ayrton 장비 확충</strong>브로큰 발렌타인 FIVE, 손에손에 뮤직페스타 등 대형 콘서트 조명 담당</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2024</div>
+            <div class="history-content"><strong>Netflix XO, KITTY Season 2</strong>드라마 콘서트씬 조명디자인 — 국내외 OTT 첫 크레딧</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2025</div>
+            <div class="history-content"><strong>grandMA3 시스템 도입</strong>뮤지컬 나의 대통령, 파라다이스 아트나이트 2025 등</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img class="profile-img"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&fit=crop&crop=faces"
+            alt="이차훈 대표"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div style="display:none; width:100%; height:100%; background: linear-gradient(180deg, #1a1a2e 0%, #0a0a14 100%); align-items:center; justify-content:center;">
+            <div style="text-align:center; color:var(--gray3);">
+              <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:var(--gold); letter-spacing:0.05em;">이차훈</div>
+              <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin-top:4px;">Lee Cha Hoon</div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-info">
+          <div class="profile-name">이 차 훈</div>
+          <div class="profile-name-en">Lee Cha Hoon — Lighting Designer</div>
+          <div class="profile-role">
+            서울예술대학교 연극과 졸업 (2009–2012)<br>
+            조명디자인 · 에이펙스라이트 대표
+          </div>
+          <ul class="profile-career-list">
+            <li class="profile-career-item">
+              <span class="career-org">메타(플랫폼창동61) — 조명감독, 무대기술</span>
+              <span class="career-period">2016–2017</span>
+            </li>
+            <li class="profile-career-item">
+              <span class="career-org">인터파크창동씨어터 — 조명감독, 조명디자인</span>
+              <span class="career-period">2017–2018</span>
+            </li>
+            <li class="profile-career-item">
+              <span class="career-org">에이펙스라이트 — 대표, 조명디자인 & 공연제작</span>
+              <span class="career-period">2018–현재</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── EQUIPMENT ─── -->
+<section id="equipment">
+  <div class="equipment-header">
+    <div class="section-eyebrow">Our Gear</div>
+    <h2 class="section-title">EQUIPMENT</h2>
+    <p class="section-sub">세계 최정상 브랜드 장비만을 보유 · 운용합니다.</p>
+  </div>
+
+  <div class="equipment-cats">
+    <button class="equipment-cat-btn active" onclick="showEqPanel('console', this)">
+      <div class="eq-cat-num">01</div>
+      <div class="eq-cat-name">Console</div>
+      <div class="eq-cat-count">조명 콘솔 · 네트워크</div>
+    </button>
+    <button class="equipment-cat-btn" onclick="showEqPanel('moving', this)">
+      <div class="eq-cat-num">02</div>
+      <div class="eq-cat-name">Moving Light</div>
+      <div class="eq-cat-count">Spot · Wash · Beam</div>
+    </button>
+    <button class="equipment-cat-btn" onclick="showEqPanel('led', this)">
+      <div class="eq-cat-num">03</div>
+      <div class="eq-cat-name">LED / BAR</div>
+      <div class="eq-cat-count">Bar · Blinder · Strobe</div>
+    </button>
+    <button class="equipment-cat-btn" onclick="showEqPanel('special', this)">
+      <div class="eq-cat-num">04</div>
+      <div class="eq-cat-name">Special FX</div>
+      <div class="eq-cat-count">Beam · Laser · Fog</div>
+    </button>
+  </div>
+
+  <!-- Console Panel -->
+  <div class="equipment-panel active" id="panel-console">
+    <div class="eq-grid">
+      <div class="eq-card">
+        <div class="eq-brand">MA Lighting</div>
+        <div class="eq-model">grandMA3 Light</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>버전</span><span>3.9.60.4</span></div>
+          <div class="eq-spec"><span>플랫폼</span><span>MA3 Network</span></div>
+        </div>
+        <span class="eq-qty">1 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">MA Lighting</div>
+        <div class="eq-model">grandMA2 Light</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>버전</span><span>3.9.60.4</span></div>
+          <div class="eq-spec"><span>Wing</span><span>Command Wing 포함</span></div>
+        </div>
+        <span class="eq-qty">1 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">MA Lighting</div>
+        <div class="eq-model">MA2 Command Wing</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>용도</span><span>확장 컨트롤러</span></div>
+        </div>
+        <span class="eq-qty">4 EA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Moving Light Panel -->
+  <div class="equipment-panel" id="panel-moving">
+    <div class="eq-grid">
+      <div class="eq-card">
+        <div class="eq-brand">ROBE</div>
+        <div class="eq-model">MEGA POINTE</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>타입</span><span>Spot / Beam</span></div>
+          <div class="eq-spec"><span>DMX</span><span>5 PIN</span></div>
+        </div>
+        <span class="eq-qty">12 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">ROBE</div>
+        <div class="eq-model">SPIIDER</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>830W / LED 760W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>17kg</span></div>
+          <div class="eq-spec"><span>DMX</span><span>5 PIN</span></div>
+        </div>
+        <span class="eq-qty">24 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Clay Paky</div>
+        <div class="eq-model">GHIBLI (Spot)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>800W / LED 600W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>35.6kg</span></div>
+          <div class="eq-spec"><span>DMX</span><span>5 PIN</span></div>
+        </div>
+        <span class="eq-qty">보유</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Clay Paky</div>
+        <div class="eq-model">KHAMSIN (Wash)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>1150W / LED 750W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>39.8kg</span></div>
+        </div>
+        <span class="eq-qty">보유</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Ayrton</div>
+        <div class="eq-model">DIABLO (Spot)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>550W / LED 300W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>22kg</span></div>
+        </div>
+        <span class="eq-qty">보유</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">JB Lighting</div>
+        <div class="eq-model">M18 Profile</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>1600W / LED 1200W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>32kg</span></div>
+        </div>
+        <span class="eq-qty">보유</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LED / BAR Panel -->
+  <div class="equipment-panel" id="panel-led">
+    <div class="eq-grid">
+      <div class="eq-card">
+        <div class="eq-brand">ROBE</div>
+        <div class="eq-model">TOMBORA BATTEN 24</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>타입</span><span>LED BAR</span></div>
+          <div class="eq-spec"><span>DMX</span><span>3 & 5 PIN</span></div>
+        </div>
+        <span class="eq-qty">24 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Beyond</div>
+        <div class="eq-model">MIDI-B (WW)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>480W</span></div>
+          <div class="eq-spec"><span>DMX</span><span>3 PIN</span></div>
+        </div>
+        <span class="eq-qty">44 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Beyond</div>
+        <div class="eq-model">MINI-B (WW)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>300W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>15kg</span></div>
+        </div>
+        <span class="eq-qty">24 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Aura</div>
+        <div class="eq-model">WASH (50)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>280W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>11kg</span></div>
+        </div>
+        <span class="eq-qty">50 EA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Special FX Panel -->
+  <div class="equipment-panel" id="panel-special">
+    <div class="eq-grid">
+      <div class="eq-card">
+        <div class="eq-brand">JJ-Light</div>
+        <div class="eq-model">BEAM (7R, 9R)</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>280W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>17kg</span></div>
+          <div class="eq-spec"><span>DMX</span><span>3 & 5 PIN</span></div>
+        </div>
+        <span class="eq-qty">56 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">China</div>
+        <div class="eq-model">TILT BAR 12×40</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>480W</span></div>
+          <div class="eq-spec"><span>DMX</span><span>3 PIN / 5 PIN</span></div>
+        </div>
+        <span class="eq-qty">각 20 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">Litelees</div>
+        <div class="eq-model">WASH 6×40</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>Power</span><span>280W</span></div>
+          <div class="eq-spec"><span>Weight</span><span>7kg</span></div>
+        </div>
+        <span class="eq-qty">20 EA</span>
+      </div>
+      <div class="eq-card">
+        <div class="eq-brand">GS / Beyond</div>
+        <div class="eq-model">STOMI / JEST</div>
+        <div class="eq-specs">
+          <div class="eq-spec"><span>타입</span><span>Blinder / Strobe</span></div>
+        </div>
+        <span class="eq-qty">각 보유</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INSTAGRAM ─── -->
+<div id="instagram">
+  <div class="insta-header">
+    <div>
+      <div class="section-eyebrow">Follow Us</div>
+      <h2 class="section-title" style="font-size: clamp(28px, 4vw, 48px);">INSTAGRAM</h2>
+    </div>
+    <a href="https://www.instagram.com/apexlitedesign/" target="_blank" class="insta-handle">@apexlitedesign →</a>
+  </div>
+  <!-- 실제 인스타그램 임베드 영역 -->
+  <!-- 아래 코드를 Instagram 공식 임베드 코드로 교체하세요 -->
+  <div class="insta-grid">
+    <div class="insta-embed-notice">
+      <p style="margin-bottom: 12px; color: var(--gray2);">인스타그램 피드</p>
+      <p>Instagram 공식 임베드 코드 또는<br>
+      <a href="https://www.instagram.com/apexlitedesign/" target="_blank" style="color: var(--gold); text-decoration: none;">@apexlitedesign</a>에서 최신 공연 사진을 확인하세요.</p>
+      <p style="margin-top: 16px; font-size: 11px; color: var(--gray3);">
+        ※ 실제 배포 시 <code>SnapWidget</code> 또는 Instagram Basic Display API로 교체 예정
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h2 class="section-title">CONTACT</h2>
+      <p class="section-sub">공연 조명 디자인, 장비 렌탈, 견적 문의는 아래로 연락주세요. 빠른 시간 내에 답변드리겠습니다.</p>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value"><a href="mailto:ontoplight@naver.com">ontoplight@naver.com</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-value"><a href="tel:010-8701-8119">010-8701-8119</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Instagram</div>
+          <div class="contact-info-value"><a href="https://instagram.com/apexlitedesign" target="_blank">@apexlitedesign</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Services</div>
+          <div class="contact-info-value">조명 디자인 · 장비 렌탈 · 공연 제작</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">성함 *</label>
+            <input class="form-input" type="text" placeholder="홍길동" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">연락처 *</label>
+            <input class="form-input" type="tel" placeholder="010-0000-0000" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">이메일</label>
+          <input class="form-input" type="email" placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">문의 유형 *</label>
+          <select class="form-select" required>
+            <option value="" disabled selected>선택해주세요</option>
+            <option>콘서트 조명 디자인</option>
+            <option>뮤지컬 조명 디자인</option>
+            <option>기업행사 조명</option>
+            <option>장비 렌탈</option>
+            <option>방송 / 드라마 조명</option>
+            <option>기타 문의</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">공연명 / 행사명</label>
+          <input class="form-input" type="text" placeholder="공연명 또는 행사명을 입력해주세요">
+        </div>
+        <div class="form-group">
+          <label class="form-label">공연 일정</label>
+          <input class="form-input" type="text" placeholder="예) 2025년 8월 중, 미정">
+        </div>
+        <div class="form-group">
+          <label class="form-label">문의 내용 *</label>
+          <textarea class="form-textarea" placeholder="공연 규모, 장소, 예산 등 자세한 내용을 입력해주세요." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">문의 보내기</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">APEX<span>|</span>LITE</div>
+      <div class="footer-copy" style="margin-top: 8px;">© 2025 APEX LITE. Stage Lighting Design & Rental.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#equipment">Equipment</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="footer-sns">
+      <a href="https://instagram.com/apexlitedesign" target="_blank" aria-label="Instagram">IG</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── LIGHTBOX ─── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<script>
+  /* NAV SCROLL */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* MOBILE MENU */
+  function openMobileMenu() {
+    document.getElementById('mobileMenu').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* HERO SLIDER */
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = n;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+  setInterval(() => { goToSlide((currentSlide + 1) % slides.length); }, 5000);
+
+  /* PORTFOLIO FILTER */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      portfolioItems.forEach(item => {
+        const show = filter === 'all' || item.dataset.cat === filter;
+        item.style.display = show ? 'block' : 'none';
+      });
+    });
+  });
+
+  /* EQUIPMENT TABS */
+  function showEqPanel(id, btn) {
+    document.querySelectorAll('.equipment-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.equipment-cat-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  /* LIGHTBOX */
+  function openLightbox(title, caption) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightboxCaption').innerHTML = `<strong>${title}</strong><br>${caption}`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  /* SCROLL ANIMATIONS */
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  /* FORM SUBMIT */
+  function submitForm(e) {
+    e.preventDefault();
+    alert('문의가 접수되었습니다. 빠른 시간 내에 연락드리겠습니다.\n\n에이펙스라이트 드림');
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
