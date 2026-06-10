@@ -1315,9 +1315,10 @@
     width: calc(100% + 48px);
     margin: -24px -24px 20px -24px;
     height: 180px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    background: #0c0c0c;
+    background: #111;
+    padding: 12px;
     display: block;
   }
   .eq-card-img[data-type="console"] {
@@ -2226,8 +2227,12 @@
       </div>
       <div class="eq-card"
            onclick="openEqModal(this)"
-           data-modal-img=""
+           data-modal-img="images/eq_commandwing_main.jpg"
            data-modal-desc="grandMA2 확장 컨트롤러. 추가 페이더와 엔코더를 제공하여 대형 쇼의 운용 효율을 극대화합니다. grandMA2 Light와 연동하여 최대 4대까지 확장 가능합니다.">
+        <img class="eq-card-img"
+          src="images/eq_commandwing_main.jpg"
+          alt="MA2 Command Wing"
+          onerror="this.style.display='none'">
         <div class="eq-brand">MA Lighting</div>
         <div class="eq-model">MA2 Command Wing</div>
         <div class="eq-tags">
