@@ -3,15 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="에이펙스라이트 — 무대조명 디자인 & 렌탈 전문기업. 뮤지컬, 콘서트, 기업행사, Netflix 드라마 조명 디자인.">
-<meta property="og:title" content="APEX LITE — Stage Lighting Design & Rental">
-<meta property="og:description" content="무대조명 디자인 & 렌탈 전문기업">
+<meta name="description" content="에이펙스라이트는 공연조명, 무대조명, 콘서트, 뮤지컬, 연극 조명디자인 및 장비 렌탈 전문기업입니다.">
+<meta name="keywords" content="무대조명, 공연조명, 조명디자인, 조명렌탈, 뮤지컬조명, 콘서트조명, 연극조명, 기업행사조명, 에이펙스라이트, APEX LITE">
+<meta name="author" content="에이펙스라이트">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="에이펙스라이트 | 공연조명 · 무대조명 · 조명디자인 전문기업">
+<meta property="og:description" content="에이펙스라이트는 공연조명, 무대조명, 콘서트, 뮤지컬, 연극 조명디자인 및 장비 렌탈 전문기업입니다.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://apexlight.co.kr/images/inline_04.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="에이펙스라이트 무대조명 포트폴리오">
 <meta property="og:url" content="https://apexlight.co.kr">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="에이펙스라이트">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="에이펙스라이트 | 공연조명 · 무대조명 · 조명디자인 전문기업">
+<meta name="twitter:description" content="에이펙스라이트는 공연조명, 무대조명, 콘서트, 뮤지컬, 연극 조명디자인 및 장비 렌탈 전문기업입니다.">
+<meta name="twitter:image" content="https://apexlight.co.kr/images/inline_04.jpg">
 <link rel="canonical" href="https://apexlight.co.kr">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='15' font-weight='bold' fill='%23C9A84C' font-family='Arial'%3EAL%3C/text%3E%3C/svg%3E">
-<title>APEX LITE — Stage Lighting Design & Rental</title>
+<title>에이펙스라이트 | 공연조명 · 무대조명 · 조명디자인 전문기업</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -715,14 +727,24 @@
   .profile-card {
     background: var(--black2);
     border: 0.5px solid var(--black4);
+    position: relative;
+    overflow: hidden;
+  }
+  .profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    z-index: 1;
   }
   .profile-img-wrap {
     position: relative;
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/5;
     overflow: hidden;
     background: var(--black4);
-    max-height: 420px;
+    max-height: 480px;
   }
   .profile-img {
     position: absolute;
@@ -730,11 +752,26 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 20%;
     filter: grayscale(20%);
     display: block;
   }
   .profile-info { padding: 32px; }
+  .profile-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .profile-badge {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 0.5px solid var(--gold-dim);
+    color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
   .profile-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
@@ -1101,7 +1138,7 @@
     .equipment-cats { grid-template-columns: repeat(2, 1fr); }
     .contact-grid { grid-template-columns: 1fr; gap: 48px; }
     .insta-grid { grid-template-columns: repeat(4, 1fr); }
-    .profile-img-wrap { max-height: 360px; }
+    .profile-img-wrap { max-height: 420px; aspect-ratio: 4/5; }
   }
   @media (max-width: 768px) {
     nav { padding: 0 24px; }
@@ -1119,7 +1156,7 @@
     .portfolio-item.featured { grid-column: span 1; aspect-ratio: 3/2; }
     .about-grid { grid-template-columns: 1fr; }
     .equipment-cats { grid-template-columns: 1fr 1fr; }
-    .profile-img-wrap { aspect-ratio: 4/3; max-height: 280px; }
+    .profile-img-wrap { aspect-ratio: 4/5; max-height: 360px; }
     .form-row { grid-template-columns: 1fr; }
     .insta-grid { grid-template-columns: repeat(3, 1fr); }
     footer { padding: 32px 24px; }
@@ -1585,6 +1622,31 @@
     emailjs.init({ publicKey: "dK9WvYiiPd6PSwrRn" });
   })();
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "에이펙스라이트",
+  "alternateName": "APEX LITE",
+  "description": "에이펙스라이트는 공연조명, 무대조명, 콘서트, 뮤지컬, 연극 조명디자인 및 장비 렌탈 전문기업입니다.",
+  "url": "https://apexlight.co.kr",
+  "logo": "https://apexlight.co.kr/images/inline_04.jpg",
+  "image": "https://apexlight.co.kr/images/inline_04.jpg",
+  "telephone": "",
+  "email": "apexlitedesign@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "KR",
+    "addressRegion": "Seoul"
+  },
+  "sameAs": [
+    "https://www.instagram.com/apexlitedesign"
+  ],
+  "serviceType": ["무대조명 렌탈", "공연조명 디자인", "무대 제작", "콘서트 조명", "뮤지컬 조명"],
+  "foundingDate": "2018",
+  "knowsAbout": ["무대조명", "공연조명", "조명디자인", "무대제작", "콘서트조명", "뮤지컬조명"]
+}
+</script>
 </head>
 <body>
 
@@ -1917,16 +1979,65 @@
     </div>
   </div>
 
+  <!-- ─ FEATURED: 천개의 파랑 ─ -->
+  <div class="featured-project" data-cat="musical">
+    <div class="fp-media">
+      <img class="fp-img" src="images/cheon.webp" alt="뮤지컬 천개의 파랑 예술의전당 조명">
+      <div class="fp-year-tag">2024</div>
+    </div>
+    <div class="fp-info">
+      <div class="fp-cat">Musical · Drama</div>
+      <h3 class="fp-title">뮤지컬<br>천개의 파랑</h3>
+      <p class="fp-desc">예술의전당 CJ토월극장에서 선보인 뮤지컬 &lt;천개의 파랑&gt;. 로봇과 인간의 감정을 섬세하게 조명으로 표현하며, 차가운 기계와 따뜻한 생명의 대비를 빛으로 설계했습니다.</p>
+      <div class="fp-tags">
+        <span class="fp-tag">예술의전당 CJ토월극장</span>
+        <span class="fp-tag">Musical Lighting</span>
+        <span class="fp-tag">Dramatic Design</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─ FEATURED: 서른즈음에 ─ -->
+  <div class="featured-project fp-reverse" data-cat="musical">
+    <div class="fp-media">
+      <img class="fp-img" src="images/seureu.webp" alt="뮤지컬 서른즈음에 일본 투어 조명">
+      <div class="fp-year-tag">2024</div>
+    </div>
+    <div class="fp-info">
+      <div class="fp-cat">Musical · Japan Tour</div>
+      <h3 class="fp-title">뮤지컬<br>서른즈음에<br>일본 투어</h3>
+      <p class="fp-desc">김광석의 음악을 기반으로 한 뮤지컬 &lt;서른즈음에&gt; 일본 투어 조명디자인. 한국 감성의 정서를 일본 관객에게 전달하는 빛의 언어로 무대를 완성했습니다.</p>
+      <div class="fp-tags">
+        <span class="fp-tag">Japan Musical Tour</span>
+        <span class="fp-tag">Stage Lighting Design</span>
+        <span class="fp-tag">김광석</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─ FEATURED: 구미산단 페스티벌 ─ -->
+  <div class="featured-project" data-cat="concert">
+    <div class="fp-media">
+      <img class="fp-img" src="images/gumi.webp" alt="구미산단 페스티벌 2025 야외 공연 조명">
+      <div class="fp-year-tag">2025</div>
+    </div>
+    <div class="fp-info">
+      <div class="fp-cat">Concert · Outdoor Festival</div>
+      <h3 class="fp-title">구미산단<br>페스티벌<br>2025</h3>
+      <p class="fp-desc">구미 야외무대에서 펼쳐진 대규모 산업단지 축제 공연. 야외 특성에 맞는 강렬한 빔 연출과 넓은 커버리지로 관객 전체를 하나의 빛의 공간으로 연결했습니다.</p>
+      <div class="fp-tags">
+        <span class="fp-tag">Outdoor Concert</span>
+        <span class="fp-tag">Festival Lighting</span>
+        <span class="fp-tag">구미 야외무대</span>
+        <span class="fp-tag">Beam Design</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ─ MORE WORKS GRID ─ -->
   <div class="portfolio-grid-sub">
     <div class="section-eyebrow" style="margin-bottom:32px;">More Works</div>
     <div class="portfolio-grid" id="portfolioGrid">
-
-      <div class="portfolio-item" data-cat="concert" onclick="openLightbox('구미산단 페스티벌 2025', '구미 야외무대 | 2025')">
-        <img class="portfolio-img" src="images/gumi.webp" alt="구미산단 페스티벌 2025" onerror="this.style.display='none'">
-        <span class="portfolio-year">2025</span>
-        <div class="portfolio-info"><div class="portfolio-cat">Concert</div><div class="portfolio-title">구미산단 페스티벌 2025</div><div class="portfolio-venue">구미 야외무대</div></div>
-      </div>
 
       <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 나의 대통령', '부천시민회관 대공연장 | 2025')">
         <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_04.jpg" alt="뮤지컬 나의 대통령" onerror="this.style.display='none'">
@@ -1934,17 +2045,7 @@
         <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 나의 대통령</div><div class="portfolio-venue">부천시민회관 대공연장</div></div>
       </div>
 
-      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('천개의 파랑', '예술의전당 CJ토월극장 | 2024')">
-        <img class="portfolio-img" src="images/cheon.webp" alt="천개의 파랑" onerror="this.style.display='none'">
-        <span class="portfolio-year">2024</span>
-        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">천개의 파랑</div><div class="portfolio-venue">예술의전당 CJ토월극장</div></div>
-      </div>
 
-      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('서른즈음에', '일본 투어 | 2024')">
-        <img class="portfolio-img" src="images/seureu.webp" alt="서른즈음에" onerror="this.style.display='none'">
-        <span class="portfolio-year">2024</span>
-        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">서른즈음에</div><div class="portfolio-venue">Japan Tour</div></div>
-      </div>
 
       <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 더북', '수원시립공연 정조테마공연장 | 2023')">
         <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_03.jpg" alt="뮤지컬 더북" onerror="this.style.display='none'">
@@ -1965,7 +2066,7 @@
       </div>
 
       <div class="portfolio-item" data-cat="musical" onclick="openLightbox('가족뮤지컬 반쪽이전', '국립중앙박물관 극장 용 | 2022')">
-        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_03.jpg" alt="가족뮤지컬 반쪽이전" onerror="this.style.display='none'">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_03.jpg" alt="가족뮤지컬 반쪽이전" onerror="this.style.display='none'">
         <span class="portfolio-year">2022</span>
         <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">가족뮤지컬 반쪽이전</div><div class="portfolio-venue">국립중앙박물관 극장 용</div></div>
       </div>
@@ -2019,7 +2120,7 @@
       </div>
 
       <div class="portfolio-item" data-cat="musical" onclick="openLightbox('음악극 봄니', '전북콘텐츠융합진흥원')">
-        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_01.jpg" alt="음악극 봄니" onerror="this.style.display='none'">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_05.jpg" alt="음악극 봄니" onerror="this.style.display='none'">
         <span class="portfolio-year">2022</span>
         <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">음악극 봄니</div><div class="portfolio-venue">전북콘텐츠융합진흥원</div></div>
       </div>
@@ -2520,7 +2621,16 @@
     </div>
     <div class="about-right">
       <div class="profile-card">
+        <div class="profile-img-wrap">
+          <img class="profile-img" src="images/ceo_profile.jpg" alt="이차훈 대표 프로필"
+            onerror="this.style.display='none'">
+        </div>
         <div class="profile-info">
+          <div class="profile-badges">
+            <span class="profile-badge">Lighting Designer</span>
+            <span class="profile-badge">CEO</span>
+            <span class="profile-badge">Since 2018</span>
+          </div>
           <div class="profile-name">이 차 훈</div>
           <div class="profile-name-en">Lee Cha Hoon — Lighting Designer</div>
           <div class="profile-role">
