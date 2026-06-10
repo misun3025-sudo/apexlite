@@ -820,7 +820,7 @@
   .equipment-header { margin-bottom: 56px; }
   .equipment-cats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1px;
     background: var(--black4);
     margin-bottom: 1px;
@@ -1137,6 +1137,7 @@
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .equipment-cats { grid-template-columns: repeat(2, 1fr); }
     .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+
     .insta-grid { grid-template-columns: repeat(4, 1fr); }
     .profile-img-wrap { max-height: 420px; aspect-ratio: 4/5; }
   }
@@ -2165,30 +2166,21 @@
   </div>
 
   <div class="equipment-cats">
-    <button class="equipment-cat-btn active" onclick="showEqPanel('console', this)">
+    <button class="equipment-cat-btn active" onclick="showEqPanel('flagship', this)">
       <div class="eq-cat-num">01</div>
-      <div class="eq-cat-name">Console</div>
-      <div class="eq-cat-count">조명 콘솔 · 네트워크</div>
+      <div class="eq-cat-name">FLAGSHIP</div>
+      <div class="eq-cat-count">Premium Fixtures</div>
     </button>
-    <button class="equipment-cat-btn" onclick="showEqPanel('moving', this)">
+    <button class="equipment-cat-btn" onclick="showEqPanel('scale', this)">
       <div class="eq-cat-num">02</div>
-      <div class="eq-cat-name">Moving Light</div>
-      <div class="eq-cat-count">Spot · Wash · Beam</div>
-    </button>
-    <button class="equipment-cat-btn" onclick="showEqPanel('led', this)">
-      <div class="eq-cat-num">03</div>
-      <div class="eq-cat-name">LED / BAR</div>
-      <div class="eq-cat-count">Bar · Blinder · Strobe</div>
-    </button>
-    <button class="equipment-cat-btn" onclick="showEqPanel('special', this)">
-      <div class="eq-cat-num">04</div>
-      <div class="eq-cat-name">Special FX</div>
-      <div class="eq-cat-count">Beam · Laser · Fog</div>
+      <div class="eq-cat-name">SCALE</div>
+      <div class="eq-cat-count">Large-Scale Inventory</div>
     </button>
   </div>
 
-  <!-- Console Panel -->
-  <div class="equipment-panel active" id="panel-console">
+  <!-- Flagship Panel -->
+  <div class="equipment-panel active" id="panel-flagship">
+    <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; padding-bottom:12px; border-bottom:0.5px solid rgba(201,168,76,0.2);">Premium Fixtures</div>
     <div class="eq-grid">
       <div class="eq-card"
            onclick="openEqModal(this)"
@@ -2253,12 +2245,6 @@
         </div>
         <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-    </div>
-  </div>
-
-  <!-- Moving Light Panel -->
-  <div class="equipment-panel" id="panel-moving">
-    <div class="eq-grid">
       <div class="eq-card"
            onclick="openEqModal(this)"
            data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p022_03.jpg"
@@ -2397,8 +2383,9 @@
     </div>
   </div>
 
-  <!-- LED / BAR Panel -->
-  <div class="equipment-panel" id="panel-led">
+  <!-- Scale Panel -->
+  <div class="equipment-panel" id="panel-scale">
+    <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; padding-bottom:12px; border-bottom:0.5px solid rgba(201,168,76,0.2);">Large-Scale Inventory</div>
     <div class="eq-grid">
       <div class="eq-card"
            onclick="openEqModal(this)"
@@ -2427,7 +2414,7 @@
            onclick="openEqModal(this)"
            data-modal-img=""
            data-modal-desc="480W 고출력 LED 워시 바. 안정적인 내구성과 풍부한 광량으로 다양한 콘서트 현장에서 신뢰받는 장비입니다. 따뜻한 화이트 계열의 풍부한 광색으로 뮤지컬·콘서트 무대 워시에 적합합니다.">
-        <div class="eq-brand">Clay Paky</div>
+        <div class="eq-brand">Beyond</div>
         <div class="eq-model">MIDI-B</div>
         <div class="eq-tags">
           <span class="eq-tag-item">Bar</span>
@@ -2446,7 +2433,7 @@
            onclick="openEqModal(this)"
            data-modal-img=""
            data-modal-desc="300W 컴팩트 LED 워시. 소형·경량 설계로 좁은 리그에서도 유연한 설치가 가능합니다. MIDI-B와 함께 대규모 LED 워시 벽 구성에 활용되며 균일한 광색을 제공합니다.">
-        <div class="eq-brand">Clay Paky</div>
+        <div class="eq-brand">Beyond</div>
         <div class="eq-model">MINI-B</div>
         <div class="eq-tags">
           <span class="eq-tag-item">Bar</span>
@@ -2480,12 +2467,6 @@
         </div>
         <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-    </div>
-  </div>
-
-  <!-- Special FX Panel -->
-  <div class="equipment-panel" id="panel-special">
-    <div class="eq-grid">
       <div class="eq-card"
            onclick="openEqModal(this)"
            data-modal-img=""
@@ -2580,7 +2561,7 @@
       </div>
     </div>
     <div class="about-photo-panel">
-      <img class="about-photo-img" src="images/ceo_profile.jpg" alt="이차훈 대표 프로필"
+      <img class="about-photo-img" src="images/profile_2.jpg" alt="이차훈 대표 프로필"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="about-photo-placeholder" style="display:none;">프로필 사진</div>
       <div class="about-photo-overlay">
@@ -2595,9 +2576,9 @@
       <div class="section-eyebrow">About Us</div>
       <h2 class="section-title">APEX LITE</h2>
       <div class="about-highlight">
-        <p class="about-highlight-text">"빛으로 완성하는 무대 — 단순히 조명을 켜는 것이 아니라, 공연의 감동을 설계합니다."</p>
+        <p class="about-highlight-text">빛을 설계하는 사람이, 장비도 직접 보유합니다.</p>
       </div>
-      <p class="section-sub">에이펙스라이트는 2018년 설립 이후 뮤지컬, 콘서트, 전통공연, 기업행사, 드라마 등 다양한 무대에서 조명 디자인과 렌탈 서비스를 제공해왔습니다. ROBE, Clay Paky, Ayrton 등 세계 최고 수준의 장비와 grandMA3 콘솔 시스템을 기반으로, 소규모 소극장부터 Netflix 드라마 세트까지 어떤 무대도 책임집니다.</p>
+      <p class="section-sub">에이펙스라이트는 공연장 조명감독 출신 디자이너가 직접 운영하는 공연조명 전문기업입니다.<br><br>뮤지컬, 콘서트, OTT 콘텐츠, 기업행사, 미디어파사드까지 장르를 가리지 않고 다양한 현장을 수행해 왔습니다. 수백 회 이상의 공연 현장에서 쌓은 경험을 바탕으로 조명 디자인, 장비 구성, 현장 오퍼레이팅까지 하나의 팀이 책임집니다.<br><br>ROBE, Clay Paky, Ayrton, grandMA 등 유럽 정품 장비를 직접 보유하고 있어 국립극장, 국립오페라단, 예술의전당 등 높은 기술 기준이 요구되는 프로젝트에도 안정적으로 대응합니다.<br><br>디자인부터 장비, 그리고 현장 운영까지. 공연조명의 전 과정을 책임집니다.</p>
       <div style="margin-top: 48px;">
         <div class="section-eyebrow" style="margin-bottom: 24px;">Company Timeline</div>
         <div class="about-history">
