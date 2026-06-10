@@ -1120,6 +1120,118 @@
     font-size: 13px;
   }
 
+  /* ─── EQUIPMENT MODAL ─── */
+  .eq-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .eq-modal.open { display: flex; }
+  .eq-modal-inner {
+    background: var(--black2);
+    border: 0.5px solid var(--black4);
+    max-width: 620px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .eq-modal-img-wrap {
+    width: 100%;
+    background: #0c0c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    min-height: 200px;
+  }
+  .eq-modal-img {
+    max-width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    display: block;
+  }
+  .eq-modal-body { padding: 32px; }
+  .eq-modal-brand {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .eq-modal-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .eq-modal-desc {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    border-left: 2px solid var(--gold);
+    padding-left: 16px;
+  }
+  .eq-modal-specs-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .eq-modal-specs { display: flex; flex-direction: column; gap: 0; }
+  .eq-modal-spec {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 9px 0;
+    border-bottom: 0.5px solid var(--black4);
+    gap: 16px;
+  }
+  .eq-modal-spec span:first-child { color: var(--gray3); }
+  .eq-modal-spec span:last-child { color: var(--gray1); text-align: right; }
+  .eq-modal-close {
+    position: absolute;
+    top: 14px; right: 18px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 2;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .eq-modal-close:hover { opacity: 1; }
+  /* Equipment card image */
+  .eq-card {
+    cursor: pointer;
+  }
+  .eq-card-img {
+    width: calc(100% + 48px);
+    margin: -24px -24px 20px -24px;
+    height: 150px;
+    object-fit: contain;
+    background: #0c0c0c;
+    display: block;
+    padding: 20px;
+  }
+  .eq-view-hint {
+    margin-top: 10px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
   /* mobile nav menu */
   .mobile-menu {
     display: none;
@@ -1357,6 +1469,8 @@
       <span class="client-item">KT&G 상상마당</span>
       <span class="client-item">김천대극장</span>
       <span class="client-item">전북콘텐츠융합진흥원</span>
+      <span class="client-item">국립극장</span>
+      <span class="client-item">국립오페라단</span>
       <!-- 복제 (무한 루프) -->
       <span class="client-item netflix">Netflix Korea</span>
       <span class="client-item">국립중앙박물관</span>
@@ -1374,6 +1488,8 @@
       <span class="client-item">KT&G 상상마당</span>
       <span class="client-item">김천대극장</span>
       <span class="client-item">전북콘텐츠융합진흥원</span>
+      <span class="client-item">국립극장</span>
+      <span class="client-item">국립오페라단</span>
     </div>
   </div>
 </div>
@@ -1425,7 +1541,7 @@
 
     <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 반쪽이전', '국립중앙박물관 극장 용 | 2022.04')">
       <img class="portfolio-img"
-        src="images/inline_06.jpg"
+        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_03.jpg"
         alt="뮤지컬 반쪽이전 무대"
         onerror="this.style.display='none'">
       <span class="portfolio-year">2022</span>
@@ -1438,7 +1554,7 @@
 
     <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인간탐구생활', '국립정동극장 세실 | 2022.08')">
       <img class="portfolio-img"
-        src="images/inline_07.jpg"
+        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_03.jpg"
         alt="뮤지컬 인간탐구생활"
         onerror="this.style.display='none'">
       <span class="portfolio-year">2022</span>
@@ -1451,7 +1567,7 @@
 
     <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인현왕후', '김천대극장 | 2022.09')">
       <img class="portfolio-img"
-        src="images/inline_08.jpg"
+        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_06.jpg"
         alt="뮤지컬 인현왕후"
         onerror="this.style.display='none'">
       <span class="portfolio-year">2022</span>
@@ -1489,7 +1605,7 @@
 
     <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 메밀꽃 필 무렵', '대전시립연정국악원 · 강원도립극단 | 2023')">
       <img class="portfolio-img"
-        src="images/inline_11.jpg"
+        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_06.jpg"
         alt="뮤지컬 메밀꽃 필 무렵"
         onerror="this.style.display='none'">
       <span class="portfolio-year">2023</span>
@@ -1502,7 +1618,7 @@
 
     <div class="portfolio-item" data-cat="traditional" onclick="openLightbox('전통무용 추는사람 남산', '남산국악당 | 2022')">
       <img class="portfolio-img"
-        src="images/inline_12.jpg"
+        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_02.jpg"
         alt="전통무용 추는사람 남산"
         onerror="this.style.display='none'">
       <span class="portfolio-year">2022</span>
@@ -1510,6 +1626,44 @@
         <div class="portfolio-cat">Traditional</div>
         <div class="portfolio-title">전통무용 추는사람, 남산</div>
         <div class="portfolio-venue">남산국악당</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="musical" onclick="openLightbox('천개의 파랑', '예술의전당 CJ토월극장 | 서울예술단 창작가무극 | 2024')">
+      <img class="portfolio-img"
+        src="images/cheon.jpg.webp"
+        alt="천개의 파랑"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2024</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Musical</div>
+        <div class="portfolio-title">천개의 파랑</div>
+        <div class="portfolio-venue">예술의전당 CJ토월극장</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="musical" onclick="openLightbox('서른즈음에', '일본 공연 | 김광석 노래 원작 창작뮤지컬')">
+      <img class="portfolio-img"
+        src="images/seureu.jpg.webp"
+        alt="서른즈음에"
+        onerror="this.style.display='none'">
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Musical</div>
+        <div class="portfolio-title">서른즈음에</div>
+        <div class="portfolio-venue">일본 공연</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item" data-cat="concert" onclick="openLightbox('구미산단 페스티벌 2025', '구미 야외공연 | 2025')">
+      <img class="portfolio-img"
+        src="images/gumi.jpg.webp"
+        alt="구미산단 페스티벌 2025"
+        onerror="this.style.display='none'">
+      <span class="portfolio-year">2025</span>
+      <div class="portfolio-info">
+        <div class="portfolio-cat">Concert · Festival</div>
+        <div class="portfolio-title">구미산단 페스티벌 2025</div>
+        <div class="portfolio-venue">구미 야외공연</div>
       </div>
     </div>
 
@@ -1632,31 +1786,49 @@
   <!-- Console Panel -->
   <div class="equipment-panel active" id="panel-console">
     <div class="eq-grid">
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p028_03.jpg"
+           data-modal-desc="MA Lighting 최신 플래그십 조명 콘솔. 멀티터치 화면과 MA3 Network 프로토콜로 초대형 쇼의 복잡한 큐를 실시간으로 완벽 컨트롤합니다. 뮤지컬·콘서트·방송 모든 장르에서 신뢰받는 현장 표준입니다.">
+        <img class="eq-card-img"
+          src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p028_03.jpg"
+          alt="grandMA3 Light"
+          onerror="this.style.display='none'">
         <div class="eq-brand">MA Lighting</div>
         <div class="eq-model">grandMA3 Light</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>버전</span><span>3.9.60.4</span></div>
           <div class="eq-spec"><span>플랫폼</span><span>MA3 Network</span></div>
         </div>
-        <span class="eq-qty">1 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p029_02.jpg"
+           data-modal-desc="전 세계 공연 현장의 표준 조명 콘솔. 검증된 안정성과 직관적인 인터페이스로 수백 개 쇼의 현장에서 신뢰를 쌓아온 MA Lighting의 대표 콘솔입니다. Command Wing으로 확장 운용합니다.">
+        <img class="eq-card-img"
+          src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p029_02.jpg"
+          alt="grandMA2 Light"
+          onerror="this.style.display='none'">
         <div class="eq-brand">MA Lighting</div>
         <div class="eq-model">grandMA2 Light</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>버전</span><span>3.9.60.4</span></div>
           <div class="eq-spec"><span>Wing</span><span>Command Wing 포함</span></div>
         </div>
-        <span class="eq-qty">1 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="grandMA2 확장 컨트롤러. 추가 페이더와 엔코더를 제공하여 대형 쇼의 운용 효율을 극대화합니다. grandMA2 Light와 연동하여 최대 4대까지 확장 가능합니다.">
         <div class="eq-brand">MA Lighting</div>
         <div class="eq-model">MA2 Command Wing</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>용도</span><span>확장 컨트롤러</span></div>
+          <div class="eq-spec"><span>연동</span><span>grandMA2 Light</span></div>
         </div>
-        <span class="eq-qty">4 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
     </div>
   </div>
@@ -1664,16 +1836,31 @@
   <!-- Moving Light Panel -->
   <div class="equipment-panel" id="panel-moving">
     <div class="eq-grid">
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p022_03.jpg"
+           data-modal-desc="ROBE의 시그니처 올인원 픽스처. Spot·Beam·Wash 기능을 하나로 통합하여 단 하나의 장비로 다양한 연출이 가능합니다. 선명한 고보 프로젝션과 강력한 빔 효과로 뮤지컬·콘서트 모든 장르에서 필수 장비입니다.">
+        <img class="eq-card-img"
+          src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p022_03.jpg"
+          alt="ROBE MEGA POINTE"
+          onerror="this.style.display='none'">
         <div class="eq-brand">ROBE</div>
         <div class="eq-model">MEGA POINTE</div>
         <div class="eq-specs">
-          <div class="eq-spec"><span>타입</span><span>Spot / Beam</span></div>
+          <div class="eq-spec"><span>타입</span><span>Spot / Beam / Wash</span></div>
+          <div class="eq-spec"><span>광원</span><span>Discharge 470W</span></div>
           <div class="eq-spec"><span>DMX</span><span>5 PIN</span></div>
         </div>
-        <span class="eq-qty">12 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p023_02.jpg"
+           data-modal-desc="830W LED 파워의 멀티비트 Wash/Beam 픽스처. ROBE의 독창적인 픽셀 맵핑 기술로 화려한 빔 연출과 부드러운 워시 효과를 동시에 구현합니다. 대형 콘서트·페스티벌의 핵심 장비입니다.">
+        <img class="eq-card-img"
+          src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p023_02.jpg"
+          alt="ROBE SPIIDER"
+          onerror="this.style.display='none'">
         <div class="eq-brand">ROBE</div>
         <div class="eq-model">SPIIDER</div>
         <div class="eq-specs">
@@ -1681,9 +1868,12 @@
           <div class="eq-spec"><span>Weight</span><span>17kg</span></div>
           <div class="eq-spec"><span>DMX</span><span>5 PIN</span></div>
         </div>
-        <span class="eq-qty">24 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="Clay Paky 플래그십 스팟 픽스처. 800W Discharge 광원의 강력한 출력과 풍부한 고보·프리즘 옵션으로 뮤지컬·오페라 무대에서 정밀한 고보 투영과 선명한 컷오프 라인을 구현합니다.">
         <div class="eq-brand">Clay Paky</div>
         <div class="eq-model">GHIBLI (Spot)</div>
         <div class="eq-specs">
@@ -1691,34 +1881,50 @@
           <div class="eq-spec"><span>Weight</span><span>35.6kg</span></div>
           <div class="eq-spec"><span>DMX</span><span>5 PIN</span></div>
         </div>
-        <span class="eq-qty">보유</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p024_03.jpg"
+           data-modal-desc="Clay Paky 대형 LED 워시 픽스처. 19개 LED 어레이의 부드럽고 균일한 광색 혼합과 넓은 빔 앵글이 특징입니다. 대규모 무대의 풍부한 컬러 워시와 면조명에 최적화된 장비입니다.">
+        <img class="eq-card-img"
+          src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p024_03.jpg"
+          alt="Clay Paky KHAMSIN"
+          onerror="this.style.display='none'">
         <div class="eq-brand">Clay Paky</div>
         <div class="eq-model">KHAMSIN (Wash)</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>1150W / LED 750W</span></div>
           <div class="eq-spec"><span>Weight</span><span>39.8kg</span></div>
+          <div class="eq-spec"><span>LED</span><span>19셀 어레이</span></div>
         </div>
-        <span class="eq-qty">보유</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="Ayrton의 컴팩트한 고성능 스팟 픽스처. 550W LED의 강력한 출력을 22kg의 가벼운 바디에 담았습니다. 정밀한 고보 투영과 선명한 빔 효과로 어느 리그에서도 유연하게 활용할 수 있는 다목적 무빙 라이트입니다.">
         <div class="eq-brand">Ayrton</div>
         <div class="eq-model">DIABLO (Spot)</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>550W / LED 300W</span></div>
           <div class="eq-spec"><span>Weight</span><span>22kg</span></div>
+          <div class="eq-spec"><span>타입</span><span>Moving Spot</span></div>
         </div>
-        <span class="eq-qty">보유</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="독일 JB Lighting의 최고급 프로파일 픽스처. 1600W의 강력한 출력으로 정밀한 고보 투영과 샤프한 빔 쉐이핑을 구현합니다. 뮤지컬과 오페라 무대에서 정확한 스팟 조명에 이상적입니다.">
         <div class="eq-brand">JB Lighting</div>
         <div class="eq-model">M18 Profile</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>1600W / LED 1200W</span></div>
           <div class="eq-spec"><span>Weight</span><span>32kg</span></div>
+          <div class="eq-spec"><span>타입</span><span>Moving Profile</span></div>
         </div>
-        <span class="eq-qty">보유</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
     </div>
   </div>
@@ -1726,41 +1932,61 @@
   <!-- LED / BAR Panel -->
   <div class="equipment-panel" id="panel-led">
     <div class="eq-grid">
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p026_02.jpg"
+           data-modal-desc="ROBE의 고성능 LED 배튼 픽스처. 24개 픽셀로 구성된 배튼으로 무대 상부·하부의 균일한 워시 조명과 화려한 픽셀 이펙트를 동시에 구현합니다. MA3 네트워크와 완벽 호환되며 다양한 규모의 공연에 활용됩니다.">
+        <img class="eq-card-img"
+          src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p026_02.jpg"
+          alt="ROBE TOMBORA BATTEN 24"
+          onerror="this.style.display='none'">
         <div class="eq-brand">ROBE</div>
         <div class="eq-model">TOMBORA BATTEN 24</div>
         <div class="eq-specs">
-          <div class="eq-spec"><span>타입</span><span>LED BAR</span></div>
+          <div class="eq-spec"><span>타입</span><span>LED BAR · Pixel</span></div>
+          <div class="eq-spec"><span>픽셀</span><span>24 Cell</span></div>
           <div class="eq-spec"><span>DMX</span><span>3 & 5 PIN</span></div>
         </div>
-        <span class="eq-qty">24 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="480W 고출력 LED 워시 바. 안정적인 내구성과 풍부한 광량으로 다양한 콘서트 현장에서 신뢰받는 장비입니다. 따뜻한 화이트 계열의 풍부한 광색으로 뮤지컬·콘서트 무대 워시에 적합합니다.">
         <div class="eq-brand">Beyond</div>
         <div class="eq-model">MIDI-B (WW)</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>480W</span></div>
+          <div class="eq-spec"><span>색온도</span><span>Warm White</span></div>
           <div class="eq-spec"><span>DMX</span><span>3 PIN</span></div>
         </div>
-        <span class="eq-qty">44 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="300W 컴팩트 LED 워시. 소형·경량 설계로 좁은 리그에서도 유연한 설치가 가능합니다. MIDI-B와 함께 대규모 LED 워시 벽 구성에 활용되며 균일한 광색을 제공합니다.">
         <div class="eq-brand">Beyond</div>
         <div class="eq-model">MINI-B (WW)</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>300W</span></div>
           <div class="eq-spec"><span>Weight</span><span>15kg</span></div>
+          <div class="eq-spec"><span>색온도</span><span>Warm White</span></div>
         </div>
-        <span class="eq-qty">24 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="280W LED 무빙 워시 픽스처. 50대 대량 보유로 대형 콘서트의 면(面) 조명과 무대 전체 워시를 담당합니다. 경량 설계로 신속한 리그 구성과 이동이 용이하여 다양한 현장에서 활용도가 높습니다.">
         <div class="eq-brand">Aura</div>
         <div class="eq-model">WASH (50)</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>280W</span></div>
           <div class="eq-spec"><span>Weight</span><span>11kg</span></div>
+          <div class="eq-spec"><span>타입</span><span>Moving Wash</span></div>
         </div>
-        <span class="eq-qty">50 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
     </div>
   </div>
@@ -1768,7 +1994,10 @@
   <!-- Special FX Panel -->
   <div class="equipment-panel" id="panel-special">
     <div class="eq-grid">
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="7R/9R 고출력 빔 픽스처. 선명하고 날카로운 빔 효과로 K-POP 콘서트와 대형 공연에서 필수적인 이펙트 라이트입니다. 56대 대량 보유로 화려한 파노라믹 빔 쇼 연출이 가능합니다.">
         <div class="eq-brand">JJ-Light</div>
         <div class="eq-model">BEAM (7R, 9R)</div>
         <div class="eq-specs">
@@ -1776,33 +2005,45 @@
           <div class="eq-spec"><span>Weight</span><span>17kg</span></div>
           <div class="eq-spec"><span>DMX</span><span>3 & 5 PIN</span></div>
         </div>
-        <span class="eq-qty">56 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="틸트 전용 빔 바. 12개·40개 구성으로 고정된 파노라믹 빔 효과와 사이드 워시 용도로 사용합니다. 좌우 스위프 빔 무빙 효과를 만들어 무대에 역동적인 분위기를 연출합니다.">
         <div class="eq-brand">China</div>
         <div class="eq-model">TILT BAR 12×40</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>480W</span></div>
+          <div class="eq-spec"><span>구성</span><span>12구 / 40구</span></div>
           <div class="eq-spec"><span>DMX</span><span>3 PIN / 5 PIN</span></div>
         </div>
-        <span class="eq-qty">각 20 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="280W 컴팩트 워시 라이트. 20대 보유로 무대 사이드 필 라이트 및 보조 워시로 활용합니다. 7kg의 초경량 설계로 신속한 세팅이 가능하며 소극장부터 대형 무대까지 범용으로 사용합니다.">
         <div class="eq-brand">Litelees</div>
         <div class="eq-model">WASH 6×40</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>Power</span><span>280W</span></div>
           <div class="eq-spec"><span>Weight</span><span>7kg</span></div>
+          <div class="eq-spec"><span>구성</span><span>6×40W LED</span></div>
         </div>
-        <span class="eq-qty">20 EA</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
-      <div class="eq-card">
+      <div class="eq-card"
+           onclick="openEqModal(this)"
+           data-modal-img=""
+           data-modal-desc="Blinder·Strobe 효과 장비. 순간적인 플래시 효과와 강렬한 스트로브로 공연의 클라이맥스를 연출합니다. 관객 정면을 직접 조사하는 강렬한 블라인더 효과부터 섬세한 스트로브 조절까지 다양한 이펙트를 지원합니다.">
         <div class="eq-brand">GS / Beyond</div>
         <div class="eq-model">STOMI / JEST</div>
         <div class="eq-specs">
           <div class="eq-spec"><span>타입</span><span>Blinder / Strobe</span></div>
+          <div class="eq-spec"><span>용도</span><span>Audience Blinder</span></div>
         </div>
-        <span class="eq-qty">각 보유</span>
+        <div class="eq-view-hint">클릭하여 상세보기 →</div>
       </div>
     </div>
   </div>
@@ -1922,6 +2163,23 @@
   </div>
 </footer>
 
+<!-- ─── EQUIPMENT MODAL ─── -->
+<div class="eq-modal" id="eqModal" onclick="closeEqModal()">
+  <div class="eq-modal-inner" onclick="event.stopPropagation()">
+    <button class="eq-modal-close" onclick="closeEqModal()">✕</button>
+    <div class="eq-modal-img-wrap" id="eqModalImgWrap">
+      <img class="eq-modal-img" id="eqModalImg" src="" alt="">
+    </div>
+    <div class="eq-modal-body">
+      <div class="eq-modal-brand" id="eqModalBrand"></div>
+      <div class="eq-modal-title" id="eqModalTitle"></div>
+      <p class="eq-modal-desc" id="eqModalDesc"></p>
+      <div class="eq-modal-specs-label">SPECIFICATIONS</div>
+      <div class="eq-modal-specs" id="eqModalSpecs"></div>
+    </div>
+  </div>
+</div>
+
 <!-- ─── LIGHTBOX ─── -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">✕</button>
@@ -1992,7 +2250,46 @@
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  /* keydown handled above with equipment modal */
+
+  /* EQUIPMENT MODAL */
+  function openEqModal(card) {
+    const brand = card.querySelector('.eq-brand').textContent;
+    const model = card.querySelector('.eq-model').textContent;
+    const imgSrc = card.dataset.modalImg || '';
+    const desc = card.dataset.modalDesc || '';
+    const specEls = card.querySelectorAll('.eq-spec');
+
+    document.getElementById('eqModalBrand').textContent = brand;
+    document.getElementById('eqModalTitle').textContent = model;
+    document.getElementById('eqModalDesc').textContent = desc;
+
+    const imgEl = document.getElementById('eqModalImg');
+    const imgWrap = document.getElementById('eqModalImgWrap');
+    if (imgSrc) {
+      imgEl.src = imgSrc;
+      imgEl.alt = model;
+      imgWrap.style.display = 'flex';
+    } else {
+      imgWrap.style.display = 'none';
+    }
+
+    const specsEl = document.getElementById('eqModalSpecs');
+    specsEl.innerHTML = '';
+    specEls.forEach(spec => {
+      const key = spec.querySelector('span:first-child').textContent;
+      const val = spec.querySelector('span:last-child').textContent;
+      specsEl.innerHTML += `<div class="eq-modal-spec"><span>${key}</span><span>${val}</span></div>`;
+    });
+
+    document.getElementById('eqModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeEqModal() {
+    document.getElementById('eqModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeEqModal(); } });
 
   /* SCROLL ANIMATIONS */
   const fadeEls = document.querySelectorAll('.fade-up');
