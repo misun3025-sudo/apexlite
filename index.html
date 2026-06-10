@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -615,7 +615,59 @@
   .client-item.netflix:hover { color: #ff2020; }
 
   /* ─── ABOUT ─── */
-  #about { background: var(--black3); }
+  #about { background: var(--black3); padding-top: 0; }
+  .about-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 55vh;
+    min-height: 360px;
+    max-height: 560px;
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+  .about-photo-panel {
+    position: relative;
+    overflow: hidden;
+  }
+  .about-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+  .about-photo-panel:hover .about-photo-img { transform: scale(1.04); }
+  .about-photo-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 24px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  }
+  .about-photo-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .about-photo-sublabel {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.5);
+    margin-top: 3px;
+  }
+  .about-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--black2) 0%, #111 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray3);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1044,6 +1096,7 @@
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
     .portfolio-item.featured { grid-column: span 2; aspect-ratio: 16/9; }
     .portfolio-item { aspect-ratio: 4/3; }
+    .about-photo-grid { height: 45vw; min-height: 260px; }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .equipment-cats { grid-template-columns: repeat(2, 1fr); }
     .contact-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -1572,27 +1625,27 @@
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 60% 40%, #1a0520 0%, #080808 60%);"></div>
     </div>
-    <!-- 슬라이드 2 — 브로큰 발렌타인 FIVE 콘서트 -->
+    <!-- 슬라이드 2 — 야외 페스티벌 황금빛 무대 -->
     <div class="hero-slide">
       <img class="hero-slide-bg"
-        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p011_08.jpg"
-        alt="브로큰 발렌타인 콘서트 무대 조명"
+        src="images/hero_stage2.jpg"
+        alt="야외 콘서트 무대 조명"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-      <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 40% 60%, #0a1a2e 0%, #080808 60%);"></div>
+      <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 40% 60%, #1a0e00 0%, #080808 60%);"></div>
     </div>
-    <!-- 슬라이드 3 — 손에손에 뮤직페스타 콘서트 -->
+    <!-- 슬라이드 3 — 콘서트 관객 오렌지 조명 -->
     <div class="hero-slide">
       <img class="hero-slide-bg"
-        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p009_06.jpg"
-        alt="콘서트 무대 조명 디자인"
+        src="images/hero_stage4.jpg"
+        alt="콘서트 관객과 무대 조명"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 70% 30%, #1a1500 0%, #080808 60%);"></div>
     </div>
-    <!-- 슬라이드 4 — 안산 대부광산 미디어파사드 -->
+    <!-- 슬라이드 4 — 컬러풀 콘서트 네온 조명 -->
     <div class="hero-slide">
       <img class="hero-slide-bg"
-        src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p012_04.jpg"
-        alt="안산 대부광산 미디어파사드 야경"
+        src="images/hero_stage1.jpg"
+        alt="컬러풀 콘서트 무대 빔 조명"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="hero-slide-bg-fallback" style="display:none; background: radial-gradient(ellipse at 50% 50%, #001a10 0%, #080808 60%);"></div>
     </div>
@@ -1780,18 +1833,17 @@
     </div>
     <div class="portfolio-filters">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="broadcast">Broadcast</button>
-      <button class="filter-btn" data-filter="concert">Concert</button>
       <button class="filter-btn" data-filter="musical">Musical</button>
+      <button class="filter-btn" data-filter="concert">Concert</button>
       <button class="filter-btn" data-filter="traditional">Traditional</button>
       <button class="filter-btn" data-filter="media">Media Art</button>
     </div>
   </div>
 
   <!-- ─ FEATURED: Netflix XO KITTY ─ -->
-  <div class="featured-project" data-cat="broadcast">
+  <div class="featured-project" data-cat="concert">
     <div class="fp-media">
-      <img class="fp-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_03.jpg" alt="Netflix XO KITTY Season 2 콘서트씬 조명">
+      <img class="fp-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p006_05.jpg" alt="Netflix XO KITTY Season 2 콘서트씬 조명">
       <div class="fp-badge-netflix">NETFLIX</div>
       <div class="fp-year-tag">2025</div>
     </div>
@@ -1865,81 +1917,39 @@
     </div>
   </div>
 
-  <!-- ─ FEATURED: 천개의 파랑 ─ -->
-  <div class="featured-project" data-cat="musical">
-    <div class="fp-media">
-      <img class="fp-img" src="images/cheon.webp" alt="천개의 파랑 예술의전당">
-      <div class="fp-year-tag">2024</div>
-    </div>
-    <div class="fp-info">
-      <div class="fp-cat">Musical · Dance</div>
-      <h3 class="fp-title">천개의<br>파랑</h3>
-      <p class="fp-desc">서울예술단 창작가무극. 예술의전당 CJ토월극장 무대에서 펼쳐진 감성적인 조명 연출. 파랑이라는 색의 다층적인 감정을 빛으로 표현한 작품.</p>
-      <div class="fp-tags">
-        <span class="fp-tag">Musical</span>
-        <span class="fp-tag">예술의전당 CJ토월극장</span>
-        <span class="fp-tag">서울예술단</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ─ FEATURED: 서른즈음에 ─ -->
-  <div class="featured-project fp-reverse" data-cat="musical">
-    <div class="fp-media">
-      <img class="fp-img" src="images/seureu.webp" alt="서른즈음에 일본 공연">
-      <div class="fp-year-tag">2024</div>
-    </div>
-    <div class="fp-info">
-      <div class="fp-cat">Musical · Japan Tour</div>
-      <h3 class="fp-title">서른<br>즈음에</h3>
-      <p class="fp-desc">김광석의 노래를 원작으로 한 창작 뮤지컬의 일본 투어 공연. 한국 정서를 일본 무대에서 구현한 특별한 프로젝트로, 현지 관객에게도 깊은 감동을 전달.</p>
-      <div class="fp-tags">
-        <span class="fp-tag">Musical</span>
-        <span class="fp-tag">Japan Tour</span>
-        <span class="fp-tag">김광석 원작</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ─ FEATURED: 구미산단 페스티벌 ─ -->
-  <div class="featured-project" data-cat="concert">
-    <div class="fp-media">
-      <img class="fp-img" src="images/gumi.webp" alt="구미산단 페스티벌 2025">
-      <div class="fp-year-tag">2025</div>
-    </div>
-    <div class="fp-info">
-      <div class="fp-cat">Concert · Festival · Outdoor</div>
-      <h3 class="fp-title">구미산단<br>페스티벌<br>2025</h3>
-      <p class="fp-desc">구미 야외 대형 무대에서 열린 산업단지 문화축제. 야외 환경의 제약을 극복하고 대규모 조명 시스템으로 낮과 밤 모두 완성도 높은 무대를 연출.</p>
-      <div class="fp-tags">
-        <span class="fp-tag">Outdoor Festival</span>
-        <span class="fp-tag">구미 야외공연</span>
-        <span class="fp-tag">grandMA3</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ─ 필터 가능 그리드 ─ -->
+  <!-- ─ MORE WORKS GRID ─ -->
   <div class="portfolio-grid-sub">
     <div class="section-eyebrow" style="margin-bottom:32px;">More Works</div>
     <div class="portfolio-grid" id="portfolioGrid">
 
-      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('가족뮤지컬 반쪽이전', '국립중앙박물관 극장 용 | 2022.04')">
-        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_03.jpg" alt="뮤지컬 반쪽이전" onerror="this.style.display='none'">
-        <span class="portfolio-year">2022</span>
-        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">가족뮤지컬 반쪽이전</div><div class="portfolio-venue">국립중앙박물관 극장 용</div></div>
+      <div class="portfolio-item" data-cat="concert" onclick="openLightbox('구미산단 페스티벌 2025', '구미 야외무대 | 2025')">
+        <img class="portfolio-img" src="images/gumi.webp" alt="구미산단 페스티벌 2025" onerror="this.style.display='none'">
+        <span class="portfolio-year">2025</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Concert</div><div class="portfolio-title">구미산단 페스티벌 2025</div><div class="portfolio-venue">구미 야외무대</div></div>
       </div>
 
-      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인간탐구생활', '국립정동극장 세실 | 2022.08')">
-        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_03.jpg" alt="뮤지컬 인간탐구생활" onerror="this.style.display='none'">
-        <span class="portfolio-year">2022</span>
-        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 인간탐구생활</div><div class="portfolio-venue">국립정동극장 세실</div></div>
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 나의 대통령', '부천시민회관 대공연장 | 2025')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_04.jpg" alt="뮤지컬 나의 대통령" onerror="this.style.display='none'">
+        <span class="portfolio-year">2025</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 나의 대통령</div><div class="portfolio-venue">부천시민회관 대공연장</div></div>
       </div>
 
-      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인현왕후', '김천대극장 | 2022.09')">
-        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_06.jpg" alt="뮤지컬 인현왕후" onerror="this.style.display='none'">
-        <span class="portfolio-year">2022</span>
-        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 인현왕후</div><div class="portfolio-venue">김천대극장</div></div>
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('천개의 파랑', '예술의전당 CJ토월극장 | 2024')">
+        <img class="portfolio-img" src="images/cheon.webp" alt="천개의 파랑" onerror="this.style.display='none'">
+        <span class="portfolio-year">2024</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">천개의 파랑</div><div class="portfolio-venue">예술의전당 CJ토월극장</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('서른즈음에', '일본 투어 | 2024')">
+        <img class="portfolio-img" src="images/seureu.webp" alt="서른즈음에" onerror="this.style.display='none'">
+        <span class="portfolio-year">2024</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">서른즈음에</div><div class="portfolio-venue">Japan Tour</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 더북', '수원시립공연 정조테마공연장 | 2023')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_03.jpg" alt="뮤지컬 더북" onerror="this.style.display='none'">
+        <span class="portfolio-year">2023</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 더북</div><div class="portfolio-venue">수원시립공연 정조테마공연장</div></div>
       </div>
 
       <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 메밀꽃 필 무렵', '강원도립극단 · 대전시립연정국악원 | 2023')">
@@ -1948,177 +1958,90 @@
         <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 메밀꽃 필 무렵</div><div class="portfolio-venue">강원도립극단 · 대전시립연정국악원</div></div>
       </div>
 
-      <div class="portfolio-item" data-cat="traditional" onclick="openLightbox('전통무용 추는사람 남산', '남산국악당 | 2022')">
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인간탐구생활', '국립정동극장 세실 | 2022')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_03.jpg" alt="뮤지컬 인간탐구생활" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 인간탐구생활</div><div class="portfolio-venue">국립정동극장 세실</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('가족뮤지컬 반쪽이전', '국립중앙박물관 극장 용 | 2022')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_03.jpg" alt="가족뮤지컬 반쪽이전" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">가족뮤지컬 반쪽이전</div><div class="portfolio-venue">국립중앙박물관 극장 용</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('뮤지컬 인현왕후', '김천대극장 | 2022')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_06.jpg" alt="뮤지컬 인현왕후" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">뮤지컬 인현왕후</div><div class="portfolio-venue">김천대극장</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="traditional" onclick="openLightbox('전통무용 추는사람, 남산', '남산국악당 | 2022')">
         <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_02.jpg" alt="전통무용 추는사람 남산" onerror="this.style.display='none'">
         <span class="portfolio-year">2022</span>
         <div class="portfolio-info"><div class="portfolio-cat">Traditional</div><div class="portfolio-title">전통무용 추는사람, 남산</div><div class="portfolio-venue">남산국악당</div></div>
       </div>
 
-
-    </div>
-  </div>
-</section>
-
-<!-- ─── ADDITIONAL WORKS ─── -->
-<section id="additional-works">
-  <div class="addl-header">
-    <div class="section-eyebrow">All Works</div>
-    <h2 class="section-title">ADDITIONAL WORKS</h2>
-    <p class="section-sub">2018년 이후 300개 이상의 무대를 조명해온 에이펙스라이트의 주요 작업 목록입니다.</p>
-  </div>
-  <div class="addl-grid">
-
-    <div class="addl-item" onclick="openLightbox('연극 그날밤','부천아트센터 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_01.jpg" alt="연극 그날밤" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">연극 그날밤</div><div class="addl-venue">부천아트센터</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('가족뮤지컬 반쪽이전','국립중앙박물관 극장 용 공동기획')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_02.jpg" alt="반쪽이전" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">가족뮤지컬 반쪽이전</div><div class="addl-venue">국립중앙박물관 극장 용</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 더북','수원시립공연 정조테마공연장')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_03.jpg" alt="뮤지컬 더북" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 더북</div><div class="addl-venue">수원시립공연 정조테마공연장</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('오페라 뱀이 심장을 먹었어','세종M 씨어터 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_04.jpg" alt="오페라 뱀이 심장을 먹었어" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Opera</div><div class="addl-title">오페라 뱀이 심장을 먹었어</div><div class="addl-venue">세종M 씨어터</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 메밀꽃 필 무렵','강원문화재단 공동기획')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_05.jpg" alt="메밀꽃 필 무렵" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 메밀꽃 필 무렵</div><div class="addl-venue">강원문화재단 공동기획</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 메밀꽃 필 무렵','고창문화의전당 공동기획')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_06.jpg" alt="메밀꽃 2" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 메밀꽃 필 무렵</div><div class="addl-venue">고창문화의전당</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 메밀꽃 필 무렵','대전시립연정국악원 공동기획')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_07.jpg" alt="메밀꽃 3" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 메밀꽃 필 무렵</div><div class="addl-venue">대전시립연정국악원</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('브로큰 발렌타인 FIVE','노들섬 라이브하우스 단독 콘서트')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p011_08.jpg" alt="브로큰 발렌타인" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Concert</div><div class="addl-title">브로큰 발렌타인 단독콘서트 FIVE</div><div class="addl-venue">노들섬 라이브하우스</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('손에손에 뮤직페스타','K-POP Festival 서울 · 부산')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p009_06.jpg" alt="손에손에" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Concert</div><div class="addl-title">손에손에 뮤직페스타 IN 서울·부산</div><div class="addl-venue">노들섬 · KT&G 상상마당</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('한예극장 기억지각 상상표상','한예극장 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_04.jpg" alt="기억지각" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Theatre</div><div class="addl-title">기억지각 상상표상</div><div class="addl-venue">한예극장</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 인현왕후','김천대극장 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_06.jpg" alt="인현왕후" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 인현왕후</div><div class="addl-venue">김천대극장</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('창작연희극 엇장수 허재강','한국콘텐츠진흥원 제작지원')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_06.jpg" alt="엇장수 허재강" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Traditional</div><div class="addl-title">창작연희극 엇장수 허재강</div><div class="addl-venue">한국콘텐츠진흥원</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('음악극 빛소리 수궁가','한국콘텐츠진흥원 제작지원')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_07.jpg" alt="빛소리 수궁가" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Traditional</div><div class="addl-title">음악극 빛소리 수궁가</div><div class="addl-venue">한국콘텐츠진흥원</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('음악극 봄니','전북콘텐츠융합진흥원 제작지원')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_01.jpg" alt="봄니" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">음악극 봄니</div><div class="addl-venue">전북콘텐츠융합진흥원</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('전통무용 추는사람, 남산','남산국악당 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_02.jpg" alt="추는사람 남산" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Traditional</div><div class="addl-title">전통무용 추는사람, 남산</div><div class="addl-venue">남산국악당</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('DANCE TO THE MUSIC 스트릿댄스 페스티벌','조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_02.jpg" alt="스트릿댄스" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Festival</div><div class="addl-title">DANCE TO THE MUSIC</div><div class="addl-venue">스트릿댄스 페스티벌</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('연극 안녕 당신의 순간들','세종시문화관광재단 제작지원')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_03.jpg" alt="안녕 당신의 순간들" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Theatre</div><div class="addl-title">연극 안녕 당신의 순간들</div><div class="addl-venue">세종시문화관광재단</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('가족뮤지컬 반쪽이전','세종예술의전당 공동기획')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_01.jpg" alt="반쪽이전 세종" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">가족뮤지컬 반쪽이전</div><div class="addl-venue">세종예술의전당</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 나의 대통령','부천시민회관 대공연장')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_04.jpg" alt="나의 대통령" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 나의 대통령</div><div class="addl-venue">부천시민회관 대공연장</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('죽은 남자의 휴대폰','한양레퍼토리 씨어터 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_05.jpg" alt="죽은 남자의 휴대폰" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Theatre</div><div class="addl-title">죽은 남자의 휴대폰</div><div class="addl-venue">한양레퍼토리 씨어터</div></div></div>
-
-    <div class="addl-item" onclick="openLightbox('뮤지컬 인간탐구생활','대학로 더굿씨어터 조명디자인')"><img src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_03.jpg" alt="인간탐구생활" onerror="this.parentNode.style.background='#1a1a1a'"><div class="addl-info"><div class="addl-cat">Musical</div><div class="addl-title">뮤지컬 인간탐구생활</div><div class="addl-venue">대학로 더굿씨어터</div></div></div>
-
-  </div>
-
-  <div class="portfolio-more">
-    <p style="font-size:13px; color:var(--gray3); margin-bottom:20px;">위는 300개 이상의 작업 중 일부입니다 — 전체 이력은 문의해주세요</p>
-    <a href="#contact" class="btn-outline">전체 이력 문의하기</a>
-  </div>
-</section>
-
-<!-- ─── ABOUT ─── -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-left">
-      <div class="section-eyebrow">About Us</div>
-      <h2 class="section-title">APEX LITE</h2>
-      <div class="about-highlight">
-        <p class="about-highlight-text">"빛으로 완성하는 무대 — 단순히 조명을 켜는 것이 아니라, 공연의 감동을 설계합니다."</p>
+      <div class="portfolio-item" data-cat="concert" onclick="openLightbox('DANCE TO THE MUSIC', '스트릿댄스 페스티벌')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_02.jpg" alt="DANCE TO THE MUSIC" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Concert</div><div class="portfolio-title">DANCE TO THE MUSIC</div><div class="portfolio-venue">스트릿댄스 페스티벌</div></div>
       </div>
-      <p class="section-sub">에이펙스라이트는 2018년 설립 이후 뮤지컬, 콘서트, 전통공연, 기업행사, 드라마 등 다양한 무대에서 조명 디자인과 렌탈 서비스를 제공해왔습니다. ROBE, Clay Paky, Ayrton 등 세계 최고 수준의 장비와 grandMA3 콘솔 시스템을 기반으로, 소규모 소극장부터 Netflix 드라마 세트까지 어떤 무대도 책임집니다.</p>
-      <div style="margin-top: 48px;">
-        <div class="section-eyebrow" style="margin-bottom: 24px;">Company Timeline</div>
-        <div class="about-history">
-          <div class="history-item">
-            <div class="history-year">2018</div>
-            <div class="history-content"><strong>에이펙스라이트 설립</strong>조명디자인 및 렌탈 전문기업으로 출발</div>
-          </div>
-          <div class="history-item">
-            <div class="history-year">2020</div>
-            <div class="history-content"><strong>공연 조명 본격 확장</strong>무용 "악가무서화", 오페라 "뱀이 심장을 먹었어" 등 세종M씨어터 입성</div>
-          </div>
-          <div class="history-item">
-            <div class="history-year">2022</div>
-            <div class="history-content"><strong>대형 뮤지컬 본격 진입</strong>국립중앙박물관, 정동극장, 세종문화회관 등 주요 공연장 다수 작업</div>
-          </div>
-          <div class="history-item">
-            <div class="history-year">2023</div>
-            <div class="history-content"><strong>ROBE · Ayrton 장비 확충</strong>브로큰 발렌타인 FIVE, 손에손에 뮤직페스타 등 대형 콘서트 조명 담당</div>
-          </div>
-          <div class="history-item">
-            <div class="history-year">2024</div>
-            <div class="history-content"><strong>Netflix XO, KITTY Season 2</strong>드라마 콘서트씬 조명디자인 — 국내외 OTT 첫 크레딧. 안산 대부광산 미디어파사드</div>
-          </div>
-          <div class="history-item">
-            <div class="history-year">2025</div>
-            <div class="history-content"><strong>grandMA3 시스템 도입</strong>뮤지컬 나의 대통령, 파라다이스 아트나이트 2025, 구미산단 페스티벌 등</div>
-          </div>
-        </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('죽은 남자의 휴대폰', '한양레퍼토리 씨어터')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_05.jpg" alt="죽은 남자의 휴대폰" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">죽은 남자의 휴대폰</div><div class="portfolio-venue">한양레퍼토리 씨어터</div></div>
       </div>
-    </div>
-    <div class="about-right">
-      <div class="profile-card">
-        <div class="profile-img-wrap">
-          <img class="profile-img"
-            src="images/inline_13.jpg"
-            alt="이차훈 대표"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-          <div style="display:none; width:100%; height:100%; background: linear-gradient(180deg, #1a1a2e 0%, #0a0a14 100%); align-items:center; justify-content:center;">
-            <div style="text-align:center; color:var(--gray3);">
-              <div style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:var(--gold); letter-spacing:0.05em;">이차훈</div>
-              <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin-top:4px;">Lee Cha Hoon</div>
-            </div>
-          </div>
-        </div>
-        <div class="profile-info">
-          <div class="profile-name">이 차 훈</div>
-          <div class="profile-name-en">Lee Cha Hoon — Lighting Designer</div>
-          <div class="profile-role">
-            서울예술대학교 연극과 졸업 (2009–2012)<br>
-            조명디자인 · 에이펙스라이트 대표
-          </div>
-          <ul class="profile-career-list">
-            <li class="profile-career-item">
-              <span class="career-org">메타(플랫폼창동61) — 조명감독, 무대기술</span>
-              <span class="career-period">2016–2017</span>
-            </li>
-            <li class="profile-career-item">
-              <span class="career-org">인터파크창동씨어터 — 조명감독, 조명디자인</span>
-              <span class="career-period">2017–2018</span>
-            </li>
-            <li class="profile-career-item">
-              <span class="career-org">에이펙스라이트 — 대표, 조명디자인 & 공연제작</span>
-              <span class="career-period">2018–현재</span>
-            </li>
-          </ul>
-          <!-- 조명 디자인 이력 전체 -->
-          <div class="profile-works-toggle" onclick="toggleWorks(this)">
-            <span>조명 디자인 이력 전체 보기</span>
-            <span class="toggle-arrow">▼</span>
-          </div>
-          <div class="profile-works-list" id="profileWorksList" style="display:none;">
-            <div class="works-section-label">LIGHTING DESIGN</div>
-            <div class="works-item"><span class="works-date">2020.06</span><span>무용 "악가무서화" 조명디자인</span></div>
-            <div class="works-item"><span class="works-date">2020.10</span><span>무용 "헬로우" 조명디자인 서초문화재단 기획공연</span></div>
-            <div class="works-item"><span class="works-date">2021.03</span><span>오페라 "뱀이 심장을 먹었어" 조명디자인 세종M씨어터</span></div>
-            <div class="works-item"><span class="works-date">2021.06</span><span>연극 "그날밤" 조명디자인 부천아트센터</span></div>
-            <div class="works-item"><span class="works-date">2022.03</span><span>뮤지컬 "반쪽이전" 조명디자인 국립중앙박물관 용극장</span></div>
-            <div class="works-item"><span class="works-date">2022.05</span><span>뮤지컬 "인간탐구생활" 조명디자인 정동극장</span></div>
-            <div class="works-item"><span class="works-date">2022.06</span><span>뮤지컬 "우주에게 보내는 편지" 조명디자인 정동극장</span></div>
-            <div class="works-item"><span class="works-date">2022.07</span><span>콘서트 "손에손에 뮤직페스타" 노들섬 라이브하우스</span></div>
-            <div class="works-item"><span class="works-date">2022.09</span><span>뮤지컬 "인현왕후" 조명디자인 김천대극장</span></div>
-            <div class="works-item"><span class="works-date">2022.12</span><span>연극 "백조의 노래" 조명디자인 민송아트홀</span></div>
-            <div class="works-item"><span class="works-date">2023.10</span><span>뮤지컬 "더북" 조명디자인 수원시립공연 정조테마공연장</span></div>
-            <div class="works-item"><span class="works-date">2023.11</span><span>콘서트 "브로큰 발렌타인 단독 콘서트 – FIVE" 노들섬 라이브하우스</span></div>
-            <div class="works-item"><span class="works-date">2023.10</span><span>뮤지컬 "아빠의 청춘" 조명디자인 수원시립공연 정테마공연장</span></div>
-            <div class="works-item"><span class="works-date">2024.04</span><span>넷플릭스 드라마 "XO, KITTY" 콘서트 씬 조명디자인</span></div>
-            <div class="works-item"><span class="works-date">2025.07</span><span>뮤지컬 "나의 대통령" 조명디자인 부천시민회관 대공연장</span></div>
-            <div class="works-item"><span class="works-date">2025.08</span><span>무용 "파라다이스 아트 나이트 2025" 파라다이스시티 서울</span></div>
-          </div>
-        </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('연극 안녕 당신의 순간들', '세종시문화관광재단')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_03.jpg" alt="연극 안녕 당신의 순간들" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">연극 안녕 당신의 순간들</div><div class="portfolio-venue">세종시문화관광재단</div></div>
       </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('연극 그날밤', '부천아트센터 | 2021')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_01.jpg" alt="연극 그날밤" onerror="this.style.display='none'">
+        <span class="portfolio-year">2021</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">연극 그날밤</div><div class="portfolio-venue">부천아트센터</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('오페라 뱀이 심장을 먹었어', '세종M씨어터 | 2021')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p016_04.jpg" alt="오페라 뱀이 심장을 먹었어" onerror="this.style.display='none'">
+        <span class="portfolio-year">2021</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">오페라 뱀이 심장을 먹었어</div><div class="portfolio-venue">세종M씨어터</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('기억지각 상상표상', '한예극장')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_04.jpg" alt="기억지각 상상표상" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">기억지각 상상표상</div><div class="portfolio-venue">한예극장</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('음악극 봄니', '전북콘텐츠융합진흥원')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p014_01.jpg" alt="음악극 봄니" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">음악극 봄니</div><div class="portfolio-venue">전북콘텐츠융합진흥원</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="musical" onclick="openLightbox('가족뮤지컬 반쪽이전', '세종예술의전당')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p015_01.jpg" alt="가족뮤지컬 반쪽이전 세종" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Musical</div><div class="portfolio-title">가족뮤지컬 반쪽이전</div><div class="portfolio-venue">세종예술의전당</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="traditional" onclick="openLightbox('창작연희극 엇장수 허재강', '한국콘텐츠진흥원')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_06.jpg" alt="창작연희극 엇장수 허재강" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Traditional</div><div class="portfolio-title">창작연희극 엇장수 허재강</div><div class="portfolio-venue">한국콘텐츠진흥원</div></div>
+      </div>
+
+      <div class="portfolio-item" data-cat="traditional" onclick="openLightbox('음악극 빛소리 수궁가', '한국콘텐츠진흥원')">
+        <img class="portfolio-img" src="images/4_APEX-LITE-Lighting-Portfolio-2507ver_p013_07.jpg" alt="음악극 빛소리 수궁가" onerror="this.style.display='none'">
+        <span class="portfolio-year">2022</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Traditional</div><div class="portfolio-title">음악극 빛소리 수궁가</div><div class="portfolio-venue">한국콘텐츠진흥원</div></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -2532,6 +2455,121 @@
   </div>
 </section>
 
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <!-- 대표 사진 2단 레이아웃 -->
+  <div class="about-photo-grid">
+    <div class="about-photo-panel">
+      <img class="about-photo-img" src="images/ceo_working.jpg" alt="이차훈 대표 현장 작업"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="about-photo-placeholder" style="display:none;">현장 작업 사진</div>
+      <div class="about-photo-overlay">
+        <div class="about-photo-label">On Stage</div>
+        <div class="about-photo-sublabel">Console Operation · Live Performance</div>
+      </div>
+    </div>
+    <div class="about-photo-panel">
+      <img class="about-photo-img" src="images/ceo_profile.jpg" alt="이차훈 대표 프로필"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="about-photo-placeholder" style="display:none;">프로필 사진</div>
+      <div class="about-photo-overlay">
+        <div class="about-photo-label">이 차 훈 · Lee Cha Hoon</div>
+        <div class="about-photo-sublabel">Lighting Designer · CEO</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="section-eyebrow">About Us</div>
+      <h2 class="section-title">APEX LITE</h2>
+      <div class="about-highlight">
+        <p class="about-highlight-text">"빛으로 완성하는 무대 — 단순히 조명을 켜는 것이 아니라, 공연의 감동을 설계합니다."</p>
+      </div>
+      <p class="section-sub">에이펙스라이트는 2018년 설립 이후 뮤지컬, 콘서트, 전통공연, 기업행사, 드라마 등 다양한 무대에서 조명 디자인과 렌탈 서비스를 제공해왔습니다. ROBE, Clay Paky, Ayrton 등 세계 최고 수준의 장비와 grandMA3 콘솔 시스템을 기반으로, 소규모 소극장부터 Netflix 드라마 세트까지 어떤 무대도 책임집니다.</p>
+      <div style="margin-top: 48px;">
+        <div class="section-eyebrow" style="margin-bottom: 24px;">Company Timeline</div>
+        <div class="about-history">
+          <div class="history-item">
+            <div class="history-year">2018</div>
+            <div class="history-content"><strong>에이펙스라이트 설립</strong>조명디자인 및 렌탈 전문기업으로 출발</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2020</div>
+            <div class="history-content"><strong>공연 조명 본격 확장</strong>무용 "악가무서화", 오페라 "뱀이 심장을 먹었어" 등 세종M씨어터 입성</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2022</div>
+            <div class="history-content"><strong>대형 뮤지컬 본격 진입</strong>국립중앙박물관, 정동극장, 세종문화회관 등 주요 공연장 다수 작업</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2023</div>
+            <div class="history-content"><strong>ROBE · Ayrton 장비 확충</strong>브로큰 발렌타인 FIVE, 손에손에 뮤직페스타 등 대형 콘서트 조명 담당</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2024</div>
+            <div class="history-content"><strong>Netflix XO, KITTY Season 2</strong>드라마 콘서트씬 조명디자인 — 국내외 OTT 첫 크레딧. 안산 대부광산 미디어파사드</div>
+          </div>
+          <div class="history-item">
+            <div class="history-year">2025</div>
+            <div class="history-content"><strong>grandMA3 시스템 도입</strong>뮤지컬 나의 대통령, 파라다이스 아트나이트 2025, 구미산단 페스티벌 등</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="profile-card">
+        <div class="profile-info">
+          <div class="profile-name">이 차 훈</div>
+          <div class="profile-name-en">Lee Cha Hoon — Lighting Designer</div>
+          <div class="profile-role">
+            서울예술대학교 연극과 졸업 (2009–2012)<br>
+            조명디자인 · 에이펙스라이트 대표
+          </div>
+          <ul class="profile-career-list">
+            <li class="profile-career-item">
+              <span class="career-org">메타(플랫폼창동61) — 조명감독, 무대기술</span>
+              <span class="career-period">2016–2017</span>
+            </li>
+            <li class="profile-career-item">
+              <span class="career-org">인터파크창동씨어터 — 조명감독, 조명디자인</span>
+              <span class="career-period">2017–2018</span>
+            </li>
+            <li class="profile-career-item">
+              <span class="career-org">에이펙스라이트 — 대표, 조명디자인 & 공연제작</span>
+              <span class="career-period">2018–현재</span>
+            </li>
+          </ul>
+          <!-- 조명 디자인 이력 전체 -->
+          <div class="profile-works-toggle" onclick="toggleWorks(this)">
+            <span>조명 디자인 이력 전체 보기</span>
+            <span class="toggle-arrow">▼</span>
+          </div>
+          <div class="profile-works-list" id="profileWorksList" style="display:none;">
+            <div class="works-section-label">LIGHTING DESIGN</div>
+            <div class="works-item"><span class="works-date">2020.06</span><span>무용 "악가무서화" 조명디자인</span></div>
+            <div class="works-item"><span class="works-date">2020.10</span><span>무용 "헬로우" 조명디자인 서초문화재단 기획공연</span></div>
+            <div class="works-item"><span class="works-date">2021.03</span><span>오페라 "뱀이 심장을 먹었어" 조명디자인 세종M씨어터</span></div>
+            <div class="works-item"><span class="works-date">2021.06</span><span>연극 "그날밤" 조명디자인 부천아트센터</span></div>
+            <div class="works-item"><span class="works-date">2022.03</span><span>뮤지컬 "반쪽이전" 조명디자인 국립중앙박물관 용극장</span></div>
+            <div class="works-item"><span class="works-date">2022.05</span><span>뮤지컬 "인간탐구생활" 조명디자인 정동극장</span></div>
+            <div class="works-item"><span class="works-date">2022.06</span><span>뮤지컬 "우주에게 보내는 편지" 조명디자인 정동극장</span></div>
+            <div class="works-item"><span class="works-date">2022.07</span><span>콘서트 "손에손에 뮤직페스타" 노들섬 라이브하우스</span></div>
+            <div class="works-item"><span class="works-date">2022.09</span><span>뮤지컬 "인현왕후" 조명디자인 김천대극장</span></div>
+            <div class="works-item"><span class="works-date">2022.12</span><span>연극 "백조의 노래" 조명디자인 민송아트홀</span></div>
+            <div class="works-item"><span class="works-date">2023.10</span><span>뮤지컬 "더북" 조명디자인 수원시립공연 정조테마공연장</span></div>
+            <div class="works-item"><span class="works-date">2023.11</span><span>콘서트 "브로큰 발렌타인 단독 콘서트 – FIVE" 노들섬 라이브하우스</span></div>
+            <div class="works-item"><span class="works-date">2023.10</span><span>뮤지컬 "아빠의 청춘" 조명디자인 수원시립공연 정테마공연장</span></div>
+            <div class="works-item"><span class="works-date">2024.04</span><span>넷플릭스 드라마 "XO, KITTY" 콘서트 씬 조명디자인</span></div>
+            <div class="works-item"><span class="works-date">2025.07</span><span>뮤지컬 "나의 대통령" 조명디자인 부천시민회관 대공연장</span></div>
+            <div class="works-item"><span class="works-date">2025.08</span><span>무용 "파라다이스 아트 나이트 2025" 파라다이스시티 서울</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- ─── CONTACT ─── -->
