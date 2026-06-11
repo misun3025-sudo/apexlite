@@ -1152,6 +1152,7 @@
     section { padding: 72px 24px; }
     #stats { padding: 32px 24px; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-title { font-size: clamp(24px, 7vw, 38px); }
     .hero-content { padding: 0 24px; }
     .hero-dots { left: 24px; }
     .hero-scroll { right: 24px; }
@@ -1404,6 +1405,8 @@
     background: var(--black3);
   }
   .fp-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
