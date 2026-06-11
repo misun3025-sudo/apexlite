@@ -1576,6 +1576,10 @@
     transition: opacity 0.2s;
   }
   .profile-works-toggle:hover { opacity: 0.7; }
+  .about-en-toggle { cursor: pointer; font-size: 13px; color: #C9A84C; margin-top: 24px; display: inline-block; }
+  .about-en-content { margin-top: 16px; padding: 24px; border: 1px solid rgba(201,168,76,0.3); border-radius: 8px; }
+  .about-en-content p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+  .about-en-content p:last-child { margin-bottom: 0; }
   .toggle-arrow { font-size: 10px; transition: transform 0.3s; }
   .toggle-arrow.open { transform: rotate(180deg); }
   .profile-works-list {
@@ -2587,7 +2591,17 @@
       <div class="about-highlight">
         <p class="about-highlight-text">빛을 설계하는 사람이, 장비까지 직접 운용합니다.</p>
       </div>
-      <p class="section-sub">에이펙스라이트는 연기 전공자 출신 조명감독이 직접 운영하는 공연조명 전문기업입니다.<br><br>대표 이차훈은 대덕대학교 연기과에서 배우로서 예술의 기본기를 다진 뒤, 서울예술대학교 연극과에서 조명을 전공했습니다. 두 학교에서 조교를 역임하며 무대 현장의 감각을 쌓았고, 뮤지스땅스(2014)와 플랫폼창동61(2016) 두 공간의 개관 단계부터 조명감독으로 참여해 수백 회의 공연을 단독 전담해 왔습니다.<br><br>ROBE, Clay Paky, Ayrton, grandMA 등 유럽 정품 장비를 자체 보유하고 있어, 높은 기술 기준이 요구되는 국공립 무대와 글로벌 OTT 프로젝트에도 흔들림 없이 대응합니다.<br><br>조명을 중심으로, 공연 전체를 설계할 수도 있습니다. 〈XO, Kitty〉를 비롯한 다수의 현장에서 무대·음향·영상 각 분야의 베테랑 전문가들과 오랜 기간 팀을 이루어 통합 운영해 왔습니다. 단일 파트 의뢰는 물론, 공연 전체를 하나의 팀으로 맡기는 턴키 방식까지 유연하게 대응합니다.</p>
+      <p class="section-sub">에이펙스라이트는 연기 전공자 출신 조명감독이 직접 운영하는 <strong>공연조명 전문기업</strong>입니다.<br><br>대표 <strong>이차훈</strong>은 대덕대학교 연기과에서 <strong>배우로서 예술의 기본기</strong>를 다진 뒤, 서울예술대학교 연극과에서 조명을 전공했습니다. 두 학교에서 조교를 역임하며 무대 현장의 감각을 쌓았고, <strong>뮤지스땅스(2014)</strong>와 <strong>플랫폼창동61(2016)</strong> 두 공간의 개관 단계부터 조명감독으로 참여해 <strong>수백 회의 공연을 단독 전담</strong>해 왔습니다.<br><br>ROBE, Clay Paky, Ayrton, grandMA 등 <strong>유럽 정품 장비를 자체 보유</strong>하고 있어, 높은 기술 기준이 요구되는 <strong>국공립 무대와 글로벌 OTT 프로젝트</strong>에도 흔들림 없이 대응합니다.<br><br><strong>조명을 중심으로, 공연 전체를 설계합니다.</strong> 〈XO, Kitty〉를 비롯한 다수의 현장에서 <strong>무대·음향·영상 각 분야의 베테랑 전문가들</strong>과 오랜 기간 팀을 이루어 통합 운영해 왔습니다. 단일 파트 의뢰부터 <strong>공연 전체를 하나의 팀으로 맡기는 턴키 방식</strong>까지, 현장에 맞춰 유연하게 대응합니다.</p>
+      <div class="about-en-full">
+        <p class="about-en-toggle" onclick="toggleAboutEn(this)">Read in English ▼</p>
+        <div class="about-en-content" style="display:none;">
+          <p><strong>Designed by lighting professionals. Operated with our own equipment.</strong></p>
+          <p>ApexLight is a performance lighting company founded and led by a lighting director with a background in acting.</p>
+          <p>CEO <strong>Lee Cha Hoon</strong> trained in the fundamentals of performing arts as an actor at Daeduk University's Department of Acting, then specialized in lighting design at Seoul Institute of the Arts. He served as a teaching assistant at both institutions, and as Lighting Director from the opening of <strong>Mu:zistance (2014)</strong> and <strong>Platform Changdong 61 (2016)</strong>, he has solely overseen the lighting for <strong>hundreds of performances</strong>.</p>
+          <p>With our own inventory of authentic European equipment — including <strong>ROBE, Clay Paky, Ayrton, and grandMA</strong> — we reliably meet the technical standards required for <strong>national venues and global OTT productions</strong>.</p>
+          <p><strong>From lighting, we design the entire production.</strong> On numerous projects including 〈XO, Kitty〉, we have built integrated production teams with <strong>seasoned veterans in stage, sound, and video</strong>, working together over many years. Whether you need a single department or a <strong>full turnkey production under one team</strong>, we adapt flexibly to the demands of each project.</p>
+        </div>
+      </div>
       <div style="margin-top: 48px;">
         <div class="section-eyebrow" style="margin-bottom: 24px;">Company Timeline</div>
         <div class="about-history">
@@ -2653,7 +2667,7 @@
             </li>
             <li class="profile-career-item">
               <span class="career-org">한국예술종합학교 연희과 — 시간제 교수 역임</span>
-              <span class="career-period">강사</span>
+              <span class="career-period"></span>
             </li>
           </ul>
           <!-- 조명 디자인 이력 전체 -->
@@ -2894,6 +2908,14 @@
       });
     });
   });
+
+  /* ABOUT EN TOGGLE */
+  function toggleAboutEn(el) {
+    const content = el.nextElementSibling;
+    const isOpen = content.style.display !== 'none';
+    content.style.display = isOpen ? 'none' : 'block';
+    el.textContent = isOpen ? 'Read in English ▼' : 'Read in English ▲';
+  }
 
   /* WORKS TOGGLE */
   function toggleWorks(el) {
