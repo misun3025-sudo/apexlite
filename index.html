@@ -1766,8 +1766,8 @@
   <a href="#portfolio" onclick="closeMobileMenu()">Projects</a>
   <a href="#equipment" onclick="closeMobileMenu()">Equipment</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
 </div>
 
 <!-- ─── NAV ─── -->
@@ -1778,8 +1778,8 @@
     <li><a href="#portfolio">Projects</a></li>
     <li><a href="#equipment">Equipment</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#contact" class="nav-cta">견적 문의</a>
   <button class="nav-hamburger" onclick="openMobileMenu()" aria-label="메뉴 열기">
@@ -2790,6 +2790,123 @@
 </section>
 
 
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h2 class="section-title">CONTACT</h2>
+      <p class="section-sub">공연 조명 디자인, 장비 렌탈, 견적 문의는 아래로 연락주세요. 빠른 시간 내에 답변드리겠습니다.</p>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value"><a href="mailto:apexlite1@gmail.com">apexlite1@gmail.com</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-value"><a href="tel:010-8701-8119">010-8701-8119</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Instagram</div>
+          <div class="contact-info-value"><a href="https://instagram.com/apexlitedesign" target="_blank">@apexlitedesign</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Services</div>
+          <div class="contact-info-value">조명 디자인 · 장비 렌탈 · 공연 제작</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">성함 *</label>
+            <input class="form-input" type="text" name="from_name" placeholder="홍길동" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">연락처 *</label>
+            <input class="form-input" type="tel" name="phone" placeholder="010-0000-0000" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">이메일</label>
+          <input class="form-input" type="email" name="reply_to" placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">문의 유형 *</label>
+          <select class="form-select" name="inquiry_type" required>
+            <option value="" disabled selected>선택해주세요</option>
+            <option>콘서트 조명 디자인</option>
+            <option>뮤지컬 조명 디자인</option>
+            <option>기업행사 조명</option>
+            <option>장비 렌탈</option>
+            <option>방송 / 드라마 조명</option>
+            <option>기타 문의</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">장소 유형</label>
+          <select class="form-select" name="venue_type">
+            <option value="" disabled selected>선택해주세요</option>
+            <option>실내극장</option>
+            <option>호텔·컨벤션</option>
+            <option>야외</option>
+            <option>스튜디오·방송</option>
+            <option>미정</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">예상 규모</label>
+          <select class="form-select" name="venue_scale">
+            <option value="" disabled selected>선택해주세요</option>
+            <option>100석 이하</option>
+            <option>100~500석</option>
+            <option>500~1,000석</option>
+            <option>1,000석 이상</option>
+            <option>미정</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">필요 범위</label>
+          <select class="form-select" name="service_scope">
+            <option value="" disabled selected>선택해주세요</option>
+            <option>조명만</option>
+            <option>조명+음향</option>
+            <option>조명+무대+트러스</option>
+            <option>통합 패키지</option>
+            <option>미정</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">예산 범위</label>
+          <select class="form-select" name="budget_range">
+            <option value="" disabled selected>선택해주세요</option>
+            <option>500만 미만</option>
+            <option>500~1,500만</option>
+            <option>1,500~5,000만</option>
+            <option>5,000만 이상</option>
+            <option>미정</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">공연명 / 행사명</label>
+          <input class="form-input" type="text" name="show_name" placeholder="공연명 또는 행사명을 입력해주세요">
+        </div>
+        <div class="form-group">
+          <label class="form-label">공연 일정</label>
+          <input class="form-input" type="text" name="show_date" placeholder="예) 2025년 8월 중, 미정">
+        </div>
+        <div class="form-group">
+          <label class="form-label">문의 내용 *</label>
+          <textarea class="form-textarea" name="message" placeholder="공연 규모, 장소, 예산 등 자세한 내용을 입력해주세요." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">문의 보내기</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
 <!-- ─── FAQ ─── -->
 <section id="faq">
   <div class="faq-header">
@@ -3037,122 +3154,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ─── CONTACT ─── -->
-<section id="contact">
-  <div class="contact-grid">
-    <div class="contact-left">
-      <div class="section-eyebrow">Get in Touch</div>
-      <h2 class="section-title">CONTACT</h2>
-      <p class="section-sub">공연 조명 디자인, 장비 렌탈, 견적 문의는 아래로 연락주세요. 빠른 시간 내에 답변드리겠습니다.</p>
-      <div class="contact-info-list">
-        <div class="contact-info-item">
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-value"><a href="mailto:apexlite1@gmail.com">apexlite1@gmail.com</a></div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">Phone</div>
-          <div class="contact-info-value"><a href="tel:010-8701-8119">010-8701-8119</a></div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">Instagram</div>
-          <div class="contact-info-value"><a href="https://instagram.com/apexlitedesign" target="_blank">@apexlitedesign</a></div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">Services</div>
-          <div class="contact-info-value">조명 디자인 · 장비 렌탈 · 공연 제작</div>
-        </div>
-      </div>
-    </div>
-    <div class="contact-right">
-      <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">성함 *</label>
-            <input class="form-input" type="text" name="from_name" placeholder="홍길동" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">연락처 *</label>
-            <input class="form-input" type="tel" name="phone" placeholder="010-0000-0000" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">이메일</label>
-          <input class="form-input" type="email" name="reply_to" placeholder="example@email.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">문의 유형 *</label>
-          <select class="form-select" name="inquiry_type" required>
-            <option value="" disabled selected>선택해주세요</option>
-            <option>콘서트 조명 디자인</option>
-            <option>뮤지컬 조명 디자인</option>
-            <option>기업행사 조명</option>
-            <option>장비 렌탈</option>
-            <option>방송 / 드라마 조명</option>
-            <option>기타 문의</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">장소 유형</label>
-          <select class="form-select" name="venue_type">
-            <option value="" disabled selected>선택해주세요</option>
-            <option>실내극장</option>
-            <option>호텔·컨벤션</option>
-            <option>야외</option>
-            <option>스튜디오·방송</option>
-            <option>미정</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">예상 규모</label>
-          <select class="form-select" name="venue_scale">
-            <option value="" disabled selected>선택해주세요</option>
-            <option>100석 이하</option>
-            <option>100~500석</option>
-            <option>500~1,000석</option>
-            <option>1,000석 이상</option>
-            <option>미정</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">필요 범위</label>
-          <select class="form-select" name="service_scope">
-            <option value="" disabled selected>선택해주세요</option>
-            <option>조명만</option>
-            <option>조명+음향</option>
-            <option>조명+무대+트러스</option>
-            <option>통합 패키지</option>
-            <option>미정</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">예산 범위</label>
-          <select class="form-select" name="budget_range">
-            <option value="" disabled selected>선택해주세요</option>
-            <option>500만 미만</option>
-            <option>500~1,500만</option>
-            <option>1,500~5,000만</option>
-            <option>5,000만 이상</option>
-            <option>미정</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">공연명 / 행사명</label>
-          <input class="form-input" type="text" name="show_name" placeholder="공연명 또는 행사명을 입력해주세요">
-        </div>
-        <div class="form-group">
-          <label class="form-label">공연 일정</label>
-          <input class="form-input" type="text" name="show_date" placeholder="예) 2025년 8월 중, 미정">
-        </div>
-        <div class="form-group">
-          <label class="form-label">문의 내용 *</label>
-          <textarea class="form-textarea" name="message" placeholder="공연 규모, 장소, 예산 등 자세한 내용을 입력해주세요." required></textarea>
-        </div>
-        <button type="submit" class="form-submit" id="submitBtn">문의 보내기</button>
-      </form>
-    </div>
   </div>
 </section>
 
