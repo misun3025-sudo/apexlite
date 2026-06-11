@@ -1627,6 +1627,89 @@
     .addl-info { opacity: 1; transform: none; }
   }
 
+  /* ─── FAQ ─── */
+  #faq { background: var(--black2); }
+  .faq-header { margin-bottom: 64px; }
+  .faq-categories { display: flex; flex-direction: column; gap: 56px; }
+  .faq-category-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid rgba(201,168,76,0.3);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-category-label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .faq-list { display: flex; flex-direction: column; }
+  .faq-item { border-bottom: 0.5px solid var(--black4); }
+  .faq-item:first-child { border-top: 0.5px solid var(--black4); }
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gray1);
+    transition: color 0.2s;
+    user-select: none;
+    list-style: none;
+  }
+  .faq-question:hover { color: var(--white); }
+  .faq-item.open .faq-question { color: var(--gold); }
+  .faq-q-text { flex: 1; line-height: 1.5; }
+  .faq-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    position: relative;
+    border: 0.5px solid var(--black4);
+    transition: border-color 0.25s;
+  }
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    background: var(--gray3);
+    transition: transform 0.3s, opacity 0.3s, background 0.25s;
+  }
+  .faq-icon::before { width: 10px; height: 1px; transform: translate(-50%, -50%); }
+  .faq-icon::after  { width: 1px; height: 10px; transform: translate(-50%, -50%); }
+  .faq-item.open .faq-icon { border-color: var(--gold); }
+  .faq-item.open .faq-icon::before { background: var(--gold); }
+  .faq-item.open .faq-icon::after  { background: var(--gold); transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+  .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+  .faq-item.open .faq-answer { max-height: 500px; }
+  .faq-answer-inner {
+    padding: 0 0 24px 20px;
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.9;
+    border-left: 2px solid var(--gold);
+  }
+  @media (max-width: 768px) {
+    .faq-question { font-size: 14px; padding: 16px 0; }
+    .faq-answer-inner { font-size: 13px; }
+  }
+
 </style>
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -1670,6 +1753,7 @@
   <a href="#portfolio" onclick="closeMobileMenu()">Projects</a>
   <a href="#equipment" onclick="closeMobileMenu()">Equipment</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
 </div>
 
@@ -1681,6 +1765,7 @@
     <li><a href="#portfolio">Projects</a></li>
     <li><a href="#equipment">Equipment</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">견적 문의</a>
@@ -2701,6 +2786,256 @@
 </section>
 
 
+<!-- ─── FAQ ─── -->
+<section id="faq">
+  <div class="faq-header">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-title">자주 묻는 질문</h2>
+  </div>
+
+  <div class="faq-categories">
+
+    <!-- 서비스 범위 -->
+    <div class="faq-category">
+      <div class="faq-category-label">서비스 범위</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">조명 외에 음향과 무대도 함께 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 에이펙스라이트는 조명을 중심으로 음향, 무대, 트러스, LED 시스템까지 통합 운영이 가능합니다. 공연 전체를 하나의 팀으로 맡기는 턴키 방식도 대응합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">기업행사 조명도 진행하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 기업 컨퍼런스, 시상식, 브랜드 런칭 행사, 송년회, 컨벤션 등 기업행사 조명 설계와 현장 운영이 가능합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">학교 축제나 대학 공연도 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 강당 공연부터 운동장 야외 축제까지 규모에 맞는 조명 시스템을 구성해 드립니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">방송 및 OTT 촬영 조명 경험이 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">있습니다. Netflix 드라마 〈XO, Kitty〉 시즌2·3 콘서트씬 조명을 담당했으며, 방송 촬영 환경에 맞는 조명 설계 경험을 보유하고 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">콘서트 조명도 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. K-POP, 밴드, 인디, 클래식 등 장르를 가리지 않고 콘서트 조명 디자인과 현장 오퍼레이팅이 가능합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">뮤지컬 조명 디자인도 하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 국립극장, 정동극장, 예술의전당, 세종문화회관 등 국내 주요 공연장에서 뮤지컬 조명 디자인 경험을 보유하고 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">전통공연이나 국악 공연도 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 국악, 전통무용, 현대무용 등 한국 공연예술 전반에 걸친 조명 디자인 경험이 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">미디어파사드나 야외 설치 조명도 하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 안산 대부광산 미디어파사드 등 야외 대형 프로젝트 경험이 있습니다. 프로젝션 매핑과 조명 설치를 결합한 몰입형 공간 연출이 가능합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">종교 시설 조명 설계도 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 교회 예배당 조명 설계 및 컨설팅 경험이 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">클럽이나 공연장 조명 시스템 구축도 하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 공연장, 클럽 등 상설 공간의 조명 시스템 설계 및 구축 컨설팅이 가능합니다.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 장비 -->
+    <div class="faq-category">
+      <div class="faq-category-label">장비</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">어떤 장비를 보유하고 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">ROBE, Clay Paky, Ayrton, JB Lighting 등 유럽 정품 무빙라이트와 grandMA3·MA2 콘솔을 직접 보유하고 있습니다. 국공립 공연장과 글로벌 OTT 프로젝트 기준을 충족하는 장비입니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">장비 렌탈만 단독으로도 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 디자인 없이 장비 렌탈만 단독으로도 의뢰할 수 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">grandMA 콘솔 운영이 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. grandMA3와 MA2 모두 운영 가능하며, 전문 오퍼레이터가 직접 현장에 투입됩니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">야외 공연에도 대응 가능한 장비인가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 야외 환경에 적합한 IP 등급 장비와 대출력 무빙라이트를 보유하고 있어 야외 페스티벌, 야외 콘서트에도 대응합니다.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 경험 및 신뢰 -->
+    <div class="faq-category">
+      <div class="faq-category-label">경험 및 신뢰</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">국립극장이나 국립오페라단 공연 경험이 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">있습니다. 국립극장, 국립오페라단, 예술의전당, 경기아트센터 등 국공립 공연장에 지속적으로 장비를 공급하고 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Netflix 작업 경험이 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. Netflix 오리지널 드라마 〈XO, Kitty〉 시즌2·3 콘서트씬 조명디자인을 담당했습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">해외 공연 경험이 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">있습니다. 2019년 뮤지컬 〈서른즈음에〉 일본 투어(도쿄·오사카, 1,300석)에서 조명디자인을 담당했습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">대표가 직접 현장에 참여하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 대표 이차훈이 주요 프로젝트에 직접 참여합니다. 공연장 조명감독 출신으로 현장 경험을 바탕으로 한 실질적인 운영을 지향합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">작은 규모 공연도 진행하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 규모와 관계없이 모든 공연에 동일한 기준으로 임합니다. 소극장부터 대형 공연장까지 경험이 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">조명감독 출신이 운영하는 회사인가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 대표 이차훈은 뮤지스땅스, 플랫폼창동61 등 공연장에서 조명감독으로 근무한 현장 출신입니다. 연기 전공 후 서울예술대학교에서 조명을 전공했으며 두 학교 모두 조교를 역임했습니다.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 견적 및 진행 -->
+    <div class="faq-category">
+      <div class="faq-category-label">견적 및 진행</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">견적은 어떻게 산정되나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">공연 장르, 공연장 규모, 필요 장비 사양, 운영 인원, 공연 일수 등을 종합적으로 고려해 산정합니다. 홈페이지 견적 문의 폼이나 전화로 문의해 주시면 빠르게 안내해 드립니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">견적 문의 후 얼마나 빨리 답변을 받을 수 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">영업일 기준 1~2일 내 답변드립니다. 급한 경우 전화 문의를 권장합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">지방 공연도 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 전국 어디든 출장이 가능합니다. 일본 투어 경험이 있을 만큼 지역 제한 없이 대응합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">공연 준비 기간이 얼마나 필요한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">공연 규모와 장르에 따라 다르지만, 여유 있는 협의를 위해 최소 2~4주 전 문의를 권장합니다. 대형 공연은 더 이른 시점에 협의하는 것이 좋습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">계약서 작성이 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 기업 및 기관 발주의 경우 계약서 및 세금계산서 발행이 가능합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">조명 디자인 없이 운영(오퍼레이팅)만 의뢰할 수 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 기존 디자인이 있는 경우 오퍼레이팅만 단독으로 의뢰할 수 있습니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">리허설 및 기술 큐 작업도 포함되나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 기본적으로 리허설 참여와 기술 큐 작업이 포함됩니다. 세부 사항은 계약 시 협의합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">사전 답사나 현장 미팅이 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. 프로젝트 규모에 따라 사전 현장 답사와 미팅을 진행합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">공연 당일 현장 스탭도 지원되나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">네. 공연 규모에 맞는 현장 스탭을 구성해 드립니다. 조명 외 음향, 무대 스탭까지 통합 구성도 가능합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">포트폴리오나 레퍼런스를 더 볼 수 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">홈페이지 Projects 섹션에서 주요 작업을 확인하실 수 있습니다. 추가 자료가 필요하신 경우 이메일로 문의해 주시면 별도로 제공해 드립니다.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ─── CONTACT ─── -->
 <section id="contact">
   <div class="contact-grid">
@@ -2989,6 +3324,14 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeEqModal(); } });
+
+  /* FAQ ACCORDION */
+  function toggleFaq(questionEl) {
+    const item = questionEl.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
 
   /* SCROLL ANIMATIONS */
   const fadeEls = document.querySelectorAll('.fade-up');
