@@ -30,9 +30,12 @@
       "@type": "Organization",
       "@id": "https://apexlight.co.kr/#organization",
       "name": "에이펙스라이트",
-      "alternateName": ["APEX LITE", "㈜에이펙스라이트", "Apex Lite", "Apexlite"],
+      "alternateName": ["APEX LITE", "㈜에이펙스라이트", "Apex Lite", "Apexlite", "온탑라이팅"],
       "url": "https://apexlight.co.kr",
-      "email": "apexlite1@gmail.com"
+      "email": "apexlite1@gmail.com",
+      "sameAs": [
+        "https://moneypin.biz/bizno/detail/6107203174/"
+      ]
     },
     {
       "@type": "Person",
@@ -50,7 +53,21 @@
         "https://www.youtube.com/post/UgkxrrEog6A3ug8-UUQXwnvGhtzca6ITRZzO",
         "https://www.youtube.com/watch?v=Mt7r0xv11CA",
         "https://m.doosanartcenter.com/ko/performance/1601",
-        "https://www.zachsalsman.com/portfolio-item/xo-kitty-s2/"
+        "https://www.zachsalsman.com/portfolio-item/xo-kitty-s2/",
+        "https://www.yes24.com/product/goods/29927658",
+        "https://www.youtube.com/watch?v=oVXkJaRMApU",
+        "https://seoul-news.tistory.com/240",
+        "https://ejmgmbv.yettz.com/bbs/board.php?bo_table=theater2&page=6&wr_id=1101",
+        "https://www.newsa.co.kr/news/articleView.html?idxno=177772",
+        "https://m.doosanartcenter.com/ko/performance/1384",
+        "https://culture.seoul.go.kr/culture/culture/cultureImage/view.do?menuNo=200111&pageIndex=1553&searchCate=&youtubeId=4094",
+        "https://koreadance.kr/board/board_view.php?board_name=d_news&view_id=2992",
+        "https://ewha.biz/548637",
+        "https://blog.naver.com/darkblue888/223639445148",
+        "https://jrtf.or.kr/info/program/?p=program02",
+        "https://www.newdaily.co.kr/site/data/html/2026/06/02/2026060200199.html",
+        "https://www.hansmusicdrama.co.kr/patners",
+        "https://nol.yanolja.com/ticket/meta/artist/%EC%9D%B4%EC%B0%A8%ED%9B%88-fpRhfhp4OSfa1Wq2"
       ]
     }
   ]
@@ -1838,6 +1855,72 @@
     width: fit-content;
   }
   .credits-link-list a:hover { color: var(--white); border-color: var(--gold); }
+  .credits-card.hidden-card { display: none; }
+  #creditsGrid.expanded .credits-card.hidden-card { display: block; }
+  .credits-toggle-wrap { text-align: center; margin-top: 32px; }
+  .credits-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 0.5px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 14px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .credits-toggle-btn:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+  .credits-toggle-arrow { font-size: 10px; transition: transform 0.3s; }
+  .credits-toggle-btn.open .credits-toggle-arrow { transform: rotate(180deg); }
+  .credits-other, .credits-business {
+    max-width: 780px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 0.5px solid var(--black4);
+  }
+  .credits-block-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .credits-other-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .credits-other-list li {
+    font-size: 12.5px;
+    color: var(--gray2);
+    line-height: 1.7;
+  }
+  .credits-other-note {
+    font-size: 11px;
+    color: var(--gray3);
+    line-height: 1.6;
+  }
+  .credits-biz-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .credits-biz-list a {
+    font-size: 12.5px;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--gold-dim);
+    padding-bottom: 2px;
+    width: fit-content;
+    line-height: 1.6;
+  }
+  .credits-biz-list a:hover { color: var(--white); border-color: var(--gold); }
   @media (max-width: 768px) {
     .credits-grid { grid-template-columns: 1fr; }
     .credits-card { padding: 28px 24px 24px; }
@@ -2670,6 +2753,12 @@
         <div class="portfolio-info"><div class="portfolio-cat">Traditional</div><div class="portfolio-title">음악극 빛소리 수궁가</div><div class="portfolio-venue">한국콘텐츠진흥원</div></div>
       </div>
 
+      <div class="portfolio-item" data-cat="concert" onclick="openLightbox('설민석의 한국사 대모험: 영웅의 시간', '코엑스 오디토리움 · 이화여대 삼성홀 외 전국 투어 | 2024–2025')">
+        <img class="portfolio-img" src="images/설민석의-한국사-대모험.jpg" alt="설민석의 한국사 대모험: 영웅의 시간" onerror="this.style.display='none'">
+        <span class="portfolio-year">2024–2025</span>
+        <div class="portfolio-info"><div class="portfolio-cat">Concert · Family</div><div class="portfolio-title">설민석의 한국사 대모험: 영웅의 시간</div><div class="portfolio-venue">코엑스 오디토리움 · 이화여대 삼성홀 외 전국 투어</div></div>
+      </div>
+
     </div>
   </div>
 
@@ -3212,9 +3301,9 @@
           <div class="profile-works-list" id="profileWorksList" style="display:none;">
             <div class="works-section-label">LIGHTING DESIGN</div>
             <div class="works-item"><span class="works-date">2020.06</span><span>무용 "악가무서화" 조명디자인</span></div>
-            <div class="works-item"><span class="works-date">2020.10</span><span>무용 "헬로우" 조명디자인 서초문화재단 기획공연</span></div>
             <div class="works-item"><span class="works-date">2021.03</span><span>오페라 "뱀이 심장을 먹었어" 조명디자인 세종M씨어터</span></div>
             <div class="works-item"><span class="works-date">2021.06</span><span>연극 "그날밤" 조명디자인 부천아트센터</span></div>
+            <div class="works-item"><span class="works-date">2021.10</span><span>무용 "헬로우" 조명감독 서초문화재단 기획공연</span></div>
             <div class="works-item"><span class="works-date">2022.03</span><span>뮤지컬 "반쪽이전" 조명디자인 국립중앙박물관 용극장</span></div>
             <div class="works-item"><span class="works-date">2022.05</span><span>뮤지컬 "인간탐구생활" 조명디자인 정동극장</span></div>
             <div class="works-item"><span class="works-date">2022.06</span><span>뮤지컬 "우주에게 보내는 편지" 조명디자인 정동극장</span></div>
@@ -3244,10 +3333,10 @@
   </div>
 
   <div class="credits-notice">
-    APEX LITE는 공식 문서와 공연 크레딧에서 <strong>에이펙스라이트</strong>, <strong>㈜에이펙스라이트</strong>, <strong>Apex Lite</strong>, <strong>Apexlite</strong>로 표기되어 왔으며 모두 동일한 공연조명 전문기업을 의미합니다. 대표 조명감독은 <strong>이차훈(Lee Cha Hoon, Cha Hoon Lee)</strong>입니다.
+    APEX LITE는 공식 문서와 공연 크레딧에서 <strong>에이펙스라이트</strong>, <strong>㈜에이펙스라이트</strong>, <strong>Apex Lite</strong>, <strong>Apexlite</strong>로 표기되어 왔으며 모두 동일한 공연조명 전문기업을 의미합니다. 대표 조명감독은 <strong>이차훈(Lee Cha Hoon, Cha Hoon Lee)</strong>입니다. APEX LITE(에이펙스라이트)는 2018년 온탑라이팅으로 사업을 시작해 2020년 5월 현재의 상호로 변경했습니다. 2020년 이전 공연 크레딧에는 온탑라이팅으로 표기되어 있으며, 동일한 사업체입니다.
   </div>
 
-  <div class="credits-grid">
+  <div class="credits-grid" id="creditsGrid">
 
     <div class="credits-card">
       <span class="credits-year-label">2015</span>
@@ -3256,6 +3345,76 @@
       <div class="credits-credit-line">이차훈 조명감독 / 뮤지스땅스</div>
       <div class="credits-link-list">
         <a href="https://www.ktv.go.kr/content/view?content_id=505405" target="_blank" rel="noopener">KTV 국민방송 기사·영상 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2016</span>
+      <div class="credits-card-title">악퉁 3.5 앨범</div>
+      <p class="credits-card-desc">밴드 악퉁의 정규 앨범 크레딧에 플랫폼창동61 조명감독으로 기록되어 있습니다.</p>
+      <div class="credits-credit-line">Lighting director 이차훈 양정모 @Platform창동61</div>
+      <div class="credits-link-list">
+        <a href="https://www.yes24.com/product/goods/29927658" target="_blank" rel="noopener">YES24 앨범 정보 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2016</span>
+      <div class="credits-card-title">플랫폼창동61 조명감독 인터뷰</div>
+      <p class="credits-card-desc">플랫폼창동61 공식 소개영상에 조명감독으로 출연해 공연장 조명 업무와 무대기술 교육에 대해 설명했습니다. 영상 화면에 소속과 직무가 함께 표기되어 있습니다.</p>
+      <div class="credits-credit-line">플랫폼창동61 조명감독_이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://www.youtube.com/watch?v=oVXkJaRMApU" target="_blank" rel="noopener">플랫폼창동61 음향조명 아카데미 소개영상 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2016</span>
+      <div class="credits-card-title">연극 〈카라마조프 인셉션〉</div>
+      <p class="credits-card-desc">관악구 공연 기록에 조명 담당으로 기재되어 있습니다.</p>
+      <div class="credits-credit-line">조명 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://seoul-news.tistory.com/240" target="_blank" rel="noopener">공연 안내 기록 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2016</span>
+      <div class="credits-card-title">화학작용 프로젝트 2 〈변신〉 · 극단 창세</div>
+      <p class="credits-card-desc">극단 창세 제작 공연의 조명디자인을 담당했습니다.</p>
+      <div class="credits-credit-line">조명디자인 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://ejmgmbv.yettz.com/bbs/board.php?bo_table=theater2&amp;page=6&amp;wr_id=1101" target="_blank" rel="noopener">극단 창세 공연 기록 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2018</span>
+      <div class="credits-card-title">마술극 〈사라진 마술사〉</div>
+      <p class="credits-card-desc">마술극 공연의 조명감독을 맡았으며 언론 기사에 크레딧이 기록되어 있습니다.</p>
+      <div class="credits-credit-line">조명감독 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://www.newsa.co.kr/news/articleView.html?idxno=177772" target="_blank" rel="noopener">뉴스에이 기사 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2019</span>
+      <div class="credits-card-title">연극 〈이갈리아의 딸들〉 · 두산아트센터</div>
+      <p class="credits-card-desc">조명장비 대여로 참여했습니다. 당시 상호인 온탑라이팅 명의로 기록되어 있습니다.</p>
+      <div class="credits-credit-line">조명대여 온탑라이팅(대표 이차훈)</div>
+      <div class="credits-link-list">
+        <a href="https://m.doosanartcenter.com/ko/performance/1384" target="_blank" rel="noopener">두산아트센터 공식 공연 기록 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2021</span>
+      <div class="credits-card-title">무용 〈HELLO — 당신을 위한 행복의 메시지〉 · 서초문화재단</div>
+      <p class="credits-card-desc">서초문화재단 기획공연의 조명감독을 맡았습니다.</p>
+      <div class="credits-credit-line">조명감독 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://culture.seoul.go.kr/culture/culture/cultureImage/view.do?menuNo=200111&amp;pageIndex=1553&amp;searchCate=&amp;youtubeId=4094" target="_blank" rel="noopener">서울문화포털 공식 기록 →</a>
       </div>
     </div>
 
@@ -3270,7 +3429,7 @@
       </div>
     </div>
 
-    <div class="credits-card">
+    <div class="credits-card hidden-card">
       <span class="credits-year-label">2022</span>
       <div class="credits-card-title">뮤지컬 〈우주에게 보내는 편지〉 · 국립정동극장 세실</div>
       <p class="credits-card-desc">창작ing 쇼케이스 조명디자인을 담당했으며, 공식 프로그램북 14쪽에 기록되어 있습니다.</p>
@@ -3281,7 +3440,7 @@
       </div>
     </div>
 
-    <div class="credits-card">
+    <div class="credits-card hidden-card">
       <span class="credits-year-label">2023</span>
       <div class="credits-card-title">브로큰 발렌타인 단독콘서트 〈FIVE〉</div>
       <p class="credits-card-desc">노들섬 라이브하우스 공연의 조명을 담당했으며, 아티스트 공식 채널에 크레딧이 기록되어 있습니다.</p>
@@ -3302,6 +3461,27 @@
       </div>
     </div>
 
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2024</span>
+      <div class="credits-card-title">제26회 생생 춤 페스티벌 · 강동아트센터 대극장 한강</div>
+      <p class="credits-card-desc">(사)한국현대무용협회가 주최한 안무가 매칭 프로젝트로, 2024년 9월 4일간 진행된 현대무용 페스티벌에서 조명감독을 맡았습니다.</p>
+      <div class="credits-credit-line">조명감독 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://koreadance.kr/board/board_view.php?board_name=d_news&amp;view_id=2992" target="_blank" rel="noopener">한국무용 공식 공연자료 →</a>
+        <a href="https://ewha.biz/548637" target="_blank" rel="noopener">플레이뉴스 기사 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card hidden-card">
+      <span class="credits-year-label">2024</span>
+      <div class="credits-card-title">글림아티스트 릴레이 팬미팅 · 대학로 자유극장</div>
+      <p class="credits-card-desc">㈜글림아티스트가 주최한 릴레이 팬미팅의 조명디자인을 담당했습니다. 최수진·홍성원·강찬·윤은오·김이후 배우가 참여해 2024년 10월 24일부터 28일까지 진행됐습니다.</p>
+      <div class="credits-credit-line">조명디자인 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://blog.naver.com/darkblue888/223639445148" target="_blank" rel="noopener">공연 기록 →</a>
+      </div>
+    </div>
+
     <div class="credits-card">
       <span class="credits-year-label">2024–2025</span>
       <div class="credits-card-title">Netflix 〈XO, KITTY〉 시즌 2·3</div>
@@ -3312,6 +3492,53 @@
       </div>
     </div>
 
+    <div class="credits-card">
+      <span class="credits-year-label">2025</span>
+      <div class="credits-card-title">세계유산 조선왕릉축전 〈성종, 빛을 심다〉</div>
+      <p class="credits-card-desc">국가유산청 세계유산 조선왕릉축전 공연의 조명디자인을 담당했습니다. 2025년 10월 선릉·정릉에서 진행됐습니다.</p>
+      <div class="credits-credit-line">조명디자인 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://jrtf.or.kr/info/program/?p=program02" target="_blank" rel="noopener">조선왕릉축전 공식 프로그램 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card">
+      <span class="credits-year-label">2026</span>
+      <div class="credits-card-title">연극 〈서바이트〉 · 서강대학교 메리홀 소극장</div>
+      <p class="credits-card-desc">극단 마크117 제작 공연의 조명디자인을 담당했습니다.</p>
+      <div class="credits-credit-line">조명디자인 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://www.newdaily.co.kr/site/data/html/2026/06/02/2026060200199.html" target="_blank" rel="noopener">뉴데일리 기사 →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="credits-toggle-wrap">
+    <button class="credits-toggle-btn" id="creditsToggleBtn" type="button" onclick="toggleCredits()">
+      <span>공식 기록 11건 더 보기</span><span class="credits-toggle-arrow">▾</span>
+    </button>
+  </div>
+
+  <div class="credits-other">
+    <div class="credits-block-title">그 외 공연 크레딧 기록</div>
+    <ul class="credits-other-list">
+      <li>2017 연극 〈낙화〉(극단 불의전차) — 조명디자인 이차훈</li>
+      <li>2019 월드뮤직그룹 반디 〈플라스틱 아일랜드〉 — 조명 이차훈</li>
+      <li>2021 움직임연극 〈메이〉(프로젝트 엘) — 조명디자인 이차훈</li>
+      <li>2021 오페라 〈리골레또: 피해자와 피의자 사이〉 — 조명디자인 이차훈</li>
+      <li>2026 연극 〈STAY TUNED : 빈처2026〉(소극장 혜화당) — 조명디자인 이차훈</li>
+    </ul>
+    <p class="credits-other-note">제작단체 공식 SNS 및 공연 기록에 남아 있는 크레딧입니다.</p>
+  </div>
+
+  <div class="credits-business">
+    <div class="credits-block-title">사업자 및 협력 기록</div>
+    <div class="credits-biz-list">
+      <a href="https://moneypin.biz/bizno/detail/6107203174/" target="_blank" rel="noopener">에이펙스라이트(Apex Lite) · 대표자 이차훈 — 사업자정보 →</a>
+      <a href="https://www.hansmusicdrama.co.kr/patners" target="_blank" rel="noopener">한스뮤직드라마 협력업체 — 조명디자인 APEX LITE · 이차훈 감독 →</a>
+      <a href="https://nol.yanolja.com/ticket/meta/artist/%EC%9D%B4%EC%B0%A8%ED%9B%88-fpRhfhp4OSfa1Wq2" target="_blank" rel="noopener">NOL 티켓 아티스트 프로필 — 이차훈 · 조명디자인 →</a>
+    </div>
   </div>
 </section>
 
@@ -3984,6 +4211,16 @@
       list.style.display = 'none';
       arrow.classList.remove('open');
     }
+  }
+
+  /* CREDITS TOGGLE */
+  function toggleCredits() {
+    const grid = document.getElementById('creditsGrid');
+    const btn = document.getElementById('creditsToggleBtn');
+    const label = btn.querySelector('span');
+    const expanded = grid.classList.toggle('expanded');
+    btn.classList.toggle('open', expanded);
+    label.textContent = expanded ? '접기' : '공식 기록 11건 더 보기';
   }
 
   /* EQUIPMENT TABS */
