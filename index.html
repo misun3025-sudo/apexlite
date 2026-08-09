@@ -1932,6 +1932,44 @@
     background: var(--gold);
     color: var(--black);
   }
+  /* 카드 리스트 2줄 포맷 */
+  .venue-card-list-name {
+    display: block;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .venue-card-list-detail {
+    display: block;
+    font-size: 11px;
+    color: var(--gray3);
+    letter-spacing: 0.03em;
+    margin-top: 3px;
+  }
+  .venue-card-emphasis {
+    font-size: 14px;
+    color: var(--gray1);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    font-weight: 400;
+    border-left: 2px solid rgba(201,168,76,0.4);
+    padding-left: 14px;
+  }
+  /* ABOUT 섹션 지표 바 */
+  .about-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 0.5px solid var(--black4);
+    border-bottom: 0.5px solid var(--black4);
+    margin: 0 48px 64px;
+  }
+  .about-metrics .stat-item { padding: 24px 20px; }
+  .about-metrics .stat-num { font-size: 44px; }
+  @media (max-width: 768px) {
+    .about-metrics { grid-template-columns: 1fr; margin: 0 0 56px; }
+    .about-metrics .stat-item { border-right: none; border-bottom: 0.5px solid var(--black4); }
+    .about-metrics .stat-item:last-child { border-bottom: none; }
+  }
   @media (max-width: 768px) {
     #venue-system { padding: 0 0 72px; }
     .venue-img-band { grid-template-columns: 1fr; }
@@ -2899,6 +2937,22 @@
     </div>
   </div>
 
+  <!-- about 지표 바 -->
+  <div class="about-metrics">
+    <div class="stat-item fade-up">
+      <div class="stat-num">3</div>
+      <div class="stat-label">공연장 개관·재개관 참여</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num">300<span class="stat-unit">+</span></div>
+      <div class="stat-label">Productions</div>
+    </div>
+    <div class="stat-item fade-up" style="border-right:none;">
+      <div class="stat-num">2018</div>
+      <div class="stat-label">Since</div>
+    </div>
+  </div>
+
   <div class="about-grid">
     <div class="about-left">
       <div class="section-eyebrow">About Us</div>
@@ -3029,19 +3083,19 @@
       <img src="images/venue-musistance.jpg.png" alt="뮤지스땅스 개관 구축 참여"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="venue-img-placeholder"></div>
-      <div class="venue-img-caption">뮤지스땅스 — 개관 구축 참여</div>
+      <div class="venue-img-caption">뮤지스땅스 — 개관 조명 시스템 구축 참여</div>
     </div>
     <div class="venue-img-item">
       <img src="images/venue-platform61.jpg.png" alt="플랫폼창동61 개관 구축 참여"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="venue-img-placeholder"></div>
-      <div class="venue-img-caption">플랫폼창동61 — 개관 구축 참여</div>
+      <div class="venue-img-caption">플랫폼창동61 — 개관 조명 시스템 구축 참여</div>
     </div>
     <div class="venue-img-item">
       <img src="images/venue-samilro.jpg.png" alt="삼일로창고극장 재개관 구축 참여"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
       <div class="venue-img-placeholder"></div>
-      <div class="venue-img-caption">삼일로창고극장 — 2018.06 재개관 구축 참여</div>
+      <div class="venue-img-caption">삼일로창고극장 — 2018.06 재개관 시스템 구축 참여</div>
     </div>
   </div>
 
@@ -3074,10 +3128,20 @@
       <div class="venue-card-title">TRACK A. VENUE / 공연장 시스템 구축</div>
       <p class="venue-card-desc">공연장은 하나의 작품을 위한 시스템이 아닙니다.<br>장르와 제작 규모가 다른 수많은 공연을 수용할 수 있도록,<br>앞으로 들어올 모든 작품을 기준으로 설계합니다.</p>
       <ul class="venue-card-list">
-        <li>뮤지스땅스 — 2014.09–2016.01 · 개관 구축</li>
-        <li>플랫폼창동61 — 2016.02–2018.04 · 개관 구축</li>
-        <li>삼일로창고극장 — 2018.05–2018.09 · 재개관 구축 (2018.06.22 재개관)</li>
+        <li>
+          <span class="venue-card-list-name">뮤지스땅스 — 2014.09–2016.01</span>
+          <span class="venue-card-list-detail">개관 조명 시스템 구축 참여 / 조명 파트 관리·감독</span>
+        </li>
+        <li>
+          <span class="venue-card-list-name">플랫폼창동61 — 2016.02–2018.04</span>
+          <span class="venue-card-list-detail">개관 조명 시스템 구축 참여 / 조명 파트 관리·감독</span>
+        </li>
+        <li>
+          <span class="venue-card-list-name">삼일로창고극장 — 2018.05–2018.09</span>
+          <span class="venue-card-list-detail">재개관 조명 시스템 구축 참여 / 조명 파트 관리·감독</span>
+        </li>
       </ul>
+      <p class="venue-card-emphasis">세 곳 모두 구축 이후 조명감독으로 상주하며,<br>직접 설계한 시스템으로 공연을 운영했습니다.</p>
       <p class="venue-card-note">이 외 대학로 소극장, 종교시설, 교육기관 공연장 등<br>민간 공간의 조명 시스템 구축 다수.</p>
     </div>
     <div class="venue-card fade-up">
