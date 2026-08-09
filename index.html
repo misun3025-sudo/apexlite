@@ -1727,6 +1727,226 @@
     .faq-answer-inner { font-size: 13px; }
   }
 
+  /* ─── VENUE SYSTEM ─── */
+  #venue-system {
+    background: #0A0A0A;
+    padding: 0 0 100px;
+    border-top: 0.5px solid rgba(201,168,76,0.25);
+  }
+  .venue-img-band {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .venue-img-item {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    background: var(--black3);
+  }
+  .venue-img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: filter 0.4s;
+    display: block;
+  }
+  .venue-img-item:hover img { filter: brightness(1); }
+  .venue-img-placeholder {
+    width: 100%;
+    height: 260px;
+    background: var(--black3);
+  }
+  .venue-img-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+    font-size: 11px;
+    color: var(--gray3);
+    letter-spacing: 0.14em;
+  }
+  .venue-header {
+    padding: 72px 48px 0;
+    margin-bottom: 56px;
+  }
+  .venue-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 48px 72px;
+    border-top: 0.5px solid var(--black4);
+    border-bottom: 0.5px solid var(--black4);
+  }
+  .venue-stat-item {
+    padding: 32px 24px;
+    text-align: center;
+    border-right: 0.5px solid var(--black4);
+  }
+  .venue-stat-item:last-child { border-right: none; }
+  .venue-stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  .venue-stat-label {
+    font-size: 11px;
+    color: var(--gray3);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .venue-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 0 48px 72px;
+  }
+  .venue-card {
+    background: #141414;
+    border-left: 2px solid var(--gold);
+    padding: 36px 32px;
+  }
+  .venue-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .venue-card-desc {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+  .venue-card-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .venue-card-list li {
+    font-size: 13px;
+    color: var(--gray2);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .venue-card-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+  .venue-card-note {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.7;
+    border-top: 0.5px solid var(--black4);
+    padding-top: 14px;
+  }
+  .venue-process {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: var(--black4);
+    margin: 0 48px 72px;
+  }
+  .venue-process-step {
+    background: var(--black2);
+    padding: 28px 22px;
+    border-right: 1px solid var(--black4);
+  }
+  .venue-process-step:last-child { border-right: none; }
+  .venue-process-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .venue-process-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+  .venue-process-desc {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.7;
+  }
+  .venue-types {
+    margin: 0 48px 72px;
+  }
+  .venue-types-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .venue-types-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .venue-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .venue-tag {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    border: 0.5px solid var(--gold-dim);
+    padding: 7px 18px;
+    border-radius: 100px;
+  }
+  .venue-cta-wrap {
+    text-align: center;
+    padding: 0 48px;
+  }
+  .venue-cta-btn {
+    display: inline-block;
+    border: 0.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .venue-cta-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+  @media (max-width: 768px) {
+    #venue-system { padding: 0 0 72px; }
+    .venue-img-band { grid-template-columns: 1fr; }
+    .venue-header { padding: 56px 24px 0; }
+    .venue-stats { grid-template-columns: 1fr; margin: 0 24px 56px; }
+    .venue-stat-item { border-right: none; border-bottom: 0.5px solid var(--black4); }
+    .venue-stat-item:last-child { border-bottom: none; }
+    .venue-cards { grid-template-columns: 1fr; margin: 0 24px 56px; }
+    .venue-process { grid-template-columns: 1fr; margin: 0 24px 56px; }
+    .venue-process-step { border-right: none; border-bottom: 1px solid var(--black4); }
+    .venue-process-step:last-child { border-bottom: none; }
+    .venue-types { margin: 0 24px 56px; }
+    .venue-cta-wrap { padding: 0 24px; }
+  }
+
 </style>
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -1770,6 +1990,7 @@
   <a href="#portfolio" onclick="closeMobileMenu()">Projects</a>
   <a href="#equipment" onclick="closeMobileMenu()">Equipment</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#venue-system" onclick="closeMobileMenu()">Venue System</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
   <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
 </div>
@@ -1782,6 +2003,7 @@
     <li><a href="#portfolio">Projects</a></li>
     <li><a href="#equipment">Equipment</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="#venue-system">Venue System</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
@@ -2684,13 +2906,13 @@
       <div class="about-highlight">
         <p class="about-highlight-text">빛을 설계하는 사람이, 장비까지 직접 운용합니다.</p>
       </div>
-      <p class="section-sub">에이펙스라이트는 연기 전공자 출신 조명감독이 직접 운영하는 <strong>공연조명 전문기업</strong>입니다.<br><br>대표 <strong>이차훈</strong>은 대덕대학교 연기과에서 <strong>배우로서 예술의 기본기</strong>를 다진 뒤, 서울예술대학교 연극과에서 조명을 전공했습니다. 두 학교에서 조교를 역임하며 무대 현장의 감각을 쌓았고, <strong>뮤지스땅스(2014)</strong>와 <strong>플랫폼창동61(2016)</strong> 두 공간의 개관 단계부터 조명감독으로 참여해 <strong>수백 회의 공연을 단독 전담</strong>해 왔습니다.<br><br>ROBE, Clay Paky, Ayrton, grandMA 등 <strong>유럽 정품 장비를 자체 보유</strong>하고 있어, 높은 기술 기준이 요구되는 <strong>국공립 무대와 글로벌 OTT 프로젝트</strong>에도 흔들림 없이 대응합니다.<br><br><strong>조명을 중심으로, 공연 전체를 설계합니다.</strong> 〈XO, Kitty〉를 비롯한 다수의 현장에서 <strong>무대·음향·영상 각 분야의 베테랑 전문가들</strong>과 오랜 기간 팀을 이루어 통합 운영해 왔습니다. 단일 파트 의뢰부터 <strong>공연 전체를 하나의 팀으로 맡기는 턴키 방식</strong>까지, 현장에 맞춰 유연하게 대응합니다.</p>
+      <p class="section-sub">에이펙스라이트는 연기 전공자 출신 조명감독이 직접 운영하는 <strong>공연조명 전문기업</strong>입니다.<br><br>대표 <strong>이차훈</strong>은 대덕대학교 연기과에서 <strong>배우로서 예술의 기본기</strong>를 다진 뒤, 서울예술대학교 연극과에서 조명을 전공했습니다. 두 학교에서 조교를 역임하며 무대 현장의 감각을 쌓았고, <strong>뮤지스땅스(2014)</strong>, <strong>플랫폼창동61(2016)</strong>, <strong>삼일로창고극장(2018)</strong> 세 공간의 개관·재개관 단계부터 조명감독으로 참여해 <strong>수백 회의 공연을 단독 전담</strong>해 왔습니다.<br><br>ROBE, Clay Paky, Ayrton, grandMA 등 <strong>유럽 정품 장비를 자체 보유</strong>하고 있어, 높은 기술 기준이 요구되는 <strong>국공립 무대와 글로벌 OTT 프로젝트</strong>에도 흔들림 없이 대응합니다.<br><br><strong>조명을 중심으로, 공연 전체를 설계합니다.</strong> 〈XO, Kitty〉를 비롯한 다수의 현장에서 <strong>무대·음향·영상 각 분야의 베테랑 전문가들</strong>과 오랜 기간 팀을 이루어 통합 운영해 왔습니다. 단일 파트 의뢰부터 <strong>공연 전체를 하나의 팀으로 맡기는 턴키 방식</strong>까지, 현장에 맞춰 유연하게 대응합니다.</p>
       <div class="about-en-full">
         <p class="about-en-toggle" onclick="toggleAboutEn(this)">Read in English ▼</p>
         <div class="about-en-content" style="display:none;">
           <p><strong>Designed by lighting professionals. Operated with our own equipment.</strong></p>
           <p>ApexLight is a performance lighting company founded and led by a lighting director with a background in acting.</p>
-          <p>CEO <strong>Lee Cha Hoon</strong> trained in the fundamentals of performing arts as an actor at Daeduk University's Department of Acting, then specialized in lighting design at Seoul Institute of the Arts. He served as a teaching assistant at both institutions, and as Lighting Director from the opening of <strong>Mu:zistance (2014)</strong> and <strong>Platform Changdong 61 (2016)</strong>, he has solely overseen the lighting for <strong>hundreds of performances</strong>.</p>
+          <p>CEO <strong>Lee Cha Hoon</strong> trained in the fundamentals of performing arts as an actor at Daeduk University's Department of Acting, then specialized in lighting design at Seoul Institute of the Arts. He served as a teaching assistant at both institutions, and as Lighting Director from the opening of <strong>Mu:zistance (2014)</strong>, <strong>Platform Changdong 61 (2016)</strong>, and the reopening of <strong>Samilro Changgo Theater (2018)</strong>, he has solely overseen the lighting for <strong>hundreds of performances</strong>.</p>
           <p>With our own inventory of authentic European equipment — including <strong>ROBE, Clay Paky, Ayrton, and grandMA</strong> — we reliably meet the technical standards required for <strong>national venues and global OTT productions</strong>.</p>
           <p><strong>From lighting, we design the entire production.</strong> On numerous projects including 〈XO, Kitty〉, we have built integrated production teams with <strong>seasoned veterans in stage, sound, and video</strong>, working together over many years. Whether you need a single department or a <strong>full turnkey production under one team</strong>, we adapt flexibly to the demands of each project.</p>
         </div>
@@ -2755,6 +2977,10 @@
               <span class="career-period">2016.02–2018.04</span>
             </li>
             <li class="profile-career-item">
+              <span class="career-org">삼일로창고극장 — 조명감독 · 재개관 구축 참여</span>
+              <span class="career-period">2018.05–2018.09</span>
+            </li>
+            <li class="profile-career-item">
               <span class="career-org">에이펙스라이트 — 대표 · 조명감독</span>
               <span class="career-period">2018.05–현재</span>
             </li>
@@ -2791,6 +3017,129 @@
       </div>
     </div>
   </div>
+</section>
+
+
+<!-- ─── VENUE SYSTEM ─── -->
+<section id="venue-system">
+
+  <!-- (1) 이미지 밴드 -->
+  <div class="venue-img-band">
+    <div class="venue-img-item">
+      <img src="images/venue-musistance.jpg.png" alt="뮤지스땅스 개관 구축 참여"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <div class="venue-img-placeholder"></div>
+      <div class="venue-img-caption">뮤지스땅스 — 개관 구축 참여</div>
+    </div>
+    <div class="venue-img-item">
+      <img src="images/venue-platform61.jpg.png" alt="플랫폼창동61 개관 구축 참여"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <div class="venue-img-placeholder"></div>
+      <div class="venue-img-caption">플랫폼창동61 — 개관 구축 참여</div>
+    </div>
+    <div class="venue-img-item">
+      <img src="images/venue-samilro.jpg.png" alt="삼일로창고극장 재개관 구축 참여"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <div class="venue-img-placeholder"></div>
+      <div class="venue-img-caption">삼일로창고극장 — 2018.06 재개관 구축 참여</div>
+    </div>
+  </div>
+
+  <!-- (2) 섹션 라벨 + 헤드라인 -->
+  <div class="venue-header">
+    <div class="section-eyebrow">Venue System</div>
+    <h2 class="section-title">공간이 공연장이 되기 전부터,<br>조명 시스템을 설계합니다.</h2>
+    <p class="section-sub">공연장 개관과 재개관부터 상설 전시·미디어 공간까지.<br>공간의 목적과 운영 방식에 맞춰 조명·제어 시스템을 설계하고,<br>실제 운영 가능한 환경까지 구축합니다.</p>
+  </div>
+
+  <!-- (3) 지표 바 -->
+  <div class="venue-stats">
+    <div class="venue-stat-item fade-up">
+      <div class="venue-stat-value">2014~</div>
+      <div class="venue-stat-label">공연장 개관·구축 참여</div>
+    </div>
+    <div class="venue-stat-item fade-up">
+      <div class="venue-stat-value">2017–</div>
+      <div class="venue-stat-label">상설 시스템 운영</div>
+    </div>
+    <div class="venue-stat-item fade-up">
+      <div class="venue-stat-value">2016~</div>
+      <div class="venue-stat-label">타임코드 통합 제어 수행</div>
+    </div>
+  </div>
+
+  <!-- (4) 2트랙 카드 -->
+  <div class="venue-cards">
+    <div class="venue-card fade-up">
+      <div class="venue-card-title">TRACK A. VENUE / 공연장 시스템 구축</div>
+      <p class="venue-card-desc">공연장은 하나의 작품을 위한 시스템이 아닙니다.<br>장르와 제작 규모가 다른 수많은 공연을 수용할 수 있도록,<br>앞으로 들어올 모든 작품을 기준으로 설계합니다.</p>
+      <ul class="venue-card-list">
+        <li>뮤지스땅스 — 2014.09–2016.01 · 개관 구축</li>
+        <li>플랫폼창동61 — 2016.02–2018.04 · 개관 구축</li>
+        <li>삼일로창고극장 — 2018.05–2018.09 · 재개관 구축 (2018.06.22 재개관)</li>
+      </ul>
+      <p class="venue-card-note">이 외 대학로 소극장, 종교시설, 교육기관 공연장 등<br>민간 공간의 조명 시스템 구축 다수.</p>
+    </div>
+    <div class="venue-card fade-up">
+      <div class="venue-card-title">TRACK B. PERMANENT / 상설 쇼 시스템</div>
+      <p class="venue-card-desc">상설 공간은 한 번의 완성보다, 매일 같은 완성도를 반복해야 합니다.<br>정교한 연출과 함께 장기간 안정적으로 반복 운영되는 시스템까지 설계합니다.</p>
+      <ul class="venue-card-list">
+        <li>단양 수양개빛터널 — 쇼컨트롤·미디어·조명·레이저 통합 / 2017–현재 상설 운영</li>
+        <li>국립중앙박물관 〈가야본성 — 칼과 현〉 — 조명·미디어 타임코드 통합 / 약 3개월 무인 반복 운영</li>
+        <li>안산 대부광산 미디어파사드 — 무대 인프라가 없는 자연 지형의 조명 시스템 설계·현장 운영</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- (5) 구축 프로세스 -->
+  <div class="venue-process">
+    <div class="venue-process-step">
+      <div class="venue-process-num">01</div>
+      <div class="venue-process-title">공간 분석</div>
+      <p class="venue-process-desc">공간의 목적·운영 방식·도면·전원·리깅 조건 검토</p>
+    </div>
+    <div class="venue-process-step">
+      <div class="venue-process-num">02</div>
+      <div class="venue-process-title">시스템 설계</div>
+      <p class="venue-process-desc">조명기구·회로·배선·네트워크·DMX Universe 및 제어 구조 설계</p>
+    </div>
+    <div class="venue-process-step">
+      <div class="venue-process-num">03</div>
+      <div class="venue-process-title">통합 제어 구축</div>
+      <p class="venue-process-desc">콘솔·미디어서버·쇼컨트롤러·타임코드 등 필요한 시스템 연동</p>
+    </div>
+    <div class="venue-process-step">
+      <div class="venue-process-num">04</div>
+      <div class="venue-process-title">프로그래밍 &amp; 검증</div>
+      <p class="venue-process-desc">쇼파일 제작·현장 프로그래밍·연동 테스트 및 실제 운영 환경 검증</p>
+    </div>
+    <div class="venue-process-step">
+      <div class="venue-process-num">05</div>
+      <div class="venue-process-title">운영 인계</div>
+      <p class="venue-process-desc">운영 매뉴얼·백업 데이터 제공 및 담당자 교육</p>
+    </div>
+  </div>
+
+  <!-- (6) 대응 공간 유형 -->
+  <div class="venue-types">
+    <div class="venue-types-label">대응 공간 유형</div>
+    <div class="venue-tags-row">
+      <span class="venue-tag">공공 공연장</span>
+      <span class="venue-tag">민간 공연장</span>
+      <span class="venue-tag">복합문화공간</span>
+      <span class="venue-tag">상설 전시공간</span>
+      <span class="venue-tag">미디어아트 공간</span>
+      <span class="venue-tag">기업 전시공간</span>
+      <span class="venue-tag">교육기관 공연장</span>
+      <span class="venue-tag">종교시설</span>
+    </div>
+  </div>
+
+  <!-- (7) CTA -->
+  <div class="venue-cta-wrap">
+    <a href="mailto:apexlite1@gmail.com" class="venue-cta-btn">구축 상담 문의</a>
+  </div>
+
 </section>
 
 
