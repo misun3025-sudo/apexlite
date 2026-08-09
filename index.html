@@ -22,6 +22,40 @@
 <meta name="twitter:description" content="에이펙스라이트는 공연조명, 무대조명, 콘서트, 뮤지컬, 연극 조명디자인 및 장비 렌탈 전문기업입니다.">
 <meta name="twitter:image" content="https://apexlight.co.kr/images/inline_04.jpg">
 <link rel="canonical" href="https://apexlight.co.kr">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://apexlight.co.kr/#organization",
+      "name": "에이펙스라이트",
+      "alternateName": ["APEX LITE", "㈜에이펙스라이트", "Apex Lite", "Apexlite"],
+      "url": "https://apexlight.co.kr",
+      "email": "apexlite1@gmail.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://apexlight.co.kr/#leechahoon",
+      "name": "이차훈",
+      "alternateName": ["Lee Cha Hoon", "Cha Hoon Lee"],
+      "jobTitle": "조명디자이너 · 조명감독",
+      "worksFor": { "@id": "https://apexlight.co.kr/#organization" },
+      "sameAs": [
+        "https://www.ktv.go.kr/content/view?content_id=505405",
+        "https://www.jeongdong.or.kr/portal/bbs/B0000252/view.do?menuNo=200002&nttId=6792",
+        "https://www.jeongdong.or.kr/portal/cmmn/file/fileDown.do?atchFileId=412e6aee4c544a57ae8e32e145742c88c5f2c15ff5fcaea7e3568fbbe4b26e24&bbsId=&fileSn=2&menuNo=200001",
+        "https://www.jeongdong.or.kr/portal/bbs/B0000252/view.do?menuNo=200002&nttId=6905",
+        "https://www.jeongdong.or.kr/portal/cmmn/file/fileDown.do?atchFileId=412e6aee4c544a57ae8e32e145742c882bedb2d2bc6acf827913bd699624fc16&bbsId=&fileSn=2&menuNo=200002",
+        "https://www.youtube.com/post/UgkxrrEog6A3ug8-UUQXwnvGhtzca6ITRZzO",
+        "https://www.youtube.com/watch?v=Mt7r0xv11CA",
+        "https://m.doosanartcenter.com/ko/performance/1601",
+        "https://www.zachsalsman.com/portfolio-item/xo-kitty-s2/"
+      ]
+    }
+  ]
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='15' font-weight='bold' fill='%23C9A84C' font-family='Arial'%3EAL%3C/text%3E%3C/svg%3E">
 <title>에이펙스라이트 | 공연조명·무대조명·조명렌탈 전문기업</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1727,6 +1761,88 @@
     .faq-answer-inner { font-size: 13px; }
   }
 
+  /* ─── CREDITS ─── */
+  #credits {
+    background: #0A0A0A;
+    border-top: 0.5px solid rgba(201,168,76,0.2);
+  }
+  .credits-header { margin-bottom: 32px; }
+  .credits-notice {
+    padding: 20px 24px;
+    border-left: 2px solid var(--gold);
+    background: rgba(201,168,76,0.05);
+    font-size: 13px;
+    color: var(--gray2);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 780px;
+    margin-bottom: 48px;
+  }
+  .credits-notice strong { color: var(--gold); font-weight: 500; }
+  .credits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .credits-card {
+    background: #141414;
+    border-left: 2px solid var(--gold);
+    padding: 32px 32px 28px;
+  }
+  .credits-year-label {
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    border: 0.5px solid var(--gold-dim);
+    border-radius: 100px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+  }
+  .credits-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+  .credits-card-desc {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  .credits-credit-line {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 12.5px;
+    color: var(--gray1);
+    background: rgba(201,168,76,0.07);
+    border: 0.5px solid var(--gold-dim);
+    padding: 12px 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .credits-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .credits-link-list a {
+    font-size: 12.5px;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--gold-dim);
+    padding-bottom: 2px;
+    width: fit-content;
+  }
+  .credits-link-list a:hover { color: var(--white); border-color: var(--gold); }
+  @media (max-width: 768px) {
+    .credits-grid { grid-template-columns: 1fr; }
+    .credits-card { padding: 28px 24px 24px; }
+  }
+
   /* ─── VENUE SYSTEM ─── */
   #venue-system {
     background: #0A0A0A;
@@ -3115,6 +3231,87 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ─── CREDITS ─── -->
+<section id="credits">
+  <div class="credits-header">
+    <div class="section-eyebrow">OFFICIAL RECORDS</div>
+    <h2 class="section-title">공식 기록 및 외부 크레딧</h2>
+    <p class="section-sub">공연 기관과 아티스트가 공식 자료에 기록한 내용입니다.<br>각 항목의 원문을 직접 확인하실 수 있습니다.</p>
+  </div>
+
+  <div class="credits-notice">
+    APEX LITE는 공식 문서와 공연 크레딧에서 <strong>에이펙스라이트</strong>, <strong>㈜에이펙스라이트</strong>, <strong>Apex Lite</strong>, <strong>Apexlite</strong>로 표기되어 왔으며 모두 동일한 공연조명 전문기업을 의미합니다. 대표 조명감독은 <strong>이차훈(Lee Cha Hoon, Cha Hoon Lee)</strong>입니다.
+  </div>
+
+  <div class="credits-grid">
+
+    <div class="credits-card">
+      <span class="credits-year-label">2015</span>
+      <div class="credits-card-title">뮤지스땅스 조명감독</div>
+      <p class="credits-card-desc">KTV 국민방송 〈되살아난 인디 공연…'같이 공연할까요?'〉 인터뷰에 조명감독으로 출연했습니다.</p>
+      <div class="credits-credit-line">이차훈 조명감독 / 뮤지스땅스</div>
+      <div class="credits-link-list">
+        <a href="https://www.ktv.go.kr/content/view?content_id=505405" target="_blank" rel="noopener">KTV 국민방송 기사·영상 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card">
+      <span class="credits-year-label">2022</span>
+      <div class="credits-card-title">뮤지컬 〈인간탐구생활〉 · 국립정동극장 세실</div>
+      <p class="credits-card-desc">조명디자인을 담당했으며, 공식 프로그램북 17쪽에 기록되어 있습니다.</p>
+      <div class="credits-credit-line">조명디자인 이차훈 / 조명팀 ㈜에이펙스라이트</div>
+      <div class="credits-link-list">
+        <a href="https://www.jeongdong.or.kr/portal/bbs/B0000252/view.do?menuNo=200002&amp;nttId=6792" target="_blank" rel="noopener">국립정동극장 공연 페이지 →</a>
+        <a href="https://www.jeongdong.or.kr/portal/cmmn/file/fileDown.do?atchFileId=412e6aee4c544a57ae8e32e145742c88c5f2c15ff5fcaea7e3568fbbe4b26e24&amp;bbsId=&amp;fileSn=2&amp;menuNo=200001" target="_blank" rel="noopener">공식 프로그램북 PDF (17쪽) →</a>
+      </div>
+    </div>
+
+    <div class="credits-card">
+      <span class="credits-year-label">2022</span>
+      <div class="credits-card-title">뮤지컬 〈우주에게 보내는 편지〉 · 국립정동극장 세실</div>
+      <p class="credits-card-desc">창작ing 쇼케이스 조명디자인을 담당했으며, 공식 프로그램북 14쪽에 기록되어 있습니다.</p>
+      <div class="credits-credit-line">조명디자인 이차훈</div>
+      <div class="credits-link-list">
+        <a href="https://www.jeongdong.or.kr/portal/bbs/B0000252/view.do?menuNo=200002&amp;nttId=6905" target="_blank" rel="noopener">국립정동극장 공연 페이지 →</a>
+        <a href="https://www.jeongdong.or.kr/portal/cmmn/file/fileDown.do?atchFileId=412e6aee4c544a57ae8e32e145742c882bedb2d2bc6acf827913bd699624fc16&amp;bbsId=&amp;fileSn=2&amp;menuNo=200002" target="_blank" rel="noopener">공식 프로그램북 PDF (14쪽) →</a>
+      </div>
+    </div>
+
+    <div class="credits-card">
+      <span class="credits-year-label">2023</span>
+      <div class="credits-card-title">브로큰 발렌타인 단독콘서트 〈FIVE〉</div>
+      <p class="credits-card-desc">노들섬 라이브하우스 공연의 조명을 담당했으며, 아티스트 공식 채널에 크레딧이 기록되어 있습니다.</p>
+      <div class="credits-credit-line">조명팀 Apex Lite와 이차훈 감독님<br>Stage Lighting Apex Lite · Cha Hoon Lee</div>
+      <div class="credits-link-list">
+        <a href="https://www.youtube.com/post/UgkxrrEog6A3ug8-UUQXwnvGhtzca6ITRZzO" target="_blank" rel="noopener">브로큰 발렌타인 공식 유튜브 게시물 →</a>
+        <a href="https://www.youtube.com/watch?v=Mt7r0xv11CA" target="_blank" rel="noopener">공식 라이브 영상 크레딧 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card">
+      <span class="credits-year-label">2024</span>
+      <div class="credits-card-title">연극 〈애도의 방식〉 · 두산아트센터 Space111</div>
+      <p class="credits-card-desc">조명장비 임차로 참여했습니다. 조명디자인은 김성구 디자이너가 담당했습니다.</p>
+      <div class="credits-credit-line">조명장비임차 Apexlite(대표 이차훈)</div>
+      <div class="credits-link-list">
+        <a href="https://m.doosanartcenter.com/ko/performance/1601" target="_blank" rel="noopener">두산아트센터 공식 공연 기록 →</a>
+      </div>
+    </div>
+
+    <div class="credits-card">
+      <span class="credits-year-label">2024–2025</span>
+      <div class="credits-card-title">Netflix 〈XO, KITTY〉 시즌 2·3</div>
+      <p class="credits-card-desc">콘서트 장면의 로컬 조명디자인을 담당했습니다. 해외 제작사가 주도하고 외국인 스태프가 다수 참여한 제작 환경에서 촬영감독과 직접 협업해 모터 트러스와 무빙라이트 구성을 설계했습니다.</p>
+      <div class="credits-credit-line">Local Korean Lighting Designer — Lee Cha Hoon</div>
+      <div class="credits-link-list">
+        <a href="https://www.zachsalsman.com/portfolio-item/xo-kitty-s2/" target="_blank" rel="noopener">촬영감독 Zach Salsman 공식 포트폴리오 →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
