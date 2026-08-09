@@ -1797,6 +1797,47 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
   }
+  .venue-role-block {
+    background: #0F0F0F;
+    border-left: 3px solid var(--gold);
+    border-top: 0.5px solid var(--black4);
+    border-bottom: 0.5px solid var(--black4);
+    padding: 44px 48px;
+    margin: 0 48px 72px;
+  }
+  .venue-role-quote {
+    font-size: 22px;
+    color: var(--white);
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .venue-role-desc {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.85;
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  .venue-role-flow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .venue-role-flow-step {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    border: 0.5px solid var(--gold-dim);
+    padding: 8px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .venue-role-flow-arrow {
+    color: var(--gold);
+    font-size: 14px;
+  }
   .venue-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1851,7 +1892,7 @@
   }
   .venue-process {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     background: var(--black4);
     margin: 0 48px 72px;
   }
@@ -1983,6 +2024,10 @@
     .venue-process-step:last-child { border-bottom: none; }
     .venue-types { margin: 0 24px 56px; }
     .venue-cta-wrap { padding: 0 24px; }
+    .venue-role-block { padding: 32px 24px; margin: 0 24px 56px; }
+    .venue-role-quote { font-size: 18px; }
+    .venue-role-flow { flex-direction: column; align-items: flex-start; }
+    .venue-role-flow-arrow { transform: rotate(90deg); align-self: center; }
   }
 
 </style>
@@ -3103,7 +3148,7 @@
   <div class="venue-header">
     <div class="section-eyebrow">Venue System</div>
     <h2 class="section-title">공간이 공연장이 되기 전부터,<br>조명 시스템을 설계합니다.</h2>
-    <p class="section-sub">공연장 개관과 재개관부터 상설 전시·미디어 공간까지.<br>공간의 목적과 운영 방식에 맞춰 조명·제어 시스템을 설계하고,<br>실제 운영 가능한 환경까지 구축합니다.</p>
+    <p class="section-sub">공연장 개관과 재개관부터 상설 전시·미디어 공간까지.<br>공간과 운영 목적에 맞춰 조명·제어 시스템을 검토하고,<br>필요한 경우 시스템 구성과 운용 방식을 설계하며,<br>전문 시공사와 함께 실제 운영 가능한 환경으로 완성합니다.</p>
   </div>
 
   <!-- (3) 지표 바 -->
@@ -3119,6 +3164,23 @@
     <div class="venue-stat-item fade-up">
       <div class="venue-stat-value">2016~</div>
       <div class="venue-stat-label">타임코드 통합 제어 수행</div>
+    </div>
+  </div>
+
+  <!-- (3-1) 역할 정의 블록 -->
+  <div class="venue-role-block fade-up">
+    <p class="venue-role-quote">시공 전에 필요한 것은 장비 목록보다,<br>이 시스템이 실제 공연장에서 어떻게 쓰일지를 판단하는 일입니다.</p>
+    <p class="venue-role-desc">APEX LITE는 공연장 개관·재개관·리뉴얼 과정에서 조명 시스템 사양과 구성 검토,<br>조명 파트 관리·감독, 콘솔 및 제어 시스템 세팅, 개관 이후 운영까지 참여합니다.<br>전기·구조 등 면허가 필요한 시공은 전문 시공사와 협업합니다.</p>
+    <div class="venue-role-flow">
+      <span class="venue-role-flow-step">설계 검토</span>
+      <span class="venue-role-flow-arrow">→</span>
+      <span class="venue-role-flow-step">사양 판단</span>
+      <span class="venue-role-flow-arrow">→</span>
+      <span class="venue-role-flow-step">구축 과정 관리·감독</span>
+      <span class="venue-role-flow-arrow">→</span>
+      <span class="venue-role-flow-step">시스템 세팅</span>
+      <span class="venue-role-flow-arrow">→</span>
+      <span class="venue-role-flow-step">실제 운영</span>
     </div>
   </div>
 
@@ -3181,6 +3243,11 @@
       <div class="venue-process-num">05</div>
       <div class="venue-process-title">운영 인계</div>
       <p class="venue-process-desc">운영 매뉴얼·백업 데이터 제공 및 담당자 교육</p>
+    </div>
+    <div class="venue-process-step">
+      <div class="venue-process-num">06</div>
+      <div class="venue-process-title">개관 이후 운영 지원</div>
+      <p class="venue-process-desc">초기 공연장 운영, 콘솔 및 시스템 세팅 보완, 운영 중 발생하는 기술 이슈 대응</p>
     </div>
   </div>
 
@@ -3406,6 +3473,41 @@
             <span class="faq-icon"></span>
           </div>
           <div class="faq-answer"><p class="faq-answer-inner">네. 공연장, 클럽 등 상설 공간의 조명 시스템 설계 및 구축 컨설팅이 가능합니다.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 공연장 시스템 구축 -->
+    <div class="faq-category">
+      <div class="faq-category-label">공연장 시스템 구축</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">APEX LITE가 직접 전기·구조 시공까지 하나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">전기·구조 등 면허가 필요한 공사는 전문 시공사가 담당합니다. APEX LITE는 조명 시스템의 사양과 구성 검토, 조명 파트 관리·감독, 제어 시스템 세팅과 운영 환경 검수를 담당하며 시공사와 협업합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">이미 선정된 시스템 시공사가 있어도 참여할 수 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">가능합니다. APEX LITE는 시공사를 대체하는 역할이 아니라, 실제 공연장 운영 관점에서 조명 시스템을 검토하고 발주처·설계사·시공사 사이에서 조명 파트의 기술적 판단과 현장 구현을 지원합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">어떤 공간의 조명 시스템 업무가 가능한가요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">공연장 개관·재개관, 공연장 리뉴얼, 복합문화공간, 교육기관 공연장, 전시·공연 공간 등에서 조명 시스템 검토와 구축 과정 관리, 시스템 세팅 및 운영 지원이 가능합니다.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span class="faq-q-text">공연장을 직접 운영해 본 경험이 있나요?</span>
+            <span class="faq-icon"></span>
+          </div>
+          <div class="faq-answer"><p class="faq-answer-inner">있습니다. 대표 이차훈은 뮤지스땅스(2014–2016), 플랫폼창동61(2016–2018), 삼일로창고극장(2018) 세 공간의 개관·재개관 과정에 참여한 뒤 각 공연장에서 조명감독으로 근무하며 실제 공연을 운영했습니다. 구축에 참여한 시스템을 직접 사용해 본 경험이 조명 시스템 검토의 기준이 됩니다.</p></div>
         </div>
       </div>
     </div>
