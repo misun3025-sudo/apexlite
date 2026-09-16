@@ -1,39 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://apexlight.co.kr/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/"/>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://apexlight.co.kr/#services</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://apexlight.co.kr/services/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/services/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/services/equipment-rental/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/services/equipment-rental/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/services/equipment-rental/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/services/equipment-rental/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/international/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/international/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/international/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/international/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/"/>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://apexlight.co.kr/#portfolio</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://apexlight.co.kr/venue-system/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/venue-system/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/venue-system/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/venue-system/"/>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://apexlight.co.kr/#about</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://apexlight.co.kr/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/about/"/>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://apexlight.co.kr/#equipment</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://apexlight.co.kr/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/contact/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://apexlight.co.kr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/services/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/services/equipment-rental/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/services/equipment-rental/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/services/equipment-rental/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/services/equipment-rental/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/international/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/international/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/international/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/international/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/venue-system/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/venue-system/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/venue-system/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/venue-system/"/>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://apexlight.co.kr/#contact</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://apexlight.co.kr/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/about/"/>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/contact/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

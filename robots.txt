@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /_backup/
+Disallow: /copydeck.md
 
 Sitemap: https://apexlight.co.kr/sitemap.xml

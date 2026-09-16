@@ -1,12 +1,21 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/copydeck.md", "destination": "/", "permanent": false },
+    { "source": "/_backup/:path*", "destination": "/", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/sitemap.xml",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml; charset=utf-8"
-        }
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
     }
   ]
