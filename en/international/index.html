@@ -34,43 +34,91 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/en/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="Main menu">
       <ul>
+        <li><a href="/en/">HOME</a></li>
         <li><a href="/en/services/">SERVICES</a></li>
-        <li><a href="/en/international/" aria-current="page">INTERNATIONAL</a></li>
         <li><a href="/en/projects/">PROJECTS</a></li>
-        <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
+        <li><a href="/en/international/" aria-current="page">INTERNATIONAL</a></li>
+        <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
         <li><a href="/en/about/">ABOUT</a></li>
         <li><a href="/en/contact/">CONTACT</a></li>
+        <li><a class="gnb-lang" href="/international/" title="Korean site">KR</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/international/">KR</a><span>/</span><a href="/en/international/" class="active">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/en/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/en/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/en/international/">INTERNATIONAL</a></li>
-    <li><a href="/en/projects/">PROJECTS</a></li>
-    <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/en/about/">ABOUT</a></li>
-    <li><a href="/en/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/international/">KR</a><span>/</span><a href="/en/international/" class="active">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="Close menu"></button>
+  </div>
+  <nav aria-label="Main menu">
+    <ul>
+      <li><a href="/en/">HOME</a></li>
+      <li><a href="/en/services/">SERVICES</a></li>
+      <li><a href="/en/projects/">PROJECTS</a></li>
+      <li><a href="/en/international/" aria-current="page">INTERNATIONAL</a></li>
+      <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
+      <li><a href="/en/about/">ABOUT</a></li>
+      <li><a href="/en/contact/">CONTACT</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/international/">KR</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-international.webp" alt="Japan tour venue stage lighting" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">International</p>
       <h1 class="h-page">International</h1>
+    </div>
+  </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">How it runs</p>
+        <h2 class="h-sec">From brief to show day</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h13l5 5v20a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M19 3v6h6"/><path d="M11 17h10M11 22h7"/></svg></div>
+          <p class="step__n">STEP 1</p>
+          <h3>Brief</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v7"/><path d="M9 11h14l-3 8H12z"/><path d="M12 24h8"/><path d="M14 28h4"/></svg></div>
+          <p class="step__n">STEP 2</p>
+          <h3>Local Equipment</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="4"/><circle cx="22" cy="13" r="3"/><path d="M4 27c0-4 3-7 7-7s7 3 7 7"/><path d="M19 27c0-3 1.6-5.5 4-6"/></svg></div>
+          <p class="step__n">STEP 3</p>
+          <h3>Crew</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="26" height="16" rx="2"/><path d="M8 14v6M14 12v8M20 15v5M26 13v7"/></svg></div>
+          <p class="step__n">STEP 4</p>
+          <h3>Programming</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l3 7h8l-6.5 5 2.5 8-7-4.8L9 24l2.5-8L5 11h8z"/></svg></div>
+          <p class="step__n">STEP 5</p>
+          <h3>Show</h3>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -94,7 +142,7 @@
           </ul>
         </div>
         <div class="split__img">
-          <img src="/images/hero_2.webp" alt="Moving light beams filling a concert stage" loading="lazy" width="738" height="554">
+          <img src="/images/photos/japan-tour.webp" alt="Japan tour venue stage lighting" loading="lazy">
         </div>
       </div>
     </div>
@@ -147,19 +195,29 @@
         <h2 class="h-sec">Proof</h2>
       </div>
       <div class="grid grid-3 reveal" style="margin-top:32px">
-        <article class="pcard"><div class="pcard__body">
+        <article class="pcard">          <div class="pcard__thumb">
+            <img src="/images/photos/xo-kitty.webp" alt="Netflix XO, Kitty concert scene lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
           <p class="pcard__meta">In Korea<span class="yr">2024–2025</span></p>
           <h3 class="pcard__title">XO, Kitty</h3>
           <p class="pcard__role">Concert scene lighting design · Technical team coordination (truss / audio / lighting / set) · Credited in the end titles (APEX LITE / Lee Cha Hoon)</p>
           <span class="pcard__credit">Credited in the end titles</span>
         </div></article>
-        <article class="pcard"><div class="pcard__body">
+        <article class="pcard">          <div class="pcard__thumb">
+            <img src="/images/photos/paradise.webp" alt="Paradise Art Night ballet performance lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
           <p class="pcard__meta">In Korea<span class="yr">Sep 2025</span></p>
           <h3 class="pcard__title">Paradise Art Night 2025</h3>
           <p class="pcard__venue">Paradise City, Incheon</p>
           <p class="pcard__role">Ballet performance lighting design</p>
         </div></article>
-        <article class="pcard"><div class="pcard__body">
+        <article class="pcard">
+          <div class="pcard__thumb">
+            <img src="/images/photos/japan-tour.webp" alt="Japan tour venue stage lighting" loading="lazy">
+          </div>
+          <div class="pcard__body">
           <p class="pcard__meta">Abroad<span class="yr">2019</span></p>
           <h3 class="pcard__title">Japan Tour 2019</h3>
           <p class="pcard__venue">Osaka &amp; Tokyo</p>

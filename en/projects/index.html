@@ -34,45 +34,57 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/en/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="Main menu">
       <ul>
+        <li><a href="/en/">HOME</a></li>
         <li><a href="/en/services/">SERVICES</a></li>
-        <li><a href="/en/international/">INTERNATIONAL</a></li>
         <li><a href="/en/projects/" aria-current="page">PROJECTS</a></li>
-        <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
+        <li><a href="/en/international/">INTERNATIONAL</a></li>
+        <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
         <li><a href="/en/about/">ABOUT</a></li>
         <li><a href="/en/contact/">CONTACT</a></li>
+        <li><a class="gnb-lang" href="/projects/" title="Korean site">KR</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/projects/">KR</a><span>/</span><a href="/en/projects/" class="active">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/en/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/en/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/en/international/">INTERNATIONAL</a></li>
-    <li><a href="/en/projects/">PROJECTS</a></li>
-    <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/en/about/">ABOUT</a></li>
-    <li><a href="/en/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/projects/">KR</a><span>/</span><a href="/en/projects/" class="active">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="Close menu"></button>
+  </div>
+  <nav aria-label="Main menu">
+    <ul>
+      <li><a href="/en/">HOME</a></li>
+      <li><a href="/en/services/">SERVICES</a></li>
+      <li><a href="/en/projects/" aria-current="page">PROJECTS</a></li>
+      <li><a href="/en/international/">INTERNATIONAL</a></li>
+      <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
+      <li><a href="/en/about/">ABOUT</a></li>
+      <li><a href="/en/contact/">CONTACT</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/projects/">KR</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-projects.webp" alt="K-pop concert scene lighting" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">Projects</p>
       <h1 class="h-page">Projects</h1>
       <p class="lead">Every project is listed with the exact role we played.</p>
     </div>
+  </div>
   </section>
 
   <section class="section">
@@ -92,7 +104,10 @@
       <div class="grid grid-3" id="projectGrid">
 
         <article class="pcard" data-cat="international film">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/xo-kitty.webp" alt="Netflix XO, Kitty concert scene lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">International Production · Film·Broadcast<span class="yr">2024–2025</span></p>
             <h3 class="pcard__title">Netflix "XO, Kitty" Seasons 2 &amp; 3</h3>
             <p class="pcard__role">Concert scene lighting design · Technical team coordination (truss / audio / lighting / set) · Credited in the end titles (APEX LITE / Lee Cha Hoon)</p>
@@ -102,7 +117,10 @@
         </article>
 
         <article class="pcard" data-cat="international">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/paradise.webp" alt="Paradise Art Night ballet performance lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">International Production<span class="yr">Sep 2025</span></p>
             <h3 class="pcard__title">Paradise Art Night 2025</h3>
             <p class="pcard__venue">Paradise City, Incheon</p>
@@ -111,7 +129,10 @@
         </article>
 
         <article class="pcard" data-cat="touring">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/japan-tour.webp" alt="Musical 30sai no Koro ni Japan tour stage lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Touring<span class="yr">2019</span></p>
             <h3 class="pcard__title">Musical "30sai no Koro ni" — Japan Tour</h3>
             <p class="pcard__venue">Osaka &amp; Tokyo</p>
@@ -121,7 +142,10 @@
         </article>
 
         <article class="pcard" data-cat="event">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/gumi.webp" alt="Gumi festival outdoor performance lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Event &amp; Performance<span class="yr">Oct 2025</span></p>
             <h3 class="pcard__title">2025 GIF: Gumi Industrial-complex Festival &amp; GIM Media Art Show</h3>
             <p class="pcard__role">Festival total lighting direction. Six media façade works, a 500-drone show and live performances on one former factory site.</p>
@@ -130,11 +154,11 @@
         </article>
 
         <article class="pcard" data-cat="media">
-          <div class="pcard__thumb">
-            <img src="/images/hero_3.webp" alt="Projection mapping on a former quarry cliff" loading="lazy" width="451" height="301">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/daebu.webp" alt="Daebu quarry media façade" loading="lazy">
           </div>
-          <div class="pcard__body">
-            <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2024</span></p>
+<div class="pcard__body">
+            <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2022</span></p>
             <h3 class="pcard__title">Daebu Mine Media Façade, Ansan</h3>
             <p class="pcard__role">Lighting design &amp; on-site operation. Projection mapping on a former quarry cliff with LED costume performance.</p>
             <p class="pcard__note">On natural terrain with no existing structure, power, cabling and rigging positions were planned from scratch, with the projection surface and performer lighting controlled separately.</p>
@@ -142,7 +166,10 @@
         </article>
 
         <article class="pcard" data-cat="media">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/gaya.webp" alt="Gaya Spirit exhibition lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Media Art &amp; Installation<span class="yr">Dec 2019 – Mar 2020</span></p>
             <h3 class="pcard__title">National Museum of Korea — "Gaya Spirit: Iron and Tune"</h3>
             <p class="pcard__venue">National Museum of Korea</p>
@@ -152,7 +179,10 @@
         </article>
 
         <article class="pcard" data-cat="venue">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/suyanggae.webp" alt="Danyang Suyanggae Light Tunnel" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Venue System<span class="yr">2017 —</span></p>
             <h3 class="pcard__title">Danyang Suyanggae Light Tunnel</h3>
             <p class="pcard__venue">Danyang</p>
@@ -162,7 +192,10 @@
         </article>
 
         <article class="pcard" data-cat="venue">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/platform61.webp" alt="Platform Changdong 61 venue lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Venue System<span class="yr">2016–2018</span></p>
             <h3 class="pcard__title">Platform Changdong 61</h3>
             <p class="pcard__role">Lighting director · Opening setup</p>
@@ -170,7 +203,10 @@
         </article>
 
         <article class="pcard" data-cat="venue">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/musistance.webp" alt="Musistance venue lighting" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Venue System<span class="yr">2014–2016</span></p>
             <h3 class="pcard__title">Musistance</h3>
             <p class="pcard__role">Lighting director · Opening setup</p>

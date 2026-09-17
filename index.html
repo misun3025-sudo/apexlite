@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APEX LITE 에이펙스라이트 | 조명 디자인 · 기술 제작 파트너</title>
-<meta name="description" content="공연·콘서트·촬영·브랜드 이벤트부터 국제 프로덕션과 공간 시스템까지. 조명 디자인, 기술 검토, 시스템 설계, 프로그래밍과 현장 운영을 하나의 흐름으로 연결합니다.">
+<title>APEX LITE 에이펙스라이트 | 무대조명 디자인 · 장비 · 현장 운영</title>
+<meta name="description" content="공연·콘서트·촬영·기업행사 조명을 디자인부터 장비, 프로그래밍, 현장 운영까지 한 팀이 책임집니다. Netflix 〈XO, Kitty〉 · 국립극장 · 예술의전당 · 국립중앙박물관.">
 <meta name="author" content="APEX LITE 에이펙스라이트">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://apexlight.co.kr/">
@@ -16,8 +16,8 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://apexlight.co.kr/">
-<meta property="og:title" content="APEX LITE 에이펙스라이트 | 조명 디자인 · 기술 제작 파트너">
-<meta property="og:description" content="공연·콘서트·촬영·브랜드 이벤트부터 국제 프로덕션과 공간 시스템까지. 조명 디자인, 기술 검토, 시스템 설계, 프로그래밍과 현장 운영을 하나의 흐름으로 연결합니다.">
+<meta property="og:title" content="APEX LITE 에이펙스라이트 | 무대조명 디자인 · 장비 · 현장 운영">
+<meta property="og:description" content="공연·콘서트·촬영·기업행사 조명을 디자인부터 장비, 프로그래밍, 현장 운영까지 한 팀이 책임집니다. Netflix 〈XO, Kitty〉 · 국립극장 · 예술의전당 · 국립중앙박물관.">
 <meta property="og:image" content="https://apexlight.co.kr/images/og-apexlite.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='15' font-weight='bold' fill='%23C9A84C' font-family='Arial'%3EAL%3C/text%3E%3C/svg%3E">
@@ -43,322 +43,319 @@
 </script>
 </head>
 <body>
-
 <a class="skip-link" href="#main">본문 바로가기</a>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="주메뉴">
       <ul>
-        <li><a href="/services/">SERVICES</a></li>
-        <li><a href="/international/">INTERNATIONAL</a></li>
-        <li><a href="/projects/">PROJECTS</a></li>
-        <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/" aria-current="page">홈</a></li>
+        <li><a href="/services/">서비스</a></li>
+        <li><a href="/projects/">포트폴리오</a></li>
+        <li><a href="/international/">해외 프로덕션</a></li>
+        <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+        <li><a href="/about/">회사소개</a></li>
+        <li><a href="/contact/">문의</a></li>
+        <li><a class="gnb-lang" href="/en/" title="English site">EN</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/" class="active">KR</a><span>/</span><a href="/en/">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/international/">INTERNATIONAL</a></li>
-    <li><a href="/projects/">PROJECTS</a></li>
-    <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/about/">ABOUT</a></li>
-    <li><a href="/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/" class="active">KR</a><span>/</span><a href="/en/">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="메뉴 닫기"></button>
+  </div>
+  <nav aria-label="주메뉴">
+    <ul>
+      <li><a href="/" aria-current="page">홈</a></li>
+      <li><a href="/services/">서비스</a></li>
+      <li><a href="/projects/">포트폴리오</a></li>
+      <li><a href="/international/">해외 프로덕션</a></li>
+      <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+      <li><a href="/about/">회사소개</a></li>
+      <li><a href="/contact/">문의</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/en/">EN</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
   <!-- 01 HERO -->
   <section class="hero" id="hero">
-    <div class="hero__media">
-      <img src="/images/hero_1.webp" alt="무대 위로 쏟아지는 조명 빔" fetchpriority="high" width="1012" height="1798">
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide active">
+        <img src="/images/photos/hero-01.webp" alt="공연장을 가득 채운 무빙라이트 빔" fetchpriority="high">
+      </div>
+      <div class="hero__slide">
+        <img src="/images/photos/hero-02.webp" alt="K-POP 콘서트 장면 조명" loading="lazy">
+      </div>
+      <div class="hero__slide">
+        <img src="/images/photos/hero-03.webp" alt="콘서트 무대의 컬러 조명" loading="lazy">
+      </div>
+      <div class="hero__slide">
+        <img src="/images/photos/hero-04.webp" alt="폐채석장 암벽 미디어파사드" loading="lazy">
+      </div>
     </div>
     <div class="hero__grad"></div>
-    <div class="hero__beams" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="hero__inner">
       <div class="wrap">
-        <p class="hero__label">Lighting Design &amp; Technical Production</p>
+        <p class="hero__label">무대조명 디자인 · 장비 · 현장 운영</p>
         <h1>빛을 설계하고, 현장에 구현합니다.</h1>
-        <p class="hero__sub">공연·콘서트·촬영·브랜드 이벤트부터 국제 프로덕션과 공간 시스템까지. 조명 디자인, 기술 검토, 시스템 설계, 프로그래밍과 현장 운영을 하나의 흐름으로 연결합니다.</p>
+        <p class="hero__sub">공연·콘서트·촬영·기업행사 조명을 디자인부터 장비, 프로그래밍, 현장 운영까지 한 팀이 책임집니다.</p>
+        <p class="hero__proof">Netflix 〈XO, Kitty〉 · 국립극장 · 예술의전당 · 국립중앙박물관 · 세종문화회관</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="/contact/">프로젝트 문의</a>
-          <a class="btn btn-outline" href="/projects/">포트폴리오 보기</a>
+          <a class="btn btn-primary" href="/projects/">포트폴리오 보기</a>
+          <a class="btn btn-outline" href="/contact/">프로젝트 문의</a>
+        </div>
+        <div class="hero__dots" id="heroDots" role="tablist">
+      <button type="button" role="tab" aria-selected="true" aria-label="슬라이드 1"></button>
+      <button type="button" role="tab" aria-selected="false" aria-label="슬라이드 2"></button>
+      <button type="button" role="tab" aria-selected="false" aria-label="슬라이드 3"></button>
+      <button type="button" role="tab" aria-selected="false" aria-label="슬라이드 4"></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 02 APEX 소개 / 핵심 역할 -->
-  <section class="section" id="intro">
-    <div class="wrap reveal">
-      <p class="label">About APEX LITE</p>
-      <h2 class="h-sec">디자인과 시스템을 아는 회사가, 실제 장비까지 다룹니다.</h2>
-      <p class="body-text">에이펙스라이트는 2018년부터 공연·전시·미디어아트·촬영 현장에서 조명 디자인과 기술 구현을 함께 수행해 왔습니다. 연출 의도를 해석하는 단계부터 플롯, 콘솔 프로그래밍, 타임코드 연동, 현장 운영까지 같은 흐름 안에서 책임집니다.</p>
-    </div>
-    <div class="wrap" style="margin-top:52px">
-      <div class="stats reveal">
-        <div class="stat"><b>2018</b><span>Since</span></div>
-        <div class="stat"><b>300+</b><span>Productions</span></div>
-        <div class="stat"><b>2</b><span>공연장 개관 구축</span></div>
-        <div class="stat"><b>0</b><span>현장 사고</span></div>
+  <!-- 02 SELECTED WORK -->
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Portfolio</p>
+        <h2 class="h-sec">대표 포트폴리오</h2>
       </div>
+      <div class="grid grid-3 reveal">
+      <a class="photo-card" href="/projects/">
+        <img src="/images/photos/xo-kitty.webp" alt="Netflix XO, Kitty 콘서트씬 조명" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+        <span class="photo-card__cat">촬영·OTT</span>
+          <span class="photo-card__title">Netflix 〈XO, Kitty〉 시즌 2·3</span>
+        <span class="photo-card__role">콘서트씬 조명 디자인 · 엔딩 크레딧 등재</span>
+        </span>
+      </a>
+      <a class="photo-card" href="/projects/">
+        <img src="/images/photos/japan-tour.webp" alt="뮤지컬 서른즈음에 일본 투어 무대 조명" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+        <span class="photo-card__cat">해외 투어</span>
+          <span class="photo-card__title">뮤지컬 〈서른즈음에〉 일본 투어</span>
+        <span class="photo-card__role">조명 디자인 · 현장 운영</span>
+        </span>
+      </a>
+      <a class="photo-card" href="/projects/">
+        <img src="/images/photos/gumi.webp" alt="구미산단 페스티벌 야외 공연 조명" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+        <span class="photo-card__cat">페스티벌</span>
+          <span class="photo-card__title">2025 GIF 구미산단 페스티벌</span>
+        <span class="photo-card__role">축제 전체 조명 총괄</span>
+        </span>
+      </a>
+      <a class="photo-card" href="/projects/">
+        <img src="/images/photos/daebu.webp" alt="대부광산 폐채석장 미디어파사드" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+        <span class="photo-card__cat">미디어아트</span>
+          <span class="photo-card__title">안산 대부광산 미디어파사드 (2022)</span>
+        <span class="photo-card__role">조명 디자인 · 현장 운영</span>
+        </span>
+      </a>
+      <a class="photo-card" href="/projects/">
+        <img src="/images/photos/suyanggae.webp" alt="단양 수양개빛터널 상설 조명" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+        <span class="photo-card__cat">상설 설치</span>
+          <span class="photo-card__title">단양 수양개빛터널</span>
+        <span class="photo-card__role">초기 조명 디자인 · 타임코드 시스템</span>
+        </span>
+      </a>
+      <a class="photo-card" href="/projects/">
+        <img src="/images/photos/gaya.webp" alt="가야본성 특별전 전시 조명" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+        <span class="photo-card__cat">전시</span>
+          <span class="photo-card__title">국립중앙박물관 〈가야본성 — 칼과 현〉</span>
+        <span class="photo-card__role">전시 조명 · 타임코드 시스템</span>
+        </span>
+      </a>
+      </div>
+      <a class="sec-more" href="/projects/">전체 포트폴리오 보기 →</a>
     </div>
   </section>
 
-  <!-- 03 SERVICES -->
+  <!-- 03 WHAT WE DO -->
   <section class="section section--alt" id="services">
     <div class="wrap">
-      <div class="reveal">
+      <div class="sec-head reveal">
         <p class="label">Services</p>
-        <h2 class="h-sec">필요한 단계부터, 필요한 만큼.</h2>
-        <p class="lead">디자인만, 기술 검토만, 혹은 기획부터 현장까지. 프로젝트 조건에 맞춰 범위를 구성합니다.</p>
+        <h2 class="h-sec">이런 일을 맡길 수 있습니다</h2>
       </div>
-      <div class="grid grid-3 reveal" style="margin-top:44px">
-        <article class="card"><h3><span class="num">01</span>Lighting Design</h3><p>작품과 공간을 해석해 조명 콘셉트, 플롯, 장비 구성을 설계합니다.</p></article>
-        <article class="card"><h3><span class="num">02</span>Lighting Programming</h3><p>grandMA3/MA2 기반 콘솔 프로그래밍과 타임코드(LTC/MTC) 연동.</p></article>
-        <article class="card"><h3><span class="num">03</span>Technical Advance</h3><p>공연장·현장 조건을 사전 검토해 셋업 전 리스크를 줄입니다.</p></article>
-        <article class="card"><h3><span class="num">04</span>Fixture &amp; System Review</h3><p>기존 장비 구성과 대체 기종을 검토하고 실현 가능한 사양으로 조정합니다.</p></article>
-        <article class="card"><h3><span class="num">05</span>Technical Drawing</h3><p>조명 플롯, 패치 시트, DMX 유니버스 구성표, 리깅 정보 작성.</p></article>
-        <article class="card"><h3><span class="num">06</span>Equipment &amp; Crew Coordination</h3><p>장비와 인력 수급을 규모에 맞게 구성합니다.</p></article>
-        <article class="card"><h3><span class="num">07</span>On-site Lighting Direction</h3><p>설치·포커싱·리허설·본 공연 현장 디렉팅과 오퍼레이팅.</p></article>
-        <article class="card"><h3><span class="num">08</span>Venue Lighting System</h3><p>공연장·전시장·상설 공간의 조명 시스템 설계와 구축.</p></article>
-        <article class="card"><h3><span class="num">09</span>Equipment Rental</h3><p>유럽 정품 무빙라이트와 grandMA 콘솔 보유·렌탈.</p></article>
+      <div class="grid grid-4 reveal">
+      <div class="photo-card">
+        <img src="/images/photos/svc-design.webp" alt="콘서트 무대 조명 디자인" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+          <span class="photo-card__title">조명 디자인</span>
+        <span class="photo-card__role">콘서트 · 뮤지컬 · 촬영 · 기업행사</span>
+        </span>
       </div>
-      <ul class="tags reveal">
-        <li class="tag">콘서트</li><li class="tag">뮤지컬</li><li class="tag">촬영/OTT</li>
-        <li class="tag">기업행사</li><li class="tag">무용</li><li class="tag">미디어아트</li>
-      </ul>
-      <div class="btn-row reveal"><a class="btn btn-outline" href="/services/">서비스 자세히</a></div>
+      <div class="photo-card">
+        <img src="/images/photos/svc-programming.webp" alt="grandMA 콘솔 프로그래밍" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+          <span class="photo-card__title">프로그래밍 &amp; 시스템</span>
+        <span class="photo-card__role">grandMA · 타임코드 · 쇼 컨트롤</span>
+        </span>
+      </div>
+      <div class="photo-card">
+        <img src="/images/photos/svc-equipment.webp" alt="유럽 정품 무빙라이트 장비" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+          <span class="photo-card__title">장비 &amp; 기술팀</span>
+        <span class="photo-card__role">유럽 정품 장비 보유 · 렌탈 · 음향·트러스·LED 통합 구성</span>
+        </span>
+      </div>
+      <div class="photo-card">
+        <img src="/images/photos/svc-onsite.webp" alt="콘서트 현장 조명 운영" loading="lazy">
+        <span class="photo-card__veil"></span>
+        <span class="photo-card__body">
+          <span class="photo-card__title">현장 운영</span>
+        <span class="photo-card__role">설치 · 포커싱 · 리허설 · 오퍼레이팅</span>
+        </span>
+      </div>
+      </div>
+      <a class="sec-more" href="/services/">서비스 전체 보기 →</a>
     </div>
   </section>
 
   <!-- 04 INTERNATIONAL -->
   <section class="section" id="international">
     <div class="wrap">
-      <div class="reveal">
+      <div class="sec-head reveal">
         <p class="label">International</p>
-        <h2 class="h-sec">한국에 오는 프로덕션, 해외로 가는 프로덕션.</h2>
+        <h2 class="h-sec">해외 프로덕션</h2>
       </div>
-      <div class="grid grid-2 reveal" style="margin-top:36px">
-        <article class="card">
-          <h3>In Korea</h3>
-          <p>해외 공연·촬영·행사팀의 한국 프로젝트. 현지 장비와 크루 수급, 기존 플롯의 한국 현장 적용, 프로그래밍과 현장 기술 지원을 맡습니다.</p>
-        </article>
-        <article class="card">
-          <h3>Touring Abroad</h3>
-          <p>한국 콘텐츠의 해외 공연. 현지 장비 검토와 대체 기종 선정, 테크니컬 라이더와 쇼파일 사전 준비로 현지 셋업을 빠르게 진행합니다.</p>
-        </article>
-      </div>
-      <div class="btn-row reveal"><a class="btn btn-outline" href="/international/">International 자세히</a></div>
-    </div>
-  </section>
-
-  <!-- 05 SELECTED INTERNATIONAL PROJECTS -->
-  <section class="section section--alt" id="international-projects">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="label">Selected International Projects</p>
-        <h2 class="h-sec">국제 프로덕션 실적</h2>
-      </div>
-      <div class="grid grid-3 reveal" style="margin-top:40px">
-        <article class="pcard">
-          <div class="pcard__body">
-            <p class="pcard__meta">International Production<span class="yr">2024–2025</span></p>
-            <h3 class="pcard__title">Netflix 〈XO, Kitty〉 시즌 2·3</h3>
-            <p class="pcard__role">콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 · 엔딩 크레딧 등재(에이펙스라이트 / 이차훈)</p>
-            <p class="pcard__note">해외 제작사 주도 환경에서 K-POP 콘서트 장면을 촬영 기준으로 설계했습니다.</p>
-            <span class="pcard__credit">엔딩 크레딧 등재</span>
-          </div>
-        </article>
-        <article class="pcard">
-          <div class="pcard__body">
-            <p class="pcard__meta">International Production<span class="yr">2025.09</span></p>
-            <h3 class="pcard__title">Paradise Art Night 2025</h3>
-            <p class="pcard__venue">파라다이스시티, 인천</p>
-            <p class="pcard__role">발레 공연 조명 디자인</p>
-          </div>
-        </article>
-        <article class="pcard">
-          <div class="pcard__body">
-            <p class="pcard__meta">Touring<span class="yr">2019</span></p>
-            <h3 class="pcard__title">뮤지컬 〈서른즈음에〉 일본 투어</h3>
-            <p class="pcard__venue">오사카 · 도쿄</p>
-            <p class="pcard__role">조명 디자인 · 현장 운영 · 장비 해상 반출 및 통관</p>
-            <p class="pcard__note">1,300석급 극장 2곳. 출국 전 국내에서 시뮬레이션과 사전 프로그래밍을 마치고 현지에서 바로 셋업했습니다.</p>
-          </div>
-        </article>
+      <div class="grid grid-2 reveal">
+      <a class="half-card" href="/international/">
+        <img src="/images/photos/xo-kitty.webp" alt="Netflix XO, Kitty 콘서트씬 조명" loading="lazy">
+        <span class="half-card__veil"></span>
+        <span class="half-card__body">
+          <span class="half-card__h">해외 프로덕션의 한국 프로젝트</span>
+          <span class="half-card__p">해외 공연·촬영·행사가 한국에서 진행될 때, 조명 디자인부터 장비·인력·기술 대응까지.</span>
+          <span class="go">자세히</span>
+        </span>
+      </a>
+      <a class="half-card" href="/international/">
+        <img src="/images/photos/japan-tour.webp" alt="일본 투어 무대 조명" loading="lazy">
+        <span class="half-card__veil"></span>
+        <span class="half-card__body">
+          <span class="half-card__h">한국 공연의 해외 투어</span>
+          <span class="half-card__p">한국에서 만든 조명을 해외 공연장과 현지 장비 환경에 맞게 구현합니다.</span>
+          <span class="go">자세히</span>
+        </span>
+      </a>
       </div>
     </div>
   </section>
 
-  <!-- 06 TECHNICAL ADVANCE & FIXTURE REVIEW -->
-  <section class="section" id="technical-advance">
+  <!-- 05 TECHNICAL EDGE -->
+  <section class="section section--alt" id="why">
     <div class="wrap">
-      <div class="split--media split">
-        <div class="reveal">
-          <p class="label">Technical Advance</p>
-          <h2 class="h-sec">셋업 전에 문제를 먼저 찾습니다.</h2>
-          <p class="body-text">공연장이 바뀌면 장비도, 리깅도, 전원도 달라집니다. 에이펙스라이트는 현장 조건과 보유 장비를 사전에 검토하고, 원래 연출 의도를 유지할 수 있는 대체 기종과 플롯을 제안합니다.</p>
-          <ul class="checklist">
-            <li>공연장 인벤토리 검토</li>
-            <li>대체 기종 선정</li>
-            <li>리깅 포인트·로드 확인</li>
-            <li>전원·DMX 구성</li>
-            <li>쇼파일 변환·사전 프로그래밍</li>
-          </ul>
+      <div class="split reveal">
+        <div class="split__img">
+          <img src="/images/photos/console.webp" alt="grandMA 콘솔에서 쇼파일을 프로그래밍하는 모습" loading="lazy" width="1200" height="673">
         </div>
-        <div class="split__img reveal">
-          <img src="/images/ceo_working.webp" alt="grandMA 콘솔에서 쇼파일을 프로그래밍하는 모습" loading="lazy" width="692" height="388">
+        <div>
+          <p class="label">Why APEX LITE</p>
+          <h2 class="h-sec">빛을 설계하는 사람이 시스템까지 이해합니다.</h2>
+          <div class="tech-list">
+          <div class="tech-item"><h3>디자인 → 프로그래밍</h3><p>디자인한 사람이 grandMA 프로그래밍과 타임코드 연동까지 직접 연결합니다.</p></div>
+          <div class="tech-item"><h3>도면 → 시스템</h3><p>플롯·패치·DMX 구성을 실제 구현 기준으로 설계합니다.</p></div>
+          <div class="tech-item"><h3>장비 → 대체 판단</h3><p>현장 장비가 달라져도 연출 의도를 유지할 수 있는 구성을 판단합니다.</p></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 07 CONCERT · MUSICAL · EVENT · MEDIA ART -->
-  <section class="section section--alt" id="portfolio">
+  <!-- 06 VENUE / RENTAL -->
+  <section class="section" id="equipment">
     <div class="wrap">
-      <div class="reveal">
-        <p class="label">Projects</p>
-        <h2 class="h-sec">무대에서, 무대가 아닌 공간까지.</h2>
-      </div>
-      <div class="grid grid-3 reveal" style="margin-top:40px">
-        <article class="pcard">
-          <div class="pcard__body">
-            <p class="pcard__meta">Event &amp; Performance<span class="yr">2025.10.08–09</span></p>
-            <h3 class="pcard__title">2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼</h3>
-            <p class="pcard__role">축제 전체 조명 총괄 · 미디어파사드 6편, 500대 드론쇼, 공연 동시 운영</p>
-          </div>
-        </article>
-        <article class="pcard">
-          <div class="pcard__thumb">
-            <img src="/images/hero_3.webp" alt="폐채석장 암벽에 투사된 미디어파사드" loading="lazy" width="451" height="301">
-          </div>
-          <div class="pcard__body">
-            <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2024</span></p>
-            <h3 class="pcard__title">안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉</h3>
-            <p class="pcard__role">조명 디자인 · 현장 운영 · 폐채석장 암벽 프로젝션과 LED 퍼포먼스 결합</p>
-          </div>
-        </article>
-        <article class="pcard">
-          <div class="pcard__body">
-            <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2019.12–2020.03</span></p>
-            <h3 class="pcard__title">국립중앙박물관 특별전 〈가야본성 — 칼과 현〉</h3>
-            <p class="pcard__role">전시 조명 · 타임코드 기반 조명·미디어 시스템</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="reveal" style="margin-top:54px">
-        <h3 class="h-sub">Selected Works</h3>
-        <ul class="worklist">
-          <li><b>뮤지컬 〈천개의 파랑〉</b> 예술의전당 CJ토월극장(장비 협력)</li>
-          <li><b>뮤지컬 〈나의 대통령〉</b> 부천시민회관</li>
-          <li><b>〈더북〉</b> 수원시립 정조테마공연장</li>
-          <li><b>연극 〈오이디푸스〉</b> 세종문화회관 M씨어터</li>
-          <li><b>콘서트 〈손에손에 뮤직페스타〉</b> 서울 · 부산</li>
-          <li><b>〈브로큰 발렌타인 FIVE〉</b> 노들섬 라이브하우스</li>
-        </ul>
-      </div>
-
-      <div class="btn-row reveal"><a class="btn btn-outline" href="/projects/">전체 프로젝트</a></div>
-    </div>
-  </section>
-
-  <!-- 08 VENUE SYSTEM -->
-  <section class="section" id="venue-system">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="label">Venue System</p>
-        <h2 class="h-sec">빈 공간에 조명 시스템을 처음부터 만듭니다.</h2>
-        <p class="body-text">공연장 두 곳의 개관 구축과 상설 멀티미디어 공간 설계. 장기간 무인으로 반복 운영되는 시스템까지 다뤄 왔습니다.</p>
-      </div>
-      <div class="grid grid-3 reveal" style="margin-top:36px">
-        <article class="card">
-          <h3>단양 수양개빛터널</h3>
-          <p>2017.7 준공, 현재 상설 운영 · 초기 조명 디자인 및 타임코드 시스템</p>
-        </article>
-        <article class="card">
-          <h3>플랫폼창동61</h3>
-          <p>조명감독 · 개관 구축</p>
-        </article>
-        <article class="card">
-          <h3>뮤지스땅스</h3>
-          <p>조명감독 · 개관 구축</p>
-        </article>
-      </div>
-      <div class="btn-row reveal"><a class="btn btn-outline" href="/venue-system/">Venue System 자세히</a></div>
-    </div>
-  </section>
-
-  <!-- 09 EQUIPMENT & RENTAL CAPABILITY -->
-  <section class="section section--alt" id="equipment">
-    <div class="wrap reveal">
-      <p class="label">Equipment &amp; Rental</p>
-      <h2 class="h-sec">디자인한 대로 구현할 장비를 직접 보유합니다.</h2>
-      <p class="body-text">grandMA3·MA2 콘솔과 ROBE, Ayrton, Clay Paky 등 유럽 정품 장비를 자체 보유·운용합니다. 디자인과 함께 또는 장비 렌탈만 별도로 진행할 수 있습니다.</p>
-      <div class="brands">
-        <span>MA Lighting</span><span>ROBE</span><span>Ayrton</span><span>Clay Paky</span><span>JB Lighting</span>
-      </div>
-      <div class="btn-row"><a class="btn btn-outline" href="/services/equipment-rental/">보유 장비 · 렌탈 문의</a></div>
-    </div>
-  </section>
-
-  <!-- 10 WHY APEX LITE -->
-  <section class="section" id="why">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="label">Why APEX LITE</p>
-        <h2 class="h-sec">왜 에이펙스라이트인가</h2>
-      </div>
-      <div class="why-list reveal">
-        <div class="why-item"><span class="n">01</span><div><h3>설계와 구현이 분리되지 않습니다</h3><p>콘셉트부터 콘솔 프로그래밍·타임코드 연동까지 같은 디자이너가 책임집니다. 도면과 현장 사이에서 의도가 손실되지 않습니다.</p></div></div>
-        <div class="why-item"><span class="n">02</span><div><h3>타임코드 기반 통합 제어</h3><p>영상·음향·조명을 하나의 타임라인으로 동기화하고, 무인 상설 운영 환경까지 설계합니다.</p></div></div>
-        <div class="why-item"><span class="n">03</span><div><h3>무대가 아닌 공간</h3><p>폐터널, 폐채석장, 폐공장, 전시장. 기존 무대 구조가 없는 곳에서 시스템을 처음부터 구축해 왔습니다.</p></div></div>
-        <div class="why-item"><span class="n">04</span><div><h3>작품을 읽는 조명</h3><p>연기 전공 후 조명을 전공한 디자이너가 작품 해석과 기술 구현을 함께 수행합니다.</p></div></div>
-        <div class="why-item"><span class="n">05</span><div><h3>확장 가능한 통합 기술팀</h3><p>음향·무대·트러스·LED까지 통합 기술팀 구성이 가능하며, 프로젝트 규모에 따라 전문 인력을 확장합니다.</p></div></div>
+      <div class="grid grid-2 reveal">
+      <a class="half-card" href="/venue-system/">
+        <img src="/images/photos/suyanggae-ceiling.webp" alt="상설 미디어 천장 조명 설치" loading="lazy">
+        <span class="half-card__veil"></span>
+        <span class="half-card__body">
+          <span class="half-card__h">공간 조명 시스템</span>
+          <span class="half-card__p">공연장·전시장·상설 공간의 조명 시스템을 처음부터 설계합니다.</span>
+          <span class="go">자세히</span>
+        </span>
+      </a>
+      <a class="half-card" href="/services/equipment-rental/">
+        <img src="/images/photos/svc-equipment.webp" alt="유럽 정품 무빙라이트 장비" loading="lazy">
+        <span class="half-card__veil"></span>
+        <span class="half-card__body">
+          <span class="half-card__h">보유 장비 · 렌탈</span>
+          <span class="half-card__p">grandMA · ROBE · Ayrton · Clay Paky 유럽 정품 장비 보유</span>
+          <span class="go">자세히</span>
+        </span>
+      </a>
       </div>
     </div>
   </section>
 
-  <!-- 11 ABOUT -->
+  <!-- 07 ABOUT -->
   <section class="section section--alt" id="about">
     <div class="wrap">
-      <div class="split--media split">
-        <div class="reveal">
-          <p class="label">About</p>
-          <p class="body-text">에이펙스라이트는 조명 디자인과 기술 제작을 함께 수행하는 조명 전문 파트너입니다.</p>
-          <h3 class="h-sub" style="margin-top:28px">이차훈</h3>
-          <p class="profile__role">조명디자이너 · 에이펙스라이트 대표</p>
-          <p class="body-text">공연장 두 곳의 개관 구축을 거쳐 2018년 에이펙스라이트를 설립했습니다.</p>
-          <div class="btn-row"><a class="btn btn-outline" href="/about/">회사 소개</a></div>
+      <div class="stats reveal">
+        <div class="stat"><b>2018</b><span>Since</span></div>
+        <div class="stat"><b>300+</b><span>Productions</span></div>
+        <div class="stat"><b>2</b><span>공연장 개관 구축</span></div>
+        <div class="stat"><b>0</b><span>현장 사고</span></div>
+      </div>
+      <div class="split split--start reveal" style="margin-top:56px">
+        <div class="founder">
+          <div class="founder__img">
+            <img src="/images/photos/profile.webp" alt="에이펙스라이트 대표 조명디자이너 이차훈" loading="lazy" width="800" height="800">
+          </div>
+          <div>
+            <p class="founder__name">이차훈</p>
+            <p class="founder__role">조명디자이너 · 에이펙스라이트 대표</p>
+            <p class="body-text">공연장 두 곳의 개관 구축을 거쳐 2018년 에이펙스라이트를 설립했습니다.</p>
+          </div>
         </div>
-        <div class="split__img reveal">
-          <img src="/images/profile_2.webp" alt="에이펙스라이트 대표 조명디자이너 이차훈" loading="lazy" width="900" height="900">
+        <div>
+          <p class="label">About</p>
+          <ul class="client-wall">
+          <li>국립극장</li>
+          <li>국립오페라단</li>
+          <li>예술의전당</li>
+          <li>국립중앙박물관</li>
+          <li>세종문화회관</li>
+          <li>국립정동극장</li>
+          <li>경기아트센터</li>
+          <li>부천아트센터</li>
+          <li>한국콘텐츠진흥원</li>
+          <li>파라다이스시티</li>
+          <li>Netflix</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12 PROJECT INQUIRY -->
   <section class="cta-band" id="contact">
     <div class="wrap reveal">
-      <p class="label">Project Inquiry</p>
       <h2>프로젝트를 이야기해 주세요.</h2>
-      <p>확정되지 않은 단계여도 괜찮습니다. 일정, 장소, 필요한 범위만 알려주시면 가능한 구성을 제안드립니다.</p>
-      <div class="btn-row"><a class="btn btn-primary" href="/contact/">문의하기</a></div>
+      <p>확정 전 단계여도 괜찮습니다.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="/contact/">프로젝트 문의</a></div>
     </div>
   </section>
 

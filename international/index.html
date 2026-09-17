@@ -34,44 +34,92 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="주메뉴">
       <ul>
-        <li><a href="/services/">SERVICES</a></li>
-        <li><a href="/international/" aria-current="page">INTERNATIONAL</a></li>
-        <li><a href="/projects/">PROJECTS</a></li>
-        <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/">홈</a></li>
+        <li><a href="/services/">서비스</a></li>
+        <li><a href="/projects/">포트폴리오</a></li>
+        <li><a href="/international/" aria-current="page">해외 프로덕션</a></li>
+        <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+        <li><a href="/about/">회사소개</a></li>
+        <li><a href="/contact/">문의</a></li>
+        <li><a class="gnb-lang" href="/en/international/" title="English site">EN</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/international/" class="active">KR</a><span>/</span><a href="/en/international/">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/international/">INTERNATIONAL</a></li>
-    <li><a href="/projects/">PROJECTS</a></li>
-    <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/about/">ABOUT</a></li>
-    <li><a href="/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/international/" class="active">KR</a><span>/</span><a href="/en/international/">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="메뉴 닫기"></button>
+  </div>
+  <nav aria-label="주메뉴">
+    <ul>
+      <li><a href="/">홈</a></li>
+      <li><a href="/services/">서비스</a></li>
+      <li><a href="/projects/">포트폴리오</a></li>
+      <li><a href="/international/" aria-current="page">해외 프로덕션</a></li>
+      <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+      <li><a href="/about/">회사소개</a></li>
+      <li><a href="/contact/">문의</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/en/international/">EN</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-international.webp" alt="일본 투어 공연장 무대 조명" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">International</p>
       <h1 class="h-page">International</h1>
       <p class="lead">해외 프로덕션의 한국 프로젝트와 한국 콘텐츠의 해외 투어, 양방향으로 조명 기술을 지원합니다.</p>
+    </div>
+  </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">진행 흐름</p>
+        <h2 class="h-sec">기획안에서 공연까지</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h13l5 5v20a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M19 3v6h6"/><path d="M11 17h10M11 22h7"/></svg></div>
+          <p class="step__n">STEP 1</p>
+          <h3>기획안</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4v7"/><path d="M9 11h14l-3 8H12z"/><path d="M12 24h8"/><path d="M14 28h4"/></svg></div>
+          <p class="step__n">STEP 2</p>
+          <h3>현지 장비</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="4"/><circle cx="22" cy="13" r="3"/><path d="M4 27c0-4 3-7 7-7s7 3 7 7"/><path d="M19 27c0-3 1.6-5.5 4-6"/></svg></div>
+          <p class="step__n">STEP 3</p>
+          <h3>크루</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="26" height="16" rx="2"/><path d="M8 14v6M14 12v8M20 15v5M26 13v7"/></svg></div>
+          <p class="step__n">STEP 4</p>
+          <h3>프로그래밍</h3>
+        </div>
+        <div class="step">
+          <div class="step__icon" aria-hidden="true"><svg viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l3 7h8l-6.5 5 2.5 8-7-4.8L9 24l2.5-8L5 11h8z"/></svg></div>
+          <p class="step__n">STEP 5</p>
+          <h3>공연</h3>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -95,7 +143,7 @@
           </ul>
         </div>
         <div class="split__img">
-          <img src="/images/hero_2.webp" alt="무빙라이트 빔이 채워진 공연 무대" loading="lazy" width="738" height="554">
+          <img src="/images/photos/japan-tour.webp" alt="일본 투어 공연장 무대 조명" loading="lazy">
         </div>
       </div>
     </div>
@@ -142,19 +190,28 @@
         <h2 class="h-sec">사례</h2>
       </div>
       <div class="grid grid-3 reveal" style="margin-top:32px">
-        <article class="pcard"><div class="pcard__body">
+        <article class="pcard">          <div class="pcard__thumb">
+            <img src="/images/photos/xo-kitty.webp" alt="Netflix XO, Kitty 콘서트씬 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
           <p class="pcard__meta">In Korea<span class="yr">2024–2025</span></p>
           <h3 class="pcard__title">XO, Kitty</h3>
           <p class="pcard__role">콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 · 엔딩 크레딧 등재(에이펙스라이트 / 이차훈)</p>
           <span class="pcard__credit">엔딩 크레딧 등재</span>
         </div></article>
-        <article class="pcard"><div class="pcard__body">
+        <article class="pcard">          <div class="pcard__thumb">
+            <img src="/images/photos/paradise.webp" alt="Paradise Art Night 발레 공연 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
           <p class="pcard__meta">In Korea<span class="yr">2025.09</span></p>
           <h3 class="pcard__title">Paradise Art Night 2025</h3>
           <p class="pcard__venue">파라다이스시티, 인천</p>
           <p class="pcard__role">발레 공연 조명 디자인</p>
         </div></article>
-        <article class="pcard"><div class="pcard__body">
+        <article class="pcard">          <div class="pcard__thumb">
+            <img src="/images/photos/japan-tour.webp" alt="뮤지컬 서른즈음에 일본 투어 무대 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
           <p class="pcard__meta">Abroad<span class="yr">2019</span></p>
           <h3 class="pcard__title">서른즈음에 일본 투어</h3>
           <p class="pcard__venue">오사카 · 도쿄</p>

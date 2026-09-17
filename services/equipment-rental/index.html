@@ -34,46 +34,58 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="주메뉴">
       <ul>
-        <li><a href="/services/" aria-current="page">SERVICES</a></li>
-        <li><a href="/international/">INTERNATIONAL</a></li>
-        <li><a href="/projects/">PROJECTS</a></li>
-        <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/">홈</a></li>
+        <li><a href="/services/">서비스</a></li>
+        <li><a href="/projects/">포트폴리오</a></li>
+        <li><a href="/international/">해외 프로덕션</a></li>
+        <li><a href="/services/equipment-rental/" aria-current="page">장비렌탈</a></li>
+        <li><a href="/about/">회사소개</a></li>
+        <li><a href="/contact/">문의</a></li>
+        <li><a class="gnb-lang" href="/en/services/equipment-rental/" title="English site">EN</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/services/equipment-rental/" class="active">KR</a><span>/</span><a href="/en/services/equipment-rental/">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/international/">INTERNATIONAL</a></li>
-    <li><a href="/projects/">PROJECTS</a></li>
-    <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/about/">ABOUT</a></li>
-    <li><a href="/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/services/equipment-rental/" class="active">KR</a><span>/</span><a href="/en/services/equipment-rental/">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="메뉴 닫기"></button>
+  </div>
+  <nav aria-label="주메뉴">
+    <ul>
+      <li><a href="/">홈</a></li>
+      <li><a href="/services/">서비스</a></li>
+      <li><a href="/projects/">포트폴리오</a></li>
+      <li><a href="/international/">해외 프로덕션</a></li>
+      <li><a href="/services/equipment-rental/" aria-current="page">장비렌탈</a></li>
+      <li><a href="/about/">회사소개</a></li>
+      <li><a href="/contact/">문의</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/en/services/equipment-rental/">EN</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-rental.webp" alt="JB-Lighting M18 무빙라이트" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">Equipment Rental</p>
       <h1 class="h-page">공연조명 · 무대조명 렌탈</h1>
       <p class="lead">콘서트, 뮤지컬, 기업행사, 무용, 촬영 현장에 필요한 조명 장비를 대여합니다. 국공립 공연장과 Netflix 시리즈 촬영 현장에서 운용해 온 유럽 정품 장비입니다.</p>
       <p class="lead" style="margin-top:14px">장비만 필요한 경우에도, 조명 디자인·프로그래밍·오퍼레이터와 함께 필요한 경우에도 대응합니다.</p>
     </div>
+  </div>
   </section>
 
   <section class="section">
@@ -113,6 +125,57 @@
         </table>
       </div>
       <p class="table-note reveal">이 외 LED 워시·빔·스트로브·틸트바 등 공연 규모별 장비를 함께 보유하고 있습니다. 전체 리스트는 문의 시 안내드립니다.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Gallery</p>
+        <h2 class="h-sec">보유 장비</h2>
+      </div>
+      <div class="eq-gallery reveal">
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-ma3.webp" alt="MA Lighting grandMA3 light" loading="lazy"></div>
+          <figcaption><b>grandMA3 light</b><span>MA Lighting</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-ma2.webp" alt="MA Lighting grandMA2 light" loading="lazy"></div>
+          <figcaption><b>grandMA2 light</b><span>MA Lighting</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-m18.webp" alt="JB-Lighting M18 Profile" loading="lazy"></div>
+          <figcaption><b>M18 Profile</b><span>JB-Lighting</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-ghibli.webp" alt="Ayrton Ghibli" loading="lazy"></div>
+          <figcaption><b>Ghibli</b><span>Ayrton</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-khamsin.webp" alt="Ayrton Khamsin" loading="lazy"></div>
+          <figcaption><b>Khamsin</b><span>Ayrton</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-diablo.webp" alt="Ayrton Diablo" loading="lazy"></div>
+          <figcaption><b>Diablo</b><span>Ayrton</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-megapointe.webp" alt="ROBE MegaPointe" loading="lazy"></div>
+          <figcaption><b>MegaPointe</b><span>ROBE</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-spiider.webp" alt="ROBE Spiider" loading="lazy"></div>
+          <figcaption><b>Spiider</b><span>ROBE</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-minib.webp" alt="Clay Paky Mini-B" loading="lazy"></div>
+          <figcaption><b>Mini-B</b><span>Clay Paky</span></figcaption>
+        </figure>
+        <figure class="eq-item">
+          <div class="eq-item__img"><img src="/images/photos/eq-midib.webp" alt="Clay Paky Midi-B" loading="lazy"></div>
+          <figcaption><b>Midi-B</b><span>Clay Paky</span></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 

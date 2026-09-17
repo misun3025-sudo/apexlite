@@ -34,45 +34,57 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="주메뉴">
       <ul>
-        <li><a href="/services/">SERVICES</a></li>
-        <li><a href="/international/">INTERNATIONAL</a></li>
-        <li><a href="/projects/">PROJECTS</a></li>
-        <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/contact/" aria-current="page">CONTACT</a></li>
+        <li><a href="/">홈</a></li>
+        <li><a href="/services/">서비스</a></li>
+        <li><a href="/projects/">포트폴리오</a></li>
+        <li><a href="/international/">해외 프로덕션</a></li>
+        <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+        <li><a href="/about/">회사소개</a></li>
+        <li><a href="/contact/" aria-current="page">문의</a></li>
+        <li><a class="gnb-lang" href="/en/contact/" title="English site">EN</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/contact/" class="active">KR</a><span>/</span><a href="/en/contact/">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/international/">INTERNATIONAL</a></li>
-    <li><a href="/projects/">PROJECTS</a></li>
-    <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/about/">ABOUT</a></li>
-    <li><a href="/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/contact/" class="active">KR</a><span>/</span><a href="/en/contact/">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="메뉴 닫기"></button>
+  </div>
+  <nav aria-label="주메뉴">
+    <ul>
+      <li><a href="/">홈</a></li>
+      <li><a href="/services/">서비스</a></li>
+      <li><a href="/projects/">포트폴리오</a></li>
+      <li><a href="/international/">해외 프로덕션</a></li>
+      <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+      <li><a href="/about/">회사소개</a></li>
+      <li><a href="/contact/" aria-current="page">문의</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/en/contact/">EN</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-contact.webp" alt="콘서트 무대의 컬러 조명" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">Contact</p>
       <h1 class="h-page">Project Inquiry</h1>
       <p class="lead">확정 전 단계의 문의도 환영합니다. 파악된 만큼만 작성해 주세요.</p>
     </div>
+  </div>
   </section>
 
   <section class="section">

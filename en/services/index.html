@@ -34,44 +34,79 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/en/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="Main menu">
       <ul>
+        <li><a href="/en/">HOME</a></li>
         <li><a href="/en/services/" aria-current="page">SERVICES</a></li>
-        <li><a href="/en/international/">INTERNATIONAL</a></li>
         <li><a href="/en/projects/">PROJECTS</a></li>
-        <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
+        <li><a href="/en/international/">INTERNATIONAL</a></li>
+        <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
         <li><a href="/en/about/">ABOUT</a></li>
         <li><a href="/en/contact/">CONTACT</a></li>
+        <li><a class="gnb-lang" href="/services/" title="Korean site">KR</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/services/">KR</a><span>/</span><a href="/en/services/" class="active">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/en/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/en/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/en/international/">INTERNATIONAL</a></li>
-    <li><a href="/en/projects/">PROJECTS</a></li>
-    <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/en/about/">ABOUT</a></li>
-    <li><a href="/en/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/services/">KR</a><span>/</span><a href="/en/services/" class="active">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="Close menu"></button>
+  </div>
+  <nav aria-label="Main menu">
+    <ul>
+      <li><a href="/en/">HOME</a></li>
+      <li><a href="/en/services/" aria-current="page">SERVICES</a></li>
+      <li><a href="/en/projects/">PROJECTS</a></li>
+      <li><a href="/en/international/">INTERNATIONAL</a></li>
+      <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
+      <li><a href="/en/about/">ABOUT</a></li>
+      <li><a href="/en/contact/">CONTACT</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/services/">KR</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-services.webp" alt="Lighting beams on a concert stage" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">Services</p>
       <h1 class="h-page">Services</h1>
       <p class="lead">Hire us for the full process or only the stage you need.</p>
+    </div>
+  </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="grid grid-4 reveal">
+        <article class="svc-card">
+          <div class="svc-card__thumb"><img src="/images/photos/svc-design.webp" alt="Concert stage lighting design" loading="lazy"></div>
+          <div class="svc-card__body"><h3>Lighting Design</h3><p>Concert · Musical · Film · Corporate event</p></div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-card__thumb"><img src="/images/photos/svc-programming.webp" alt="grandMA console programming" loading="lazy"></div>
+          <div class="svc-card__body"><h3>Programming &amp; Systems</h3><p>grandMA · Timecode · Show control</p></div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-card__thumb"><img src="/images/photos/svc-equipment.webp" alt="European moving-light fixtures" loading="lazy"></div>
+          <div class="svc-card__body"><h3>Equipment &amp; Crew</h3><p>Owned European fixtures · Rental · Integrated crew</p></div>
+        </article>
+        <article class="svc-card">
+          <div class="svc-card__thumb"><img src="/images/photos/svc-onsite.webp" alt="Concert lighting operation on site" loading="lazy"></div>
+          <div class="svc-card__body"><h3>On-site Operation</h3><p>Rigging · Focus · Rehearsal · Show operation</p></div>
+        </article>
+      </div>
     </div>
   </section>
 

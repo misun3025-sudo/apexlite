@@ -1,1 +1,8 @@
 *.pdf
+
+# Source originals — the site ships only the converted webp in images/photos/
+apexlite_en_photos/
+banjok.jpg
+copydeck.md
+_backup/
+_work/

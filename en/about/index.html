@@ -34,52 +34,64 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/en/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="Main menu">
       <ul>
+        <li><a href="/en/">HOME</a></li>
         <li><a href="/en/services/">SERVICES</a></li>
-        <li><a href="/en/international/">INTERNATIONAL</a></li>
         <li><a href="/en/projects/">PROJECTS</a></li>
-        <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
+        <li><a href="/en/international/">INTERNATIONAL</a></li>
+        <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
         <li><a href="/en/about/" aria-current="page">ABOUT</a></li>
         <li><a href="/en/contact/">CONTACT</a></li>
+        <li><a class="gnb-lang" href="/about/" title="Korean site">KR</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/about/">KR</a><span>/</span><a href="/en/about/" class="active">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/en/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/en/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/en/international/">INTERNATIONAL</a></li>
-    <li><a href="/en/projects/">PROJECTS</a></li>
-    <li><a href="/en/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/en/about/">ABOUT</a></li>
-    <li><a href="/en/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/about/">KR</a><span>/</span><a href="/en/about/" class="active">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/en/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="Close menu"></button>
+  </div>
+  <nav aria-label="Main menu">
+    <ul>
+      <li><a href="/en/">HOME</a></li>
+      <li><a href="/en/services/">SERVICES</a></li>
+      <li><a href="/en/projects/">PROJECTS</a></li>
+      <li><a href="/en/international/">INTERNATIONAL</a></li>
+      <li><a href="/en/services/equipment-rental/">EQUIPMENT</a></li>
+      <li><a href="/en/about/" aria-current="page">ABOUT</a></li>
+      <li><a href="/en/contact/">CONTACT</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/about/">KR</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-about.webp" alt="Concert lighting on site" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">About</p>
       <h1 class="h-page">About APEX LITE</h1>
       <p class="lead">APEX LITE is a Korea-based lighting design and technical production partner. Since 2018, we have worked across theatre, concerts, film, corporate events, exhibitions and media art — connecting design and execution in one workflow.</p>
     </div>
+  </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <div class="profile reveal">
         <div class="profile__img">
-          <img src="/images/profile_2.webp" alt="Lee Cha Hoon, Lighting Designer and Founder of APEX LITE" loading="lazy" width="900" height="900">
+          <img src="/images/photos/profile.webp" alt="Lee Cha Hoon, Lighting Designer and Founder of APEX LITE" loading="lazy">
         </div>
         <div>
           <p class="label">Founder</p>
@@ -127,8 +139,21 @@
           </ul>
         </div>
         <div class="split__img">
-          <img src="/images/ceo_working.webp" alt="Programming a show file on a grandMA console" loading="lazy" width="692" height="388">
+          <img src="/images/photos/console.webp" alt="Programming a show file on a grandMA console" loading="lazy">
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">On site</p>
+        <h2 class="h-sec">On site</h2>
+      </div>
+      <div class="grid grid-2 reveal">
+        <div class="split__img"><img src="/images/photos/sonesone.webp" alt="Concert lighting on site" loading="lazy"></div>
+        <div class="split__img"><img src="/images/photos/five-concert.webp" alt="Musical stage lighting" loading="lazy"></div>
       </div>
     </div>
   </section>

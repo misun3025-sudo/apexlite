@@ -34,45 +34,57 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <a href="/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
     <nav class="gnb" aria-label="주메뉴">
       <ul>
-        <li><a href="/services/">SERVICES</a></li>
-        <li><a href="/international/">INTERNATIONAL</a></li>
-        <li><a href="/projects/" aria-current="page">PROJECTS</a></li>
-        <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-        <li><a href="/about/">ABOUT</a></li>
-        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/">홈</a></li>
+        <li><a href="/services/">서비스</a></li>
+        <li><a href="/projects/" aria-current="page">포트폴리오</a></li>
+        <li><a href="/international/">해외 프로덕션</a></li>
+        <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+        <li><a href="/about/">회사소개</a></li>
+        <li><a href="/contact/">문의</a></li>
+        <li><a class="gnb-lang" href="/en/projects/" title="English site">EN</a></li>
       </ul>
     </nav>
-    <div class="header-right">
-      <div class="lang-toggle"><a href="/projects/" class="active">KR</a><span>/</span><a href="/en/projects/">EN</a></div>
-      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
-    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="/services/">SERVICES</a></li>
-    <li><a class="mnav-sub" href="/services/equipment-rental/">Equipment Rental</a></li>
-    <li><a href="/international/">INTERNATIONAL</a></li>
-    <li><a href="/projects/">PROJECTS</a></li>
-    <li><a href="/venue-system/">VENUE SYSTEM</a></li>
-    <li><a href="/about/">ABOUT</a></li>
-    <li><a href="/contact/">CONTACT</a></li>
-  </ul>
-  <div class="mnav-lang"><a href="/projects/" class="active">KR</a><span>/</span><a href="/en/projects/">EN</a></div>
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mnav-top">
+    <a href="/" class="logo">APEX<span>|</span>LITE</a>
+    <button class="mnav-close" type="button" aria-label="메뉴 닫기"></button>
+  </div>
+  <nav aria-label="주메뉴">
+    <ul>
+      <li><a href="/">홈</a></li>
+      <li><a href="/services/">서비스</a></li>
+      <li><a href="/projects/" aria-current="page">포트폴리오</a></li>
+      <li><a href="/international/">해외 프로덕션</a></li>
+      <li><a href="/services/equipment-rental/">장비렌탈</a></li>
+      <li><a href="/about/">회사소개</a></li>
+      <li><a href="/contact/">문의</a></li>
+    </ul>
+  </nav>
+  <a class="mnav-lang" href="/en/projects/">EN</a>
+  <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
 <main id="main">
 
-  <section class="page-head">
+  <section class="page-hero">
+    <div class="page-hero__img">
+      <img src="/images/photos/hdr-projects.webp" alt="K-POP 콘서트 장면 조명" fetchpriority="high">
+    </div>
+    <div class="page-hero__grad"></div>
+    <div class="page-hero__inner">
     <div class="wrap">
       <p class="label">Projects</p>
       <h1 class="h-page">Projects</h1>
       <p class="lead">실제 수행한 역할 범위 그대로 기록합니다.</p>
     </div>
+  </div>
   </section>
 
   <section class="section">
@@ -92,7 +104,10 @@
       <div class="grid grid-3" id="projectGrid">
 
         <article class="pcard" data-cat="international film">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/xo-kitty.webp" alt="Netflix XO, Kitty 콘서트씬 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">International Production · Film·Broadcast<span class="yr">2024–2025</span></p>
             <h3 class="pcard__title">Netflix 〈XO, Kitty〉 시즌 2·3</h3>
             <p class="pcard__role">콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 · 엔딩 크레딧 등재(에이펙스라이트 / 이차훈)</p>
@@ -102,7 +117,10 @@
         </article>
 
         <article class="pcard" data-cat="international">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/paradise.webp" alt="Paradise Art Night 발레 공연 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">International Production<span class="yr">2025.09</span></p>
             <h3 class="pcard__title">Paradise Art Night 2025</h3>
             <p class="pcard__venue">파라다이스시티, 인천</p>
@@ -111,7 +129,10 @@
         </article>
 
         <article class="pcard" data-cat="touring">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/japan-tour.webp" alt="뮤지컬 서른즈음에 일본 투어 무대 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Touring<span class="yr">2019</span></p>
             <h3 class="pcard__title">뮤지컬 〈서른즈음에〉 일본 투어</h3>
             <p class="pcard__venue">오사카 · 도쿄</p>
@@ -121,7 +142,10 @@
         </article>
 
         <article class="pcard" data-cat="event">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/gumi.webp" alt="구미산단 페스티벌 야외 공연 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Event &amp; Performance<span class="yr">2025.10.08–09</span></p>
             <h3 class="pcard__title">2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼</h3>
             <p class="pcard__role">축제 전체 조명 총괄 · 미디어파사드 6편, 500대 드론쇼, 공연 동시 운영</p>
@@ -130,11 +154,11 @@
         </article>
 
         <article class="pcard" data-cat="media">
-          <div class="pcard__thumb">
-            <img src="/images/hero_3.webp" alt="폐채석장 암벽에 투사된 미디어파사드" loading="lazy" width="451" height="301">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/daebu.webp" alt="대부광산 폐채석장 미디어파사드" loading="lazy">
           </div>
-          <div class="pcard__body">
-            <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2024</span></p>
+<div class="pcard__body">
+            <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2022</span></p>
             <h3 class="pcard__title">안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉</h3>
             <p class="pcard__role">조명 디자인 · 현장 운영 · 폐채석장 암벽 프로젝션과 LED 퍼포먼스 결합</p>
             <p class="pcard__note">구조물이 없는 자연 지형에서 전원·배선·설치 포인트를 처음부터 계획하고, 영상 투사면과 실연자 조명의 밝기를 분리 제어했습니다.</p>
@@ -142,7 +166,10 @@
         </article>
 
         <article class="pcard" data-cat="media">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/gaya.webp" alt="가야본성 특별전 전시 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Media Art &amp; Installation<span class="yr">2019.12–2020.03</span></p>
             <h3 class="pcard__title">국립중앙박물관 특별전 〈가야본성 — 칼과 현〉</h3>
             <p class="pcard__venue">국립중앙박물관</p>
@@ -152,7 +179,10 @@
         </article>
 
         <article class="pcard" data-cat="venue">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/suyanggae.webp" alt="단양 수양개빛터널 상설 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Venue System<span class="yr">2017 —</span></p>
             <h3 class="pcard__title">단양 수양개빛터널</h3>
             <p class="pcard__venue">단양</p>
@@ -162,7 +192,10 @@
         </article>
 
         <article class="pcard" data-cat="venue">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/platform61.webp" alt="플랫폼창동61 공연장 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Venue System<span class="yr">2016–2018</span></p>
             <h3 class="pcard__title">플랫폼창동61</h3>
             <p class="pcard__role">조명감독 · 개관 구축</p>
@@ -170,7 +203,10 @@
         </article>
 
         <article class="pcard" data-cat="venue">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/musistance.webp" alt="뮤지스땅스 공연장 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Venue System<span class="yr">2014–2016</span></p>
             <h3 class="pcard__title">뮤지스땅스</h3>
             <p class="pcard__role">조명감독 · 개관 구축</p>
@@ -178,7 +214,10 @@
         </article>
 
         <article class="pcard" data-cat="event">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/cheon.webp" alt="뮤지컬 천개의 파랑 무대 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Event &amp; Performance</p>
             <h3 class="pcard__title">뮤지컬 〈천개의 파랑〉</h3>
             <p class="pcard__venue">예술의전당 CJ토월극장</p>
@@ -187,7 +226,10 @@
         </article>
 
         <article class="pcard" data-cat="event">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/daetongryeong.webp" alt="뮤지컬 나의 대통령 무대 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Event &amp; Performance</p>
             <h3 class="pcard__title">뮤지컬 〈나의 대통령〉</h3>
             <p class="pcard__venue">부천시민회관</p>
@@ -195,7 +237,10 @@
         </article>
 
         <article class="pcard" data-cat="event">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/thebook.webp" alt="더북 무대 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Event &amp; Performance</p>
             <h3 class="pcard__title">〈더북〉</h3>
             <p class="pcard__venue">수원시립 정조테마공연장</p>
@@ -203,7 +248,10 @@
         </article>
 
         <article class="pcard" data-cat="event">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/oedipus.webp" alt="연극 오이디푸스 무대 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Event &amp; Performance</p>
             <h3 class="pcard__title">연극 〈오이디푸스〉</h3>
             <p class="pcard__venue">세종문화회관 M씨어터</p>
@@ -211,7 +259,10 @@
         </article>
 
         <article class="pcard" data-cat="concert">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/sonesone.webp" alt="손에손에 뮤직페스타 콘서트 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Concert &amp; Live</p>
             <h3 class="pcard__title">콘서트 〈손에손에 뮤직페스타〉</h3>
             <p class="pcard__venue">서울 · 부산</p>
@@ -219,7 +270,10 @@
         </article>
 
         <article class="pcard" data-cat="concert">
-          <div class="pcard__body">
+                    <div class="pcard__thumb">
+            <img src="/images/photos/five-concert.webp" alt="브로큰 발렌타인 FIVE 콘서트 조명" loading="lazy">
+          </div>
+<div class="pcard__body">
             <p class="pcard__meta">Concert &amp; Live</p>
             <h3 class="pcard__title">〈브로큰 발렌타인 FIVE〉</h3>
             <p class="pcard__venue">노들섬 라이브하우스</p>
