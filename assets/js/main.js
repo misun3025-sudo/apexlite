@@ -286,11 +286,12 @@
         ['Email', val('reply_to')],
         [LANG === 'EN' ? 'Phone' : '연락처', val('phone')],
         [LANG === 'EN' ? 'Location' : '지역', val('region')],
-        [LANG === 'EN' ? 'Venue' : '공연장·장소', val('venue')],
+        [LANG === 'EN' ? 'Venue & City' : '공연장·장소', val('venue')],
         [LANG === 'EN' ? 'Load-in' : '반입', val('date_loadin')],
         [LANG === 'EN' ? 'Rehearsal' : '리허설', val('date_rehearsal')],
         [LANG === 'EN' ? 'Show' : '본 공연', val('date_show')],
-        [LANG === 'EN' ? 'File links' : '자료 링크', val('ref_links')]
+        [LANG === 'EN' ? 'Dates' : '일정', val('show_date')],
+        [LANG === 'EN' ? 'Rider / Plot Link' : '자료 링크', val('ref_links')]
       ];
       var body = rows.filter(function (r) { return r[1]; })
                      .map(function (r) { return r[0] + ': ' + r[1]; })
@@ -302,7 +303,8 @@
         phone: val('phone'), company: val('company'), project_type: val('project_type'),
         support: support, region: val('region'), venue: val('venue'),
         date_loadin: val('date_loadin'), date_rehearsal: val('date_rehearsal'),
-        date_show: val('date_show'), ref_links: val('ref_links'), message: body
+        date_show: val('date_show'), show_date: val('show_date'),
+        ref_links: val('ref_links'), message: body
       };
     };
 

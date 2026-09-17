@@ -27,6 +27,21 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script>document.documentElement.classList.add("js");</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Project Inquiry | APEX LITE",
+  "description": "Early-stage inquiries are welcome. Share dates, location and what you need — we'll reply with a proposed setup.",
+  "url": "https://apexlight.co.kr/en/contact/",
+  "about": {
+    "@id": "https://apexlight.co.kr/#organization"
+  },
+  "mainEntity": {
+    "@id": "https://apexlight.co.kr/#organization"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -37,14 +52,14 @@
     <a href="/en/" class="logo" aria-label="APEX LITE home">APEX<span>|</span>LITE</a>
     <div class="header-right">
       <nav class="gnb" aria-label="Main menu"><ul>
-        <li><a href="/en/#work">Work</a></li>
-        <li><a href="/en/#equipment">Equipment</a></li>
-        <li><a href="/en/#founder">Lee Cha Hoon</a></li>
-        <li><a href="/en/#records">Records</a></li>
         <li class="has-sub"><a href="/en/services/">Services</a>
-          <ul class="sub"><li><a href="/en/services/equipment-rental/">Equipment Rental</a></li><li><a href="/en/international/">International Productions</a></li><li><a href="/en/venue-system/">Venue Systems</a></li></ul>
+          <ul class="sub"><li><a href="/en/services/equipment-rental/">Equipment Rental</a></li></ul>
         </li>
-        <li><a href="/en/#contact">Contact</a></li>
+        <li><a href="/en/international/">International</a></li>
+        <li><a href="/en/projects/">Projects</a></li>
+        <li><a href="/en/venue-system/">Venue System</a></li>
+        <li><a href="/en/about/">About</a></li>
+        <li><a href="/en/contact/" aria-current="page">Contact</a></li>
       </ul></nav>
       <a class="lang-btn" href="/contact/" hreflang="ko" lang="ko" aria-label="한국어">KR</a>
       <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
@@ -54,13 +69,13 @@
 
 <div class="mobile-nav" id="mobileNav" aria-hidden="true">
   <nav aria-label="Mobile menu"><ul>
-    <li><a href="/en/#work">Work</a></li>
-    <li><a href="/en/#equipment">Equipment</a></li>
-    <li><a href="/en/#founder">Lee Cha Hoon</a></li>
-    <li><a href="/en/#records">Records</a></li>
     <li><a href="/en/services/">Services</a>
-      <ul class="mnav-sub"><li><a href="/en/services/equipment-rental/">Equipment Rental</a></li><li><a href="/en/international/">International Productions</a></li><li><a href="/en/venue-system/">Venue Systems</a></li></ul></li>
-    <li><a href="/en/#contact">Contact</a></li>
+      <ul class="mnav-sub"><li><a href="/en/services/equipment-rental/">Equipment Rental</a></li></ul></li>
+    <li><a href="/en/international/">International</a></li>
+    <li><a href="/en/projects/">Projects</a></li>
+    <li><a href="/en/venue-system/">Venue System</a></li>
+    <li><a href="/en/about/">About</a></li>
+    <li><a href="/en/contact/" aria-current="page">Contact</a></li>
   </ul></nav>
   <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
@@ -116,51 +131,39 @@
                 <label for="project_type">Project Type<span class="hint"> (optional)</span></label>
                 <select id="project_type" name="project_type">
                   <option value="" selected>Please select</option>
-                  <option>International Production in Korea</option>
-                  <option>Concert·Touring</option>
-                  <option>Theatre·Musical·Dance</option>
-                  <option>Film·OTT</option>
-                  <option>Corporate·Brand Event</option>
-                  <option>Exhibition·Media Art</option>
-                  <option>Venue System</option>
-                  <option>Equipment Rental Only</option>
-                  <option>Other·Not decided</option>
+                  <option>Concert</option>
+                  <option>Musical</option>
+                  <option>Broadcast·OTT</option>
+                  <option>Corporate event</option>
+                  <option>Exhibition·Media art</option>
+                  <option>Other</option>
                 </select>
               </div>
               <div class="field field--full">
                 <fieldset>
-                  <legend class="fieldset-legend">Support Required<span class="hint"> (optional)</span></legend>
+                  <legend class="fieldset-legend">Services Needed<span class="hint"> (optional)</span></legend>
                   <div class="check-grid">
-                    <label class="check"><input type="checkbox" name="support" value="Lighting Design"> Lighting Design</label>
-                    <label class="check"><input type="checkbox" name="support" value="Technical Advance"> Technical Advance</label>
-                    <label class="check"><input type="checkbox" name="support" value="Equipment·Crew Sourcing"> Equipment·Crew Sourcing</label>
-                    <label class="check"><input type="checkbox" name="support" value="Fixture Review"> Fixture Review</label>
+                    <label class="check"><input type="checkbox" name="support" value="Lighting design"> Lighting design</label>
+                    <label class="check"><input type="checkbox" name="support" value="Technical advance"> Technical advance</label>
+                    <label class="check"><input type="checkbox" name="support" value="Fixture & system review"> Fixture &amp; system review</label>
                     <label class="check"><input type="checkbox" name="support" value="Programming"> Programming</label>
-                    <label class="check"><input type="checkbox" name="support" value="On-site Direction"> On-site Direction</label>
-                    <label class="check"><input type="checkbox" name="support" value="Equipment Rental"> Equipment Rental</label>
-                    <label class="check"><input type="checkbox" name="support" value="Not sure yet"> Not sure yet</label>
+                    <label class="check"><input type="checkbox" name="support" value="On-site direction"> On-site direction</label>
+                    <label class="check"><input type="checkbox" name="support" value="Equipment & crew"> Equipment &amp; crew</label>
+                    <label class="check"><input type="checkbox" name="support" value="Venue system"> Venue system</label>
                   </div>
                 </fieldset>
               </div>
-              <div class="field">
-                <label for="region">Location<span class="hint"> (optional)</span></label>
-                <input type="text" id="region" name="region">
-              </div>
-              <div class="field">
-                <label for="venue">Venue<span class="hint"> (optional)</span></label>
+              <div class="field field--full">
+                <label for="venue">Venue &amp; City<span class="hint"> (optional)</span></label>
                 <input type="text" id="venue" name="venue">
               </div>
-              <div class="field field--full">
-                <span class="fieldset-legend">Dates<span class="hint"> (optional)</span></span>
-                <div class="date-grid">
-                  <div class="field"><label for="date_loadin" class="hint">Load-in</label><input type="date" id="date_loadin" name="date_loadin"></div>
-                  <div class="field"><label for="date_rehearsal" class="hint">Rehearsal</label><input type="date" id="date_rehearsal" name="date_rehearsal"></div>
-                  <div class="field"><label for="date_show" class="hint">Show</label><input type="date" id="date_show" name="date_show"></div>
-                </div>
+              <div class="field">
+                <label for="show_date">Dates<span class="hint"> (optional)</span></label>
+                <input type="text" id="show_date" name="show_date" placeholder="e.g. mid-November 2026">
               </div>
-              <div class="field field--full">
-                <label for="ref_links">File links<span class="hint"> (optional)</span></label>
-                <input type="text" id="ref_links" name="ref_links" placeholder="Rider · Plot · Fixture list">
+              <div class="field">
+                <label for="ref_links">Rider · Plot Link<span class="hint"> (optional)</span></label>
+                <input type="text" id="ref_links" name="ref_links" placeholder="Link to rider, plot or fixture list">
               </div>
               <div class="field field--full">
                 <label for="message">Message<span class="req" aria-hidden="true">*</span></label>
