@@ -865,3 +865,97 @@ html.js .reveal, html.js .reveal.visible { opacity: 1; transform: none; transiti
 .photo-card:hover img, .half-card:hover img, .svc-tile:hover img,
 a.work-card:hover .work-card__media img { transform: none; }
 .card:hover, .btn-primary:hover { transform: none; }
+
+/* ─── EQUIPMENT CARDS — click a card, the description panel opens under its row ───
+   Panels are static HTML right after their card; grid-auto-flow: dense lets the
+   following cards back-fill the row, so an open panel always sits below that row. */
+.eqg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-flow: row dense; gap: 18px; }
+.eqg > * { min-width: 0; }
+.eqc { display: flex; }
+.eqc__btn {
+  display: flex; flex-direction: column; width: 100%; padding: 0; margin: 0; text-align: left;
+  font: inherit; color: inherit; background: #151515; border: 1px solid var(--line); cursor: pointer;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.eqc__btn:hover { border-color: var(--gold-soft); }
+.eqc__btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.eqc__btn[aria-expanded="true"] { border-color: var(--gold); background: #1a1812; }
+.eqc__media { position: relative; display: block; aspect-ratio: 1 / 1; background: #000; overflow: hidden; }
+.eqc__media img { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+.eqc__ph {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;
+  padding: 20px; text-align: center;
+  background: radial-gradient(circle at 50% 42%, rgba(201,168,76,.16) 0%, rgba(201,168,76,0) 62%), #0b0b0b;
+}
+.eqc__ph-brand { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: .2em; color: var(--gray2); }
+.eqc__ph-model { margin-top: 10px; font-family: 'Bebas Neue', sans-serif; font-size: clamp(28px, 2.3vw, 40px); letter-spacing: .04em; line-height: 1; color: var(--gold); }
+.eqc__qty {
+  position: absolute; right: 10px; top: 10px; z-index: 2;
+  font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: .08em; line-height: 1;
+  color: var(--gold); background: rgba(8,8,8,.85); border: 1px solid var(--gold-soft); padding: 6px 9px 5px;
+}
+.eqc__body { display: flex; flex-direction: column; flex: 1 1 auto; padding: 16px 16px 18px; }
+.eqc__brand { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray2); }
+.eqc__model { display: block; margin-top: 4px; font-size: 16.5px; font-weight: 700; line-height: 1.35; color: var(--white); }
+.eqc__sum { display: block; margin-top: 6px; font-size: 13.5px; line-height: 1.55; color: var(--gray2); }
+.eqc__hint { display: block; margin-top: auto; padding-top: 14px; font-size: 12.5px; font-weight: 600; letter-spacing: .06em; color: var(--gold); }
+.eqc__hint::after { content: ' +'; }
+.eqc__btn[aria-expanded="true"] .eqc__hint::after { content: ' −'; }
+
+.eqd {
+  grid-column: 1 / -1; position: relative;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 20px 48px;
+  padding: 30px 64px 30px 32px; background: #0f0e0b; border: 1px solid var(--gold-soft);
+}
+html.js .eqd:not(.is-open) { display: none; }
+.eqd__cat { font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: .2em; color: var(--gold); }
+.eqd__title { margin-top: 6px; font-size: 22px; font-weight: 700; line-height: 1.35; color: var(--white); }
+.eqd__desc { margin-top: 12px; font-size: 15.5px; line-height: 1.8; color: var(--gray1); }
+.eqd__specs { border-top: 1px solid var(--line); }
+.eqd__specs > div { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.eqd__specs dt { font-family: 'Bebas Neue', 'Pretendard', sans-serif; font-size: 14px; letter-spacing: .12em; color: var(--gold); padding-top: 2px; }
+.eqd__specs dd { font-size: 14.5px; line-height: 1.65; color: var(--gray1); }
+.eqd__close {
+  position: absolute; right: 12px; top: 12px; width: 44px; height: 44px;
+  font: inherit; font-size: 26px; line-height: 1; color: var(--gray2); background: transparent; border: 0; cursor: pointer;
+}
+.eqd__close:hover { color: var(--white); }
+html:not(.js) .eqd__close { display: none; }
+
+.eq-cat + .eq-cat { margin-top: 64px; }
+.eq-cat__head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px;
+  margin-bottom: 22px; padding-bottom: 12px; border-bottom: 1px solid var(--gold-soft);
+}
+.eq-cat__name { font-family: 'Bebas Neue', sans-serif; font-size: 34px; font-weight: 400; letter-spacing: .08em; line-height: 1; color: var(--gold); }
+.eq-cat__sub { font-size: 14px; color: var(--gray2); }
+.eq-jump { margin: 8px 0 48px; }
+
+/* ─── SELECTED INTERNATIONAL PROJECTS ─── */
+.intl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.intl-grid > * { min-width: 0; }
+.intl-card { display: flex; flex-direction: column; background: #111; border: 1px solid var(--line); }
+.intl-card__media { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #050505; }
+.intl-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.intl-card__media.is-contain img { object-fit: contain; object-position: center; }
+.intl-card__body { display: flex; flex-direction: column; flex: 1 1 auto; padding: 22px 22px 24px; }
+.intl-card__tag { font-family: 'Bebas Neue', 'Pretendard', sans-serif; font-size: 14px; letter-spacing: .14em; color: var(--gold); line-height: 1.4; }
+.intl-card__title { margin-top: 8px; font-size: 19px; font-weight: 700; line-height: 1.4; color: var(--white); }
+.intl-card__title a:hover { color: var(--gold); }
+.intl-card__desc { margin-top: 10px; font-size: 14.5px; line-height: 1.7; color: var(--gray2); }
+.intl-card .text-link { margin-top: auto; padding-top: 18px; align-self: flex-start; border-bottom: 0; }
+
+@media (max-width: 1100px) {
+  .eqg { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .intl-grid { grid-template-columns: 1fr; gap: 22px; }
+  .eqg { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .eqc__body { padding: 12px 12px 14px; }
+  .eqc__model { font-size: 15px; }
+  .eqc__sum { font-size: 13px; }
+  .eqd { grid-template-columns: 1fr; padding: 24px 20px 22px; }
+  .eqd__title { padding-right: 36px; font-size: 19px; }
+  .eqd__specs > div { grid-template-columns: 72px minmax(0, 1fr); gap: 10px; }
+  .eq-cat__name { font-size: 28px; }
+}

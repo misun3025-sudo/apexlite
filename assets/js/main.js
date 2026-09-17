@@ -179,6 +179,45 @@
     }
   }
 
+  /* ── Equipment cards: click → description panel ──
+     Panels are already in the HTML (closed by CSS while JS runs);
+     one panel open at a time per page. */
+  var eqButtons = Array.prototype.slice.call(document.querySelectorAll('[data-eq-toggle]'));
+  if (eqButtons.length) {
+    var setEq = function (btn, open) {
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      var hint = btn.querySelector('.eqc__hint');
+      btn.setAttribute('aria-expanded', String(open));
+      if (panel) panel.classList.toggle('is-open', open);
+      if (hint) hint.textContent = hint.getAttribute(open ? 'data-close' : 'data-open');
+      return panel;
+    };
+    eqButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('aria-expanded') !== 'true';
+        eqButtons.forEach(function (b) { if (b !== btn && b.getAttribute('aria-expanded') === 'true') setEq(b, false); });
+        var panel = setEq(btn, open);
+        if (open && panel) {
+          var r = panel.getBoundingClientRect();
+          if (r.bottom > window.innerHeight || r.top < 0) {
+            try { panel.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { panel.scrollIntoView(false); }
+          }
+        }
+      });
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-eq-close]'), function (x) {
+      x.addEventListener('click', function () {
+        var panel = x.closest('.eqd');
+        var btn = panel && document.querySelector('[aria-controls="' + panel.id + '"]');
+        if (btn) { setEq(btn, false); btn.focus(); }
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' && e.key !== 'Esc') return;
+      eqButtons.forEach(function (b) { if (b.getAttribute('aria-expanded') === 'true') { setEq(b, false); b.focus(); } });
+    });
+  }
+
   /* ── Contact form (EmailJS) ───────────────── */
   var form = document.getElementById('inquiryForm');
   if (form) {

@@ -31,22 +31,54 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": [
+    "Organization",
+    "LocalBusiness"
+  ],
   "@id": "https://apexlight.co.kr/#organization",
-  "name": "APEX LITE",
-  "alternateName": "에이펙스라이트",
+  "name": "에이펙스라이트",
+  "alternateName": [
+    "APEX LITE",
+    "Apex Lite",
+    "Apexlite"
+  ],
   "url": "https://apexlight.co.kr/",
   "logo": "https://apexlight.co.kr/images/og-apexlite.jpg",
+  "image": "https://apexlight.co.kr/images/og-apexlite.jpg",
   "email": "apexlite1@gmail.com",
   "telephone": "+82-10-8701-8119",
   "sameAs": [
     "https://www.instagram.com/apexlitedesign/"
   ],
   "founder": {
-    "@id": "https://apexlight.co.kr/#lee-cha-hoon"
+    "@type": "Person",
+    "@id": "https://apexlight.co.kr/#lee-cha-hoon",
+    "name": "이차훈",
+    "alternateName": "Lee Cha Hoon"
   },
   "foundingDate": "2018",
-  "description": "공연조명 디자인 · 장비 보유 · 현장 운영. 조명·무대·음향·트러스를 한 팀이 책임집니다."
+  "areaServed": {
+    "@type": "Country",
+    "name": "KR"
+  },
+  "knowsAbout": [
+    "무대조명 디자인",
+    "공연조명 디자인",
+    "조명 시스템 설계",
+    "타임코드 통합제어",
+    "LTC/MTC",
+    "grandMA3",
+    "grandMA2",
+    "조명 장비 렌탈",
+    "콘서트 조명",
+    "뮤지컬 조명",
+    "미디어파사드 조명",
+    "Stage lighting design",
+    "Lighting system design",
+    "Timecode show control",
+    "Lighting equipment rental"
+  ],
+  "description": "무대조명 디자인 · 조명 시스템 설계 · 타임코드 통합제어 · 조명 장비 렌탈. 조명 디자인부터 장비, 프로그래밍, 현장 운영까지 한 팀이 책임집니다."
 }
 </script>
 <script type="application/ld+json">
@@ -56,9 +88,12 @@
   "@id": "https://apexlight.co.kr/#lee-cha-hoon",
   "name": "이차훈",
   "alternateName": "Lee Cha Hoon",
-  "jobTitle": "Lighting Designer",
+  "jobTitle": "조명디자이너",
   "worksFor": {
-    "@id": "https://apexlight.co.kr/#organization"
+    "@type": "Organization",
+    "@id": "https://apexlight.co.kr/#organization",
+    "name": "에이펙스라이트",
+    "alternateName": "APEX LITE"
   },
   "image": "https://apexlight.co.kr/images/home/profile.webp",
   "url": "https://apexlight.co.kr/about/",
@@ -88,26 +123,48 @@
       "item": {
         "@type": "CreativeWork",
         "name": "Netflix 〈XO, Kitty〉 시즌 2·3",
-        "dateCreated": "2024",
-        "description": "에이펙스라이트 역할: 콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성",
+        "description": "콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 — 엔딩 크레딧 등재(에이펙스라이트 / 이차훈).",
         "url": "https://apexlight.co.kr/projects/xo-kitty/",
         "image": "https://apexlight.co.kr/images/home/xo-kitty.webp",
+        "dateCreated": "2024",
+        "temporalCoverage": "2024/2025",
+        "locationCreated": {
+          "@type": "Place",
+          "name": "한국 촬영 현장"
+        },
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
-        },
-        "temporalCoverage": "2024/2025"
+        }
       }
     },
     {
       "@type": "ListItem",
       "position": 2,
       "item": {
-        "@type": "CreativeWork",
+        "@type": "Event",
         "name": "뮤지컬 〈서른즈음에〉 일본 투어",
-        "dateCreated": "2019",
-        "description": "에이펙스라이트 역할: 조명 디자인 · 현장 운영",
+        "description": "조명 디자인 · 현장 운영 · 장비 해상 반출·통관 — 오사카·도쿄의 1,300석급 극장 2곳에서 진행된 일본 투어입니다.",
         "url": "https://apexlight.co.kr/projects/japan-tour/",
         "image": "https://apexlight.co.kr/images/home/japan-tour.webp",
+        "startDate": "2019",
+        "location": [
+          {
+            "@type": "Place",
+            "name": "오사카",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "JP"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "도쿄",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "JP"
+            }
+          }
+        ],
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
         }
@@ -117,12 +174,21 @@
       "@type": "ListItem",
       "position": 3,
       "item": {
-        "@type": "CreativeWork",
+        "@type": "Event",
         "name": "Paradise Art Night 2025",
-        "dateCreated": "2025-09",
-        "description": "에이펙스라이트 역할: 발레 공연 조명 디자인",
+        "description": "발레 공연 조명 디자인 — 파리 오페라 발레 에투알 내한 공연.",
         "url": "https://apexlight.co.kr/projects/paradise-art-night/",
         "image": "https://apexlight.co.kr/images/home/paradise.webp",
+        "startDate": "2025-09",
+        "location": {
+          "@type": "Place",
+          "name": "파라다이스시티",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR",
+            "addressLocality": "인천"
+          }
+        },
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
         }
@@ -132,12 +198,29 @@
       "@type": "ListItem",
       "position": 4,
       "item": {
-        "@type": "CreativeWork",
-        "name": "브로큰 발렌타인 단독 콘서트 〈FIVE〉",
-        "dateCreated": "2023-11",
-        "description": "에이펙스라이트 역할: 공연 조명",
-        "url": "https://apexlight.co.kr/projects/broken-valentine-five/",
-        "image": "https://apexlight.co.kr/images/home/five.webp",
+        "@type": "Event",
+        "name": "콘서트 〈손에손에 뮤직페스타〉",
+        "description": "콘서트 조명 디자인 · 현장 운영 — 서울과 부산 공연의 콘서트 조명 디자인과 현장 운영을 맡았습니다.",
+        "url": "https://apexlight.co.kr/projects/#p-sonesone",
+        "image": "https://apexlight.co.kr/images/home/sonesone.webp",
+        "location": [
+          {
+            "@type": "Place",
+            "name": "서울",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "KR"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "부산",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "KR"
+            }
+          }
+        ],
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
         }
@@ -147,12 +230,21 @@
       "@type": "ListItem",
       "position": 5,
       "item": {
-        "@type": "CreativeWork",
-        "name": "2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼",
-        "dateCreated": "2025-10",
-        "description": "에이펙스라이트 역할: 축제 전체 조명 총괄",
-        "url": "https://apexlight.co.kr/projects/gumi-festival/",
-        "image": "https://apexlight.co.kr/images/home/gumi.webp",
+        "@type": "Event",
+        "name": "뮤지컬 〈천개의 파랑〉",
+        "description": "장비 협력 — 예술의전당 CJ토월극장(1,004석) 공연에 장비 협력으로 참여했습니다.",
+        "url": "https://apexlight.co.kr/projects/#p-cheon",
+        "image": "https://apexlight.co.kr/images/home/cheon.webp",
+        "location": {
+          "@type": "Place",
+          "name": "예술의전당 CJ토월극장",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR",
+            "addressLocality": "서울"
+          },
+          "maximumAttendeeCapacity": 1004
+        },
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
         }
@@ -162,12 +254,22 @@
       "@type": "ListItem",
       "position": 6,
       "item": {
-        "@type": "CreativeWork",
-        "name": "안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉",
-        "dateCreated": "2022",
-        "description": "에이펙스라이트 역할: 조명 디자인 · 현장 운영",
-        "url": "https://apexlight.co.kr/projects/daebu-quarry/",
-        "image": "https://apexlight.co.kr/images/home/daebu.webp",
+        "@type": "Event",
+        "name": "2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼",
+        "description": "축제 전체 조명 총괄 — 미디어파사드 6편 + 500대 드론쇼 + 공연을 동시에 운영한 현장입니다.",
+        "url": "https://apexlight.co.kr/projects/gumi-festival/",
+        "image": "https://apexlight.co.kr/images/home/gumi.webp",
+        "startDate": "2025-10-08",
+        "endDate": "2025-10-09",
+        "location": {
+          "@type": "Place",
+          "name": "구미 방림공장",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR",
+            "addressLocality": "구미"
+          }
+        },
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
         }
@@ -177,16 +279,24 @@
       "@type": "ListItem",
       "position": 7,
       "item": {
-        "@type": "CreativeWork",
-        "name": "국립중앙박물관 〈가야본성 — 칼과 현〉",
-        "dateCreated": "2019-12",
-        "description": "에이펙스라이트 역할: 전시 조명 · 타임코드 기반 조명·미디어 시스템",
-        "url": "https://apexlight.co.kr/projects/gaya-spirit/",
-        "image": "https://apexlight.co.kr/images/home/gaya.webp",
+        "@type": "Event",
+        "name": "안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉",
+        "description": "조명 연출 설계 및 현장 운영 — 폐채석장 암벽 프로젝션 + LED 퍼포먼스.",
+        "url": "https://apexlight.co.kr/projects/daebu-quarry/",
+        "image": "https://apexlight.co.kr/images/home/daebu.webp",
+        "startDate": "2022",
+        "location": {
+          "@type": "Place",
+          "name": "안산 대부광산",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "KR",
+            "addressLocality": "안산"
+          }
+        },
         "contributor": {
           "@id": "https://apexlight.co.kr/#organization"
-        },
-        "temporalCoverage": "2019-12/2020-03"
+        }
       }
     }
   ]
@@ -234,7 +344,7 @@
 
   <!-- 01 HERO -->
   <section class="hm-hero" id="top">
-    <div class="hm-hero__img"><img src="/images/home/hero-five.webp" alt="브로큰 발렌타인 단독 콘서트 FIVE · 2023 · 조명 디자인 에이펙스라이트" width="753" height="770" fetchpriority="high"></div>
+    <div class="hm-hero__img"><img src="/images/home/hero-five.webp" alt="브로큰 발렌타인 단독 콘서트 FIVE · 노들섬 라이브하우스 · 2023 · 에이펙스라이트 공연 조명" width="753" height="770" fetchpriority="high"></div>
     <div class="hm-hero__grad" aria-hidden="true"></div>
     <div class="hm-wrap hm-hero__inner">
       <div class="hm-hero__text">
@@ -255,73 +365,73 @@
         <h2 class="hm-h2">대표 작업</h2>
       </header>
       <article class="hm-work">
-        <figure class="hm-work__media"><img src="/images/home/xo-kitty.webp" alt="Netflix XO, Kitty 시즌 2·3 · 2024–2025 · 조명 디자인 에이펙스라이트" width="1081" height="541" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/xo-kitty.webp" alt="Netflix XO, Kitty 시즌 2·3 · 한국 촬영 현장 · 2024–2025 · 에이펙스라이트 콘서트씬 조명 디자인" width="1081" height="541" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
           <p class="hm-work__meta">촬영/OTT · 2024–2025</p>
           <h3 class="hm-work__title">Netflix 〈XO, Kitty〉 시즌 2·3</h3>
           <p class="hm-work__role">콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성</p>
-          <p class="hm-work__desc">엔딩 크레딧에 에이펙스라이트·이차훈 등재. 해외 제작사 주도 환경에서 K-POP 콘서트 장면을 카메라 기준으로 설계.</p>
+          <p class="hm-work__desc">엔딩 크레딧 등재(에이펙스라이트 / 이차훈).</p>
           <a class="hm-link" href="/projects/xo-kitty/">자세히 보기</a>
         </div>
       </article>
       <article class="hm-work hm-work--rev">
-        <figure class="hm-work__media"><img src="/images/home/japan-tour.webp" alt="뮤지컬 서른즈음에 일본 투어 · 2019 · 조명 디자인 에이펙스라이트" width="880" height="640" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/japan-tour.webp" alt="뮤지컬 서른즈음에 일본 투어 · 오사카·도쿄 · 2019 · 에이펙스라이트 조명 디자인" width="880" height="640" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
-          <p class="hm-work__meta">뮤지컬 · 2019 · 오사카·도쿄 1,300석</p>
+          <p class="hm-work__meta">뮤지컬 · 2019 · 오사카·도쿄 1,300석급 극장 2곳</p>
           <h3 class="hm-work__title">뮤지컬 〈서른즈음에〉 일본 투어</h3>
-          <p class="hm-work__role">조명 디자인 · 현장 운영</p>
-          <p class="hm-work__desc">려욱(슈퍼주니어)·유권(블락비)·세용(마이네임)·성모 출연. 국내 장비를 해상 운송해 현지 셋업.</p>
+          <p class="hm-work__role">조명 디자인 · 현장 운영 · 장비 해상 반출·통관</p>
+          <p class="hm-work__desc">오사카·도쿄의 1,300석급 극장 2곳에서 진행된 일본 투어입니다.</p>
           <a class="hm-link" href="/projects/japan-tour/">자세히 보기</a>
         </div>
       </article>
       <article class="hm-work">
-        <figure class="hm-work__media"><img src="/images/home/paradise.webp" alt="Paradise Art Night 2025 · 2025 · 조명 디자인 에이펙스라이트" width="1180" height="1180" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/paradise.webp" alt="Paradise Art Night 2025 · 파라다이스시티 인천 · 2025.09 · 에이펙스라이트 발레 공연 조명 디자인" width="1180" height="1180" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
           <p class="hm-work__meta">발레 · 2025.09 · 파라다이스시티 인천</p>
           <h3 class="hm-work__title">Paradise Art Night 2025</h3>
           <p class="hm-work__role">발레 공연 조명 디자인</p>
-          <p class="hm-work__desc">파라다이스시티(인천)에서 열린 Paradise Art Night 2025의 발레 공연 조명을 디자인했습니다.</p>
+          <p class="hm-work__desc">파리 오페라 발레 에투알 내한 공연.</p>
           <a class="hm-link" href="/projects/paradise-art-night/">자세히 보기</a>
         </div>
       </article>
       <article class="hm-work hm-work--rev">
-        <figure class="hm-work__media"><img src="/images/home/five.webp" alt="브로큰 발렌타인 단독 콘서트 FIVE · 2023 · 조명 디자인 에이펙스라이트" width="748" height="820" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/sonesone.webp" alt="콘서트 손에손에 뮤직페스타 · 서울·부산 · 에이펙스라이트 콘서트 조명 디자인" width="1000" height="562" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
-          <p class="hm-work__meta">콘서트 · 2023.11 · 노들섬 라이브하우스</p>
-          <h3 class="hm-work__title">브로큰 발렌타인 단독 콘서트 〈FIVE〉</h3>
-          <p class="hm-work__role">공연 조명</p>
-          <p class="hm-work__desc">노들섬 라이브하우스 단독 콘서트. 아티스트 공식 채널에 “Stage Lighting Apex Lite · Cha Hoon Lee” 크레딧 기록.</p>
-          <a class="hm-link" href="/projects/broken-valentine-five/">자세히 보기</a>
+          <p class="hm-work__meta">콘서트 · 서울·부산</p>
+          <h3 class="hm-work__title">콘서트 〈손에손에 뮤직페스타〉</h3>
+          <p class="hm-work__role">콘서트 조명 디자인 · 현장 운영</p>
+          <p class="hm-work__desc">서울과 부산 공연의 콘서트 조명 디자인과 현장 운영을 맡았습니다.</p>
+          <a class="hm-link" href="/projects/#p-sonesone">프로젝트 목록에서 보기</a>
         </div>
       </article>
       <article class="hm-work">
-        <figure class="hm-work__media"><img src="/images/home/gumi.webp" alt="2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼 · 2025 · 조명 디자인 에이펙스라이트" width="772" height="515" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/cheon.webp" alt="뮤지컬 천개의 파랑 · 예술의전당 CJ토월극장 · 에이펙스라이트 장비 협력" width="1000" height="568" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
-          <p class="hm-work__meta">축제 · 2025.10 · 구미 방림공장</p>
-          <h3 class="hm-work__title">2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼</h3>
-          <p class="hm-work__role">축제 전체 조명 총괄</p>
-          <p class="hm-work__desc">행사 구성: 미디어파사드 6편 · 500대 드론쇼 · 공연. 이 중 에이펙스라이트의 담당 범위는 축제 전체 조명 총괄입니다.</p>
-          <a class="hm-link" href="/projects/gumi-festival/">자세히 보기</a>
+          <p class="hm-work__meta">뮤지컬 · 예술의전당 CJ토월극장(1,004석)</p>
+          <h3 class="hm-work__title">뮤지컬 〈천개의 파랑〉</h3>
+          <p class="hm-work__role">장비 협력</p>
+          <p class="hm-work__desc">예술의전당 CJ토월극장(1,004석) 공연에 장비 협력으로 참여했습니다.</p>
+          <a class="hm-link" href="/projects/#p-cheon">프로젝트 목록에서 보기</a>
         </div>
       </article>
       <article class="hm-work hm-work--rev">
-        <figure class="hm-work__media"><img src="/images/home/daebu.webp" alt="안산 대부광산 미디어파사드 하늘에서 떨어지는 별똥별 · 2022 · 조명 디자인 에이펙스라이트" width="883" height="555" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/gumi.webp" alt="2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼 · 구미 방림공장 · 2025.10.08–09 · 에이펙스라이트 축제 전체 조명 총괄" width="772" height="515" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
-          <p class="hm-work__meta">미디어아트 · 2022 · 안산 대부광산</p>
-          <h3 class="hm-work__title">안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉</h3>
-          <p class="hm-work__role">조명 디자인 · 현장 운영</p>
-          <p class="hm-work__desc">폐채석장 암벽 프로젝션과 LED 퍼포먼스를 결합한 야외 미디어파사드. 구조물이 없는 지형에서 전원·배선·설치 포인트를 처음부터 계획.</p>
-          <a class="hm-link" href="/projects/daebu-quarry/">자세히 보기</a>
+          <p class="hm-work__meta">축제 · 2025.10.08–09 · 구미 방림공장</p>
+          <h3 class="hm-work__title">2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼</h3>
+          <p class="hm-work__role">축제 전체 조명 총괄</p>
+          <p class="hm-work__desc">미디어파사드 6편 + 500대 드론쇼 + 공연을 동시에 운영한 현장입니다.</p>
+          <a class="hm-link" href="/projects/gumi-festival/">자세히 보기</a>
         </div>
       </article>
       <article class="hm-work">
-        <figure class="hm-work__media"><img src="/images/home/gaya.webp" alt="국립중앙박물관 가야본성 — 칼과 현 · 2019–2020 · 조명 디자인 에이펙스라이트" width="1200" height="900" loading="lazy" decoding="async"></figure>
+        <figure class="hm-work__media"><img src="/images/home/daebu.webp" alt="안산 대부광산 미디어파사드 하늘에서 떨어지는 별똥별 · 안산 대부광산 · 2022 · 에이펙스라이트 조명 연출 설계 및 현장 운영" width="883" height="555" loading="lazy" decoding="async"></figure>
         <div class="hm-work__body">
-          <p class="hm-work__meta">전시 · 2019.12–2020.03 · 국립중앙박물관</p>
-          <h3 class="hm-work__title">국립중앙박물관 〈가야본성 — 칼과 현〉</h3>
-          <p class="hm-work__role">전시 조명 · 타임코드 기반 조명·미디어 시스템</p>
-          <p class="hm-work__desc">곡면 미디어 파사드 앞 조형물의 형태가 읽히도록 밝기를 분리 제어. 약 3개월간 상주 오퍼레이터 없이 반복 운영.</p>
-          <a class="hm-link" href="/projects/gaya-spirit/">자세히 보기</a>
+          <p class="hm-work__meta">미디어아트 · 2022 · 안산 대부광산</p>
+          <h3 class="hm-work__title">안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉</h3>
+          <p class="hm-work__role">조명 연출 설계 및 현장 운영</p>
+          <p class="hm-work__desc">폐채석장 암벽 프로젝션 + LED 퍼포먼스.</p>
+          <a class="hm-link" href="/projects/daebu-quarry/">자세히 보기</a>
         </div>
       </article>
       <p class="hm-more"><a class="hm-link" href="/projects/">전체 프로젝트 보기</a></p>
@@ -334,21 +444,172 @@
       <header class="hm-head">
         <p class="hm-eyebrow">Owned Equipment</p>
         <h2 class="hm-h2">보유 장비와 시스템</h2>
-        <p class="hm-lead">디자인한 빛을 그대로 구현할 장비를 직접 보유하고 운용합니다.</p>
+        <p class="hm-lead">디자인한 빛을 그대로 구현할 장비를 직접 보유하고 운용합니다. 장비를 누르면 특징과 용도를 볼 수 있습니다.</p>
       </header>
-      <div class="hm-eq">
-        <figure class="hm-eq__main"><img src="/images/home/console.webp" alt="grandMA 콘솔로 쇼를 프로그래밍하는 조명디자이너 이차훈 · 에이펙스라이트" width="692" height="388" loading="lazy" decoding="async"></figure>
-        <ul class="hm-eq__grid">
-          <li class="hm-eq__item"><img src="/images/home/eq-grandma3.webp" alt="MA Lighting grandMA3 light" width="600" height="600" loading="lazy" decoding="async"><p class="hm-eq__brand">MA Lighting</p><p class="hm-eq__model">grandMA3 light</p></li>
-          <li class="hm-eq__item"><img src="/images/home/eq-megapointe.webp" alt="ROBE MegaPointe" width="600" height="600" loading="lazy" decoding="async"><p class="hm-eq__brand">ROBE</p><p class="hm-eq__model">MegaPointe</p></li>
-          <li class="hm-eq__item"><img src="/images/home/eq-spiider.webp" alt="ROBE Spiider" width="600" height="600" loading="lazy" decoding="async"><p class="hm-eq__brand">ROBE</p><p class="hm-eq__model">Spiider</p></li>
-          <li class="hm-eq__item"><img src="/images/home/eq-khamsin.webp" alt="Ayrton Khamsin" width="600" height="600" loading="lazy" decoding="async"><p class="hm-eq__brand">Ayrton</p><p class="hm-eq__model">Khamsin</p></li>
-          <li class="hm-eq__item"><img src="/images/home/eq-minib.webp" alt="Clay Paky Mini-B" width="600" height="600" loading="lazy" decoding="async"><p class="hm-eq__brand">Clay Paky</p><p class="hm-eq__model">Mini-B</p></li>
-          <li class="hm-eq__item"><img src="/images/home/eq-m18.webp" alt="JB-Lighting M18 Profile" width="600" height="600" loading="lazy" decoding="async"><p class="hm-eq__brand">JB-Lighting</p><p class="hm-eq__model">M18 Profile</p></li>
-        </ul>
+      <div class="eqg eqg--home" data-eq-grid>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-grandma3">
+            <span class="eqc__media"><img src="/images/home/eq-grandma3.webp" alt="MA Lighting grandMA3 Light 조명 콘솔 · 에이펙스라이트 보유 장비" width="600" height="600" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">MA Lighting</span>
+              <span class="eqc__model">grandMA3 Light</span>
+              <span class="eqc__sum">grandMA3 플랫폼 메인 콘솔</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-grandma3" role="region" aria-label="MA Lighting grandMA3 Light 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">CONSOLE</p>
+            <h3 class="eqd__title">MA Lighting grandMA3 Light</h3>
+            <p class="eqd__desc">grandMA3 플랫폼 메인 콘솔</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>MA Lighting</dd></div><div><dt>모델</dt><dd>grandMA3 Light</dd></div><div><dt>분류</dt><dd>조명 콘솔</dd></div><div><dt>특징</dt><dd>grandMA3 소프트웨어 기반 콘솔. 멀티터치 화면으로 대규모 무빙라이트·LED·미디어 장비를 한 세션에서 제어합니다.</dd></div><div><dt>용도</dt><dd>콘서트·뮤지컬·방송의 메인 콘솔, 타임코드 기반 쇼 운영</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-m18">
+            <span class="eqc__media"><img src="/images/home/eq-m18.webp" alt="JB Lighting M18 Profile LED 무빙 프로파일 · 에이펙스라이트 보유 장비" width="600" height="600" loading="lazy" decoding="async"><span class="eqc__qty">CRI 96</span></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">JB Lighting</span>
+              <span class="eqc__model">M18 Profile</span>
+              <span class="eqc__sum">CRI 96 고연색 프로파일</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-m18" role="region" aria-label="JB Lighting M18 Profile 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">PROFILE · SPOT</p>
+            <h3 class="eqd__title">JB Lighting M18 Profile</h3>
+            <p class="eqd__desc">CRI 96 고연색 프로파일</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>JB Lighting</dd></div><div><dt>모델</dt><dd>M18 Profile</dd></div><div><dt>분류</dt><dd>LED 무빙 프로파일</dd></div><div><dt>특징</dt><dd>CRI 96 고연색 LED 무빙 프로파일. 피부 톤과 의상 색을 자연스럽게 표현합니다.</dd></div><div><dt>용도</dt><dd>뮤지컬·연극·무용의 배우 키라이트, 촬영 현장</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-ghibli">
+            <span class="eqc__media"><img src="/images/photos/eq-ghibli.webp" alt="Ayrton GHIBLI LED 무빙 스팟 · 에이펙스라이트 보유 장비" width="700" height="916" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">Ayrton</span>
+              <span class="eqc__model">GHIBLI</span>
+              <span class="eqc__sum">고보·프리즘 메인 스팟</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-ghibli" role="region" aria-label="Ayrton GHIBLI 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">PROFILE · SPOT</p>
+            <h3 class="eqd__title">Ayrton GHIBLI</h3>
+            <p class="eqd__desc">고보·프리즘 메인 스팟</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>Ayrton</dd></div><div><dt>모델</dt><dd>GHIBLI</dd></div><div><dt>분류</dt><dd>LED 무빙 스팟</dd></div><div><dt>특징</dt><dd>프레이밍 셔터와 고보·프리즘을 갖춘 LED 무빙 스팟. 선명한 컷오프와 고보 투사가 가능합니다.</dd></div><div><dt>용도</dt><dd>극장·콘서트 메인 스팟, 고보 패턴 연출</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-khamsin">
+            <span class="eqc__media"><img src="/images/home/eq-khamsin.webp" alt="Ayrton KHAMSIN LED 무빙 프로파일 · 에이펙스라이트 보유 장비" width="600" height="600" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">Ayrton</span>
+              <span class="eqc__model">KHAMSIN</span>
+              <span class="eqc__sum">고출력 원거리 프로파일</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-khamsin" role="region" aria-label="Ayrton KHAMSIN 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">PROFILE · SPOT</p>
+            <h3 class="eqd__title">Ayrton KHAMSIN</h3>
+            <p class="eqd__desc">고출력 원거리 프로파일</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>Ayrton</dd></div><div><dt>모델</dt><dd>KHAMSIN</dd></div><div><dt>분류</dt><dd>LED 무빙 프로파일</dd></div><div><dt>특징</dt><dd>고출력 LED 무빙 프로파일. 긴 투사 거리에서도 밝기와 선명한 고보를 유지합니다.</dd></div><div><dt>용도</dt><dd>대형 공연장·야외 무대의 원거리 스팟</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-megapointe">
+            <span class="eqc__media"><img src="/images/home/eq-megapointe.webp" alt="ROBE MEGA POINTE 무빙 하이브리드 · 에이펙스라이트 보유 장비" width="600" height="600" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">ROBE</span>
+              <span class="eqc__model">MEGA POINTE</span>
+              <span class="eqc__sum">스팟 · 빔 · 워시 겸용</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-megapointe" role="region" aria-label="ROBE MEGA POINTE 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">MOVING HEAD</p>
+            <h3 class="eqd__title">ROBE MEGA POINTE</h3>
+            <p class="eqd__desc">스팟 · 빔 · 워시 겸용</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>ROBE</dd></div><div><dt>모델</dt><dd>MEGA POINTE</dd></div><div><dt>분류</dt><dd>무빙 하이브리드</dd></div><div><dt>특징</dt><dd>스팟·빔·워시를 한 대로 구현하는 하이브리드 무빙. 날카로운 빔과 고보·프리즘 이펙트가 강점입니다.</dd></div><div><dt>용도</dt><dd>콘서트·페스티벌 공중 빔, 이펙트 연출</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-spiider">
+            <span class="eqc__media"><img src="/images/home/eq-spiider.webp" alt="ROBE SPIIDER LED 무빙 워시 · 에이펙스라이트 보유 장비" width="600" height="600" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">ROBE</span>
+              <span class="eqc__model">SPIIDER</span>
+              <span class="eqc__sum">워시 · 빔 · 픽셀</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-spiider" role="region" aria-label="ROBE SPIIDER 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">MOVING HEAD</p>
+            <h3 class="eqd__title">ROBE SPIIDER</h3>
+            <p class="eqd__desc">워시 · 빔 · 픽셀</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>ROBE</dd></div><div><dt>모델</dt><dd>SPIIDER</dd></div><div><dt>분류</dt><dd>LED 무빙 워시</dd></div><div><dt>특징</dt><dd>LED 링 픽셀 제어와 센터 플라워 이펙트를 갖춘 무빙 워시. 넓은 워시와 빔을 함께 씁니다.</dd></div><div><dt>용도</dt><dd>무대 전체 컬러 워시, 픽셀 이펙트</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-midib">
+            <span class="eqc__media"><img src="/images/photos/eq-midib.webp" alt="Clay Paky MIDI-B LED 무빙 워시 · 빔 · 에이펙스라이트 보유 장비" width="700" height="833" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">Clay Paky</span>
+              <span class="eqc__model">MIDI-B</span>
+              <span class="eqc__sum">빠른 무빙 워시</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-midib" role="region" aria-label="Clay Paky MIDI-B 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">MOVING HEAD</p>
+            <h3 class="eqd__title">Clay Paky MIDI-B</h3>
+            <p class="eqd__desc">빠른 무빙 워시</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>Clay Paky</dd></div><div><dt>모델</dt><dd>MIDI-B</dd></div><div><dt>분류</dt><dd>LED 무빙 워시 · 빔</dd></div><div><dt>특징</dt><dd>줌 범위가 넓고 움직임이 빠른 LED 무빙 워시·빔입니다.</dd></div><div><dt>용도</dt><dd>무대 워시, 빠른 빔 무브먼트</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
+        <div class="eqc">
+          <button class="eqc__btn" type="button" data-eq-toggle aria-expanded="false" aria-controls="eq-minib">
+            <span class="eqc__media"><img src="/images/home/eq-minib.webp" alt="Clay Paky MINI-B LED 무빙 워시 · 빔 · 에이펙스라이트 보유 장비" width="600" height="600" loading="lazy" decoding="async"></span>
+            <span class="eqc__body">
+              <span class="eqc__brand">Clay Paky</span>
+              <span class="eqc__model">MINI-B</span>
+              <span class="eqc__sum">초소형 무빙</span>
+              <span class="eqc__hint" data-open="설명 보기" data-close="닫기">설명 보기</span>
+            </span>
+          </button>
+        </div>
+        <div class="eqd" id="eq-minib" role="region" aria-label="Clay Paky MINI-B 설명">
+          <div class="eqd__head">
+            <p class="eqd__cat">MOVING HEAD</p>
+            <h3 class="eqd__title">Clay Paky MINI-B</h3>
+            <p class="eqd__desc">초소형 무빙</p>
+          </div>
+          <dl class="eqd__specs"><div><dt>브랜드</dt><dd>Clay Paky</dd></div><div><dt>모델</dt><dd>MINI-B</dd></div><div><dt>분류</dt><dd>LED 무빙 워시 · 빔</dd></div><div><dt>특징</dt><dd>초소형 LED 무빙 워시·빔입니다.</dd></div><div><dt>용도</dt><dd>세트 내부·바닥 설치, 좁은 공간</dd></div></dl>
+          <button class="eqd__close" type="button" data-eq-close aria-label="설명 닫기">×</button>
+        </div>
       </div>
-      <p class="hm-brands">MA Lighting · ROBE · Ayrton · Clay Paky · JB-Lighting</p>
-      <p class="hm-more"><a class="hm-link" href="/services/equipment-rental/">보유 장비 전체 · 렌탈 문의</a></p>
+      <p class="hm-brands">MA Lighting · ROBE · Ayrton · Clay Paky · JB Lighting</p>
+      <p class="hm-more"><a class="hm-link" href="/services/equipment-rental/#inventory">보유 장비 전체 보기</a></p>
     </div>
   </section>
 

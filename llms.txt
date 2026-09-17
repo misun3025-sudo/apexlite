@@ -1,48 +1,53 @@
-# APEX LITE (에이펙스라이트)
+# 에이펙스라이트 (APEX LITE)
 
-> 공연조명 디자인 · 장비 보유 · 현장 운영을 한 팀이 책임지는 한국의 공연조명 전문기업. Korean lighting design and technical production company: lighting design, owned equipment and on-site operation by one team.
+> 에이펙스라이트(APEX LITE)는 무대조명 디자인, 조명 시스템 설계, 타임코드 통합제어, 조명 장비 렌탈을 하는 한국의 공연조명 전문기업입니다. 대표는 조명디자이너 이차훈입니다. APEX LITE is a Korean stage lighting company: lighting design, system design, timecode show control and equipment rental. Founder: lighting designer Lee Cha Hoon.
 
-## 회사 / Company
-- 브랜드: APEX LITE / 에이펙스라이트 (2018년 온탑라이팅으로 시작, 2020년 5월 현재 상호로 변경)
-- 대표: 이차훈 (Lee Cha Hoon) — Lighting Designer · Founder
-- 소개: 에이펙스라이트는 공연장 조명감독 출신 디자이너가 직접 운영하는 공연조명 전문기업입니다. 대표는 한국예술종합학교 연희과에서 강의해온 현장형 디자이너로, 넷플릭스 드라마 〈XO, KITTY〉, 2019년 도쿄·오사카 1,300석 K-뮤지컬 일본 투어, 국립극장·국립오페라단·예술의전당 정통 무대 등 300여 작품에 빛을 더했습니다. 디자인부터 장비, 그리고 현장 운영까지. 조명·무대·음향·트러스를 한 팀이 책임집니다.
+## 회사 정보 / Company
+- 회사명: 에이펙스라이트 / APEX LITE (표기: ㈜에이펙스라이트, Apex Lite, Apexlite)
+- 대표: 이차훈 (Lee Cha Hoon) — 조명디자이너
+- 설립: 2018 (온탑라이팅으로 시작, 2020년 5월 현재 상호로 변경)
+- 웹사이트: https://apexlight.co.kr/
+- 활동 지역: 대한민국 (해외 투어 지원 포함)
 
-## 대표 / Founder
-- 이차훈 (Lee Cha Hoon), 조명디자이너 · 에이펙스라이트 대표
-- 2014–2016 뮤지스땅스 조명감독 · 개관 구축
-- 2016–2018 플랫폼창동61 조명감독 · 개관 구축
-- 2018 삼일로창고극장 재개관 참여
-- 한국예술종합학교 연희과 시간제 교수 역임 (Former Part-time Faculty, Korea National University of Arts)
-- 학력: 대덕대학교 연기과 → 서울예술대학교 연극과 조명 전공
+## 사업 범위 / Services
+- 무대조명 디자인 (공연·뮤지컬·콘서트·촬영/OTT·축제·전시·미디어아트)
+- 조명 시스템 설계 (공연장·전시·상설 공간) — https://apexlight.co.kr/venue-system/
+- 타임코드 통합제어 (LTC/MTC, 미디어 서버·쇼 컨트롤러·레이저 연동)
+- 조명 장비 렌탈 (장비 단독 대여 또는 프로그래밍·운영 포함) — https://apexlight.co.kr/services/equipment-rental/
+- 한국 내 해외 프로덕션 조명 지원 · 한국 작품 해외 투어 지원 — https://apexlight.co.kr/international/
 
-## 서비스 / Services
-- 조명 디자인 (공연·콘서트·촬영/OTT·축제·전시·미디어아트)
-- 장비 렌탈 (장비 단독 렌탈 가능) — https://apexlight.co.kr/services/equipment-rental/
-- 프로그래밍 · 현장 운영 (조명·무대·음향·트러스 통합 운영)
-- 한국 내 해외 프로덕션 조명 지원 — https://apexlight.co.kr/international/
-- 공연장·공간 조명 시스템 — https://apexlight.co.kr/venue-system/
+## 핵심 강점 / Key strengths
+1. 디자인부터 현장 운영까지 한 팀 — 조명 디자인, 장비, 프로그래밍, 현장 운영을 한 팀이 책임집니다.
+2. 해외 제작사 주도 프로덕션 경험 — Netflix 〈XO, Kitty〉 시즌 2·3 콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 · 엔딩 크레딧 등재(에이펙스라이트 / 이차훈).
+3. 해외 투어 기술 대응 — 뮤지컬 〈서른즈음에〉 일본 투어(오사카·도쿄 1,300석급 극장 2곳) — 장비 해상 반출·통관, 출국 전 시뮬레이션·사전 프로그래밍 완료.
+4. 시스템 설계·타임코드 통합제어 — grandMA3/MA2 네트워크 구성, 타임코드(LTC/MTC) 연동, 미디어 서버·쇼 컨트롤러 연계, 레이저 제어.
+5. 장비 직접 보유 — MA Lighting · JB Lighting · Ayrton · ROBE · Clay Paky 장비를 보유하고 장비 단독 렌탈도 가능합니다.
+6. 대형·야외·비정형 현장 — 2025 GIF 구미산단 페스티벌 축제 전체 조명 총괄(미디어파사드 6편 + 500대 드론쇼 + 공연 동시 운영), 안산 대부광산 폐채석장 미디어파사드(2022).
 
-## 대표 작업 / Selected Work
-- Netflix 〈XO, Kitty〉 시즌 2·3 — 2024–2025 — 역할: 콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 — https://apexlight.co.kr/projects/xo-kitty/
-  (EN) Netflix "XO, Kitty" Seasons 2 & 3 — 2024–2025 — Role: Concert scene lighting design · Technical team for truss, audio, lighting and set
-- 뮤지컬 〈서른즈음에〉 일본 투어 — 2019 · 오사카·도쿄 1,300석 — 역할: 조명 디자인 · 현장 운영 — https://apexlight.co.kr/projects/japan-tour/
-  (EN) Musical "30sai no Koro ni" — Japan Tour — 2019 · Osaka & Tokyo, 1,300 seats — Role: Lighting design · On-site operation
-- Paradise Art Night 2025 — 2025.09 · 파라다이스시티 인천 — 역할: 발레 공연 조명 디자인 — https://apexlight.co.kr/projects/paradise-art-night/
-  (EN) Paradise Art Night 2025 — Sep 2025 · Paradise City, Incheon — Role: Ballet performance lighting design
-- 브로큰 발렌타인 단독 콘서트 〈FIVE〉 — 2023.11 · 노들섬 라이브하우스 — 역할: 공연 조명 — https://apexlight.co.kr/projects/broken-valentine-five/
-  (EN) Broken Valentine "FIVE" Concert — Nov 2023 · Nodeul Island Live House, Seoul — Role: Stage lighting
-- 2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼 — 2025.10 · 구미 방림공장 — 역할: 축제 전체 조명 총괄 — https://apexlight.co.kr/projects/gumi-festival/
-  (EN) 2025 GIF Gumi Industrial-complex Festival / GIM Media Art Show — Oct 2025 · Bangnim factory site, Gumi — Role: Festival total lighting direction
-- 안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉 — 2022 · 안산 대부광산 — 역할: 조명 디자인 · 현장 운영 — https://apexlight.co.kr/projects/daebu-quarry/
-  (EN) Daebu Mine Media Façade “A Shooting Star Falling from the Sky”, Ansan — 2022 · Daebu Mine, Ansan — Role: Lighting design · On-site operation
-- 국립중앙박물관 〈가야본성 — 칼과 현〉 — 2019.12–2020.03 · 국립중앙박물관 — 역할: 전시 조명 · 타임코드 기반 조명·미디어 시스템 — https://apexlight.co.kr/projects/gaya-spirit/
-  (EN) National Museum of Korea — "Gaya Spirit: Iron and Tune" — Dec 2019 – Mar 2020 · National Museum of Korea — Role: Exhibition lighting · Timecode-based lighting and media system
+## 대표 케이스 / Selected work
+1. Netflix 〈XO, Kitty〉 시즌 2·3 — 2024–2025 — 역할: 콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 — 엔딩 크레딧 등재(에이펙스라이트 / 이차훈). — https://apexlight.co.kr/projects/xo-kitty/
+   (EN) Netflix "XO, Kitty" Seasons 2 & 3 — 2024–2025 — Role: Concert scene lighting design · Technical team for truss, audio, lighting and set
+2. 뮤지컬 〈서른즈음에〉 일본 투어 — 2019 · 오사카·도쿄 1,300석급 극장 2곳 — 역할: 조명 디자인 · 현장 운영 · 장비 해상 반출·통관 — 오사카·도쿄의 1,300석급 극장 2곳에서 진행된 일본 투어입니다. — https://apexlight.co.kr/projects/japan-tour/
+   (EN) Musical "30sai no Koro ni" — Japan Tour — 2019 · Osaka & Tokyo, two 1,300-seat-class theatres — Role: Lighting design · On-site operation · Equipment shipping by sea & customs
+3. Paradise Art Night 2025 — 2025.09 · 파라다이스시티 인천 — 역할: 발레 공연 조명 디자인 — 파리 오페라 발레 에투알 내한 공연. — https://apexlight.co.kr/projects/paradise-art-night/
+   (EN) Paradise Art Night 2025 — Sep 2025 · Paradise City, Incheon — Role: Ballet performance lighting design
+4. 콘서트 〈손에손에 뮤직페스타〉 — 서울·부산 — 역할: 콘서트 조명 디자인 · 현장 운영 — 서울과 부산 공연의 콘서트 조명 디자인과 현장 운영을 맡았습니다. — https://apexlight.co.kr/projects/#p-sonesone
+   (EN) Concert "Son-e-Son-e Music Festa" — Seoul & Busan — Role: Concert lighting design · On-site operation
+5. 뮤지컬 〈천개의 파랑〉 — 예술의전당 CJ토월극장(1,004석) — 역할: 장비 협력 — 예술의전당 CJ토월극장(1,004석) 공연에 장비 협력으로 참여했습니다. — https://apexlight.co.kr/projects/#p-cheon
+   (EN) Musical "A Thousand Blues" — Seoul Arts Center, CJ Towol Theater (1,004 seats) — Role: Equipment support
+6. 2025 GIF 구미산단 페스티벌 / GIM 미디어아트쇼 — 2025.10.08–09 · 구미 방림공장 — 역할: 축제 전체 조명 총괄 — 미디어파사드 6편 + 500대 드론쇼 + 공연을 동시에 운영한 현장입니다. — https://apexlight.co.kr/projects/gumi-festival/
+   (EN) 2025 GIF Gumi Industrial-complex Festival / GIM Media Art Show — Oct 8–9, 2025 · Bangnim factory site, Gumi — Role: Festival total lighting direction
+7. 안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉 — 2022 · 안산 대부광산 — 역할: 조명 연출 설계 및 현장 운영 — 폐채석장 암벽 프로젝션 + LED 퍼포먼스. — https://apexlight.co.kr/projects/daebu-quarry/
+   (EN) Daebu Mine Media Façade “A Shooting Star Falling from the Sky”, Ansan — 2022 · Daebu Mine, Ansan — Role: Lighting direction design · On-site operation
 
-## 보유 장비 / Owned Equipment
-- 브랜드: MA Lighting · ROBE · Ayrton · Clay Paky · JB-Lighting
-- 대표 모델: MA Lighting grandMA3 light / ROBE MegaPointe / ROBE Spiider / Ayrton Khamsin / Clay Paky Mini-B / JB-Lighting M18 Profile
+## 보유 장비 / Owned equipment (https://apexlight.co.kr/services/equipment-rental/#inventory)
+- CONSOLE (조명 콘솔): MA Lighting grandMA3 Light / MA Lighting grandMA2 Light / MA Lighting MA2 Command Wing
+- PROFILE · SPOT (프로파일 · 스팟): JB Lighting M18 Profile (CRI 96) / Ayrton GHIBLI / Ayrton KHAMSIN / Ayrton DIABLO
+- MOVING HEAD (무빙 워시 · 빔): ROBE MEGA POINTE / ROBE SPIIDER / Clay Paky MIDI-B / Clay Paky MINI-B / Aura WASH ×50 / Litelees WASH 6×40
+- BEAM · BAR · FX (빔 · 바 · 이펙트): JJ-Light BEAM 7R / 9R ×56 / Clay Paky TAMBORA BATTEN 24 / Tilt Bar 12구 · 40구 / GS · Beyond STOMI · JEST Strobe
+- SYSTEM (제어 시스템): grandMA3 / MA2 네트워크 구성 / 타임코드(LTC/MTC) 연동 / 미디어 서버 · 쇼 컨트롤러 연계 / 레이저 제어
 
-## 공식 기록 / Official Records (원문에서 이름·회사명 확인된 링크만)
+## 공식 기록 / Official records (원문에서 이름·회사명이 확인되는 링크)
 - 2026 · 뉴데일리 · 연극 〈서바이트〉 · 서강대학교 메리홀 소극장 — 조명디자인 이차훈 — https://www.newdaily.co.kr/site/data/html/2026/06/02/2026060200199.html
 - 2024 · 두산아트센터 · 연극 〈애도의 방식〉 · Space111 — 장비 협력 — 조명장비임차 Apexlite(대표 이차훈) — https://m.doosanartcenter.com/ko/performance/1601
 - 2024 · 플레이뉴스 · 제26회 생생 춤 페스티벌 · 강동아트센터 대극장 한강 — 조명감독 이차훈 — https://ewha.biz/548637
@@ -58,17 +63,19 @@
 - 2015 · KTV 국민방송 · 〈되살아난 인디 공연…‘같이 공연할까요?’〉 인터뷰 — 뮤지스땅스 조명감독 이차훈 — https://www.ktv.go.kr/content/view?content_id=505405
 
 ## 연락처 / Contact
-- 전화: 010-8701-8119 (+82-10-8701-8119)
 - 이메일: apexlite1@gmail.com
-- 인스타그램: @apexlitedesign https://www.instagram.com/apexlitedesign/
+- 전화: 010-8701-8119 (+82-10-8701-8119)
+- 인스타그램: @apexlitedesign — https://www.instagram.com/apexlitedesign/
+- 문의 페이지: https://apexlight.co.kr/contact/
 
-## 주요 URL / Key pages
-- 홈 (KR): https://apexlight.co.kr/
-- Home (EN): https://apexlight.co.kr/en/
-- 프로젝트: https://apexlight.co.kr/projects/
+## 주요 페이지 / Key pages
+- 홈: https://apexlight.co.kr/
 - 서비스: https://apexlight.co.kr/services/
-- 장비 렌탈: https://apexlight.co.kr/services/equipment-rental/
+- 보유 장비·장비 렌탈: https://apexlight.co.kr/services/equipment-rental/
 - 해외 프로덕션: https://apexlight.co.kr/international/
+- 프로젝트: https://apexlight.co.kr/projects/
 - 공간 시스템: https://apexlight.co.kr/venue-system/
-- 대표 소개·공식 기록 전체: https://apexlight.co.kr/about/
-- 문의: https://apexlight.co.kr/#contact
+- 회사소개 · 이차훈: https://apexlight.co.kr/about/
+- 문의: https://apexlight.co.kr/contact/
+- 프로젝트 상세: https://apexlight.co.kr/projects/xo-kitty/, https://apexlight.co.kr/projects/paradise-art-night/, https://apexlight.co.kr/projects/broken-valentine-five/, https://apexlight.co.kr/projects/japan-tour/, https://apexlight.co.kr/projects/daebu-quarry/, https://apexlight.co.kr/projects/gaya-spirit/, https://apexlight.co.kr/projects/gumi-festival/
+- English: https://apexlight.co.kr/en/, https://apexlight.co.kr/en/services/, https://apexlight.co.kr/en/services/equipment-rental/, https://apexlight.co.kr/en/international/, https://apexlight.co.kr/en/projects/, https://apexlight.co.kr/en/venue-system/, https://apexlight.co.kr/en/about/, https://apexlight.co.kr/en/contact/
