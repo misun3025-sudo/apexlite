@@ -186,12 +186,14 @@
       sending: 'Sending…', submit: 'Send Inquiry',
       ok: "Thank you. We'll review your inquiry and get back to you.",
       err: 'Sending failed. Please email us directly at apexlite1@gmail.com.',
-      required: 'Please fill in your name, email and message.'
+      required: 'Please fill in your name, email and message.',
+      requiredGeneric: 'Please fill in your name, a phone number or email, and a message.'
     } : {
       sending: '전송 중…', submit: '문의 보내기',
       ok: '문의가 접수되었습니다. 검토 후 연락드리겠습니다.',
       err: '전송에 실패했습니다. apexlite1@gmail.com 으로 직접 연락해 주세요.',
-      required: '담당자, 이메일, 문의 내용을 입력해 주세요.'
+      required: '담당자, 이메일, 문의 내용을 입력해 주세요.',
+      requiredGeneric: '담당자, 연락처 또는 이메일, 문의 내용을 입력해 주세요.'
     };
 
     var btn = document.getElementById('inquirySubmit');
@@ -207,7 +209,30 @@
       return el && el.value ? el.value.trim() : '';
     };
 
+    var generic = form.hasAttribute('data-generic');
+
+    /* home form: every field carries data-label, so the mail body is built from the form itself */
+    var buildGeneric = function () {
+      var rows = [['Language', LANG]];
+      Array.prototype.forEach.call(form.querySelectorAll('[data-label]'), function (el) {
+        if (el.name !== 'message' && el.value && el.value.trim()) rows.push([el.getAttribute('data-label'), el.value.trim()]);
+      });
+      var body = rows.map(function (r) { return r[0] + ': ' + r[1]; }).join('\n') + '\n\n---\n' + val('message');
+      var payload = { lang: LANG, message: body };
+      Array.prototype.forEach.call(form.querySelectorAll('[name]'), function (el) {
+        if (el.name !== 'message') payload[el.name] = el.value ? el.value.trim() : '';
+      });
+      return payload;
+    };
+
+    var genericValid = function () {
+      if (!val('from_name') || !val('message') || (!val('phone') && !val('reply_to'))) return false;
+      var mail = form.elements.reply_to;
+      return !(mail && mail.value && !mail.checkValidity());
+    };
+
     var buildPayload = function () {
+      if (generic) return buildGeneric();
       var support = Array.prototype.slice
         .call(form.querySelectorAll('input[name="support"]:checked'))
         .map(function (i) { return i.value; })
@@ -246,9 +271,9 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        say('err', COPY.required);
+      if (generic ? !genericValid() : !form.checkValidity()) {
+        if (!generic) form.reportValidity();
+        say('err', generic ? COPY.requiredGeneric : COPY.required);
         return;
       }
       var payload = buildPayload();

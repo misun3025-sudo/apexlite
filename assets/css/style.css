@@ -794,7 +794,7 @@ a.work-card:hover .work-card__title { color: var(--gold); }
 .about-top h1 { font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.01em; }
 .about-top .person-role { margin-top: 8px; }
 .about-top .one { font-size: clamp(17px, 2vw, 21px); color: var(--gray1); line-height: 1.7; max-width: 30em; }
-.strength-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.strength-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .strength-grid > * { min-width: 0; }
 .strength { background: var(--black2); border: 1px solid var(--line); border-top: 2px solid var(--gold); padding: 26px 22px; }
 .strength .n { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--gold); line-height: 1; }
@@ -831,7 +831,7 @@ a.work-card:hover .work-card__title { color: var(--gold); }
   .feature-grid .half-card { min-height: 340px; }
   .detail-block { grid-template-columns: 1fr; gap: 12px; }
   .about-top__grid { grid-template-columns: 260px 1fr; gap: 32px; }
-  .strength-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strength-grid { grid-template-columns: 1fr; }
   .support-grid { grid-template-columns: 1fr; }
   .contact-list { grid-template-columns: 1fr; }
 }
@@ -858,3 +858,10 @@ a.work-card:hover .work-card__title { color: var(--gold); }
   .contact-band { padding: 60px 0; }
   .cap { font-size: 10.5px; }
 }
+
+/* ─── v4 site-wide rules: 1320px content, no hover zoom, no entrance animation ─── */
+:root { --maxw: 1320px; }
+html.js .reveal, html.js .reveal.visible { opacity: 1; transform: none; transition: none; }
+.photo-card:hover img, .half-card:hover img, .svc-tile:hover img,
+a.work-card:hover .work-card__media img { transform: none; }
+.card:hover, .btn-primary:hover { transform: none; }
