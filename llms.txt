@@ -20,8 +20,8 @@
 1. 디자인부터 현장 운영까지 한 팀 — 조명 디자인, 장비, 프로그래밍, 현장 운영을 한 팀이 책임집니다.
 2. 해외 제작사 주도 프로덕션 경험 — Netflix 〈XO, Kitty〉 시즌 2·3 콘서트씬 조명 디자인 · 트러스·음향·조명·세트 기술팀 구성 · 엔딩 크레딧 등재(에이펙스라이트 / 이차훈).
 3. 해외 투어 기술 대응 — 뮤지컬 〈서른즈음에〉 일본 투어(오사카·도쿄 1,300석급 극장 2곳) — 장비 해상 반출·통관, 출국 전 시뮬레이션·사전 프로그래밍 완료.
-4. 시스템 설계·타임코드 통합제어 — grandMA3/MA2 네트워크 구성, 타임코드(LTC/MTC) 연동, 미디어 서버·쇼 컨트롤러 연계, 레이저 제어.
-5. 장비 직접 보유 — MA Lighting · JB Lighting · Ayrton · ROBE · Clay Paky 장비를 보유하고 장비 단독 렌탈도 가능합니다.
+4. 시스템 설계·타임코드 통합제어 — 프로젝트의 콘솔 소프트웨어와 호환 장비에 맞춰 grandMA3 또는 grandMA2 기반 제어 네트워크를 구성하고, 메인·백업 운용을 설계합니다. 타임코드(LTC/MTC) 연동, 미디어 서버·쇼 컨트롤러 연계, 레이저 제어를 지원합니다.
+5. 장비 직접 보유 — MA Lighting · JB-Lighting · Ayrton · ROBE · Claypaky 장비를 보유하고 장비 단독 렌탈도 가능합니다.
 6. 대형·야외·비정형 현장 — 2025 GIF 구미산단 페스티벌 축제 전체 조명 총괄(미디어파사드 6편 + 500대 드론쇼 + 공연 동시 운영), 안산 대부광산 폐채석장 미디어파사드(2022).
 
 ## 대표 케이스 / Selected work
@@ -41,11 +41,31 @@
    (EN) Daebu Mine Media Façade “A Shooting Star Falling from the Sky”, Ansan — 2022 · Daebu Mine, Ansan — Role: Lighting direction design · On-site operation
 
 ## 보유 장비 / Owned equipment (https://apexlight.co.kr/services/equipment-rental/#inventory)
-- CONSOLE (조명 콘솔): MA Lighting grandMA3 Light / MA Lighting grandMA2 Light / MA Lighting MA2 Command Wing
-- PROFILE · SPOT (프로파일 · 스팟): JB Lighting M18 Profile (CRI 96) / Ayrton GHIBLI / Ayrton KHAMSIN / Ayrton DIABLO
-- MOVING HEAD (무빙 워시 · 빔): ROBE MEGA POINTE / ROBE SPIIDER / Clay Paky MIDI-B / Clay Paky MINI-B / Aura WASH ×50 / Litelees WASH 6×40
-- BEAM · BAR · FX (빔 · 바 · 이펙트): JJ-Light BEAM 7R / 9R ×56 / Clay Paky TAMBORA BATTEN 24 / Tilt Bar 12구 · 40구 / GS · Beyond STOMI · JEST Strobe
-- SYSTEM (제어 시스템): grandMA3 / MA2 네트워크 구성 / 타임코드(LTC/MTC) 연동 / 미디어 서버 · 쇼 컨트롤러 연계 / 레이저 제어
+### CONSOLE (조명 콘솔)
+- MA Lighting grandMA3 light — 조명 콘솔: grandMA3 소프트웨어로 운용하는 조명 콘솔입니다. grandMA3 쇼파일로 프로그래밍하는 콘서트·뮤지컬 운영에 사용합니다.
+- MA Lighting grandMA2 light — 조명 콘솔: grandMA2 쇼파일 기반 공연에 사용하는 조명 콘솔입니다. 적용 전 소프트웨어 버전과 패치·현장 구성을 확인합니다.
+- MA Lighting MA2 Command Wing — 콘솔 컨트롤러 (PC + grandMA2 onPC): PC에서 실행하는 grandMA2 onPC와 연결해 사용하는 컨트롤러로, 단독으로 동작하는 콘솔이 아닙니다. 백업·보조 운용이나 프로그래밍 작업에 활용합니다.
+### PROFILE · SPOT (프로파일 · 스팟)
+- JB-Lighting M18 Profile — LED 무빙 프로파일: 다중 색상 LED 광원과 프레이밍 셔터를 갖춘 무빙 프로파일입니다. CRI를 최대 96까지 조절할 수 있어 배우의 피부 톤과 의상 색을 고려한 조명에 활용할 수 있습니다.
+- Ayrton Ghibli — LED 무빙 스팟: 프레이밍 셔터와 고보·프리즘을 갖춘 LED 무빙 스팟입니다. 선명한 컷오프가 필요한 극장·콘서트 메인 스팟으로 활용합니다.
+- Ayrton Khamsin — LED 무빙 프로파일: 프레이밍과 고보 연출을 지원하는 고출력 LED 무빙 프로파일로, 대형 무대의 원거리 투사에 활용합니다.
+- Ayrton Diablo — LED 무빙 프로파일: 작은 바디에 프레이밍·고보 기능을 담은 컴팩트 LED 무빙 프로파일입니다. 리깅 하중이나 공간이 제한된 무대에 활용합니다.
+### MOVING HEAD (무빙 워시 · 빔)
+- ROBE MegaPointe — 무빙 하이브리드: 스팟·빔·워시를 한 대로 구현하는 하이브리드 무빙입니다. 날카로운 빔과 고보·프리즘 이펙트가 필요한 콘서트·페스티벌에 활용합니다.
+- ROBE Spiider — LED 무빙 워시: LED 링 픽셀 제어와 센터 플라워 이펙트를 갖춘 무빙 워시입니다. 무대 전체 컬러 워시와 픽셀 이펙트에 활용합니다.
+- Claypaky Midi-B — LED 무빙 워시·빔: 줌 범위가 넓고 움직임이 빠른 LED 무빙 워시·빔입니다. 빠른 빔 무브먼트가 필요한 장면에 활용합니다.
+- Claypaky Mini-B — LED 무빙 워시·빔: 초소형 LED 무빙 워시·빔입니다. 세트 내부나 바닥처럼 설치 공간이 좁은 위치에 활용합니다.
+- Aura Wash — LED 무빙 워시: LED 무빙 워시입니다. 무대 전체 컬러 워시에 활용합니다.
+- Litelees Wash — LED 워시: 무대 구성과 설치 조건에 맞춰 보조 워시와 컬러 연출에 활용하는 LED 워시입니다.
+### BEAM · BAR · FX (빔 · 바 · 이펙트)
+- JJ-Light Beam 7R / 9R — 빔 무빙: 좁고 선명한 빔을 만드는 빔 무빙 라이트입니다. 콘서트의 공중 빔 연출에 활용합니다.
+- Claypaky Tambora Batten — LED 바 이펙트: RGBW LED 바 타입 이펙트 조명입니다. 라인·픽셀 연출과 백라이트 구성에 사용합니다.
+- LED Tilt Bar — LED 틸트 바: 틸트 동작으로 빔의 방향을 바꾸며 라인 형태의 움직임과 효과를 만드는 LED 바입니다.
+- GS · Beyond STOMI · JEST Strobe — 스트로브: 스트로브 이펙트 조명입니다.
+
+### Control & Show Systems (제어·쇼 시스템)
+- 프로젝트의 콘솔 소프트웨어와 호환 장비에 맞춰 grandMA3 또는 grandMA2 기반 제어 네트워크를 구성하고, 메인·백업 운용을 설계합니다. 타임코드(LTC/MTC) 연동, 미디어 서버·쇼 컨트롤러 연계, 레이저 제어를 지원합니다.
+- (EN) We configure grandMA3 or grandMA2 control networks using compatible software and hardware, with main and backup operation planned for each project. Timecode (LTC/MTC) sync, media server and show controller integration, and laser control are supported.
 
 ## 공식 기록 / Official records (원문에서 이름·회사명이 확인되는 링크)
 - 2026 · 뉴데일리 · 연극 〈서바이트〉 · 서강대학교 메리홀 소극장 — 조명디자인 이차훈 — https://www.newdaily.co.kr/site/data/html/2026/06/02/2026060200199.html
