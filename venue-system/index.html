@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Venue System | 공연장·전시장·상설 공간 조명 시스템 | APEX LITE</title>
-<meta name="description" content="인프라가 없는 빈 공간에 조명 시스템을 처음부터 설계하고, 개관 후 실제로 운영되는 구조까지 만듭니다. 공연장 개관 구축, 상설 멀티미디어 공간, 장기 전시 시스템.">
+<title>공연장·공간 조명 시스템 | 개관·리뉴얼·상설 공간 | APEX LITE 에이펙스라이트</title>
+<meta name="description" content="공간과 운영 목적에 맞는 조명 시스템 설계. 공연장 개관·재개관·리뉴얼, 시스템 검토, 장비 구성, 제어·프로그래밍, 운영·인수인계. 단양 수양개빛터널.">
 <meta name="author" content="APEX LITE 에이펙스라이트">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://apexlight.co.kr/venue-system/">
@@ -16,8 +16,8 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://apexlight.co.kr/venue-system/">
-<meta property="og:title" content="Venue System | 공연장·전시장·상설 공간 조명 시스템 | APEX LITE">
-<meta property="og:description" content="인프라가 없는 빈 공간에 조명 시스템을 처음부터 설계하고, 개관 후 실제로 운영되는 구조까지 만듭니다.">
+<meta property="og:title" content="공연장·공간 조명 시스템 | 개관·리뉴얼·상설 공간 | APEX LITE 에이펙스라이트">
+<meta property="og:description" content="공간과 운영 목적에 맞는 조명 시스템 설계. 공연장 개관·재개관·리뉴얼, 시스템 검토, 장비 구성, 제어·프로그래밍, 운영·인수인계. 단양 수양개빛터널.">
 <meta property="og:image" content="https://apexlight.co.kr/images/og-apexlite.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23080808'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='15' font-weight='bold' fill='%23C9A84C' font-family='Arial'%3EAL%3C/text%3E%3C/svg%3E">
@@ -34,40 +34,33 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="/" class="logo" aria-label="APEX LITE">APEX<span>|</span>LITE</a>
-    <nav class="gnb" aria-label="주메뉴">
-      <ul>
-        <li><a href="/">홈</a></li>
-        <li><a href="/services/">서비스</a></li>
-        <li><a href="/projects/">포트폴리오</a></li>
+    <a href="/" class="logo" aria-label="APEX LITE 홈">APEX<span>|</span>LITE</a>
+    <div class="header-right">
+      <nav class="gnb" aria-label="주메뉴"><ul>
+        <li><a href="/projects/">프로젝트</a></li>
+        <li class="has-sub"><a href="/services/" aria-current="true">서비스</a>
+          <ul class="sub"><li><a href="/services/equipment-rental/">장비렌탈</a></li><li><a href="/venue-system/" aria-current="page">공연장·공간 시스템</a></li></ul>
+        </li>
         <li><a href="/international/">해외 프로덕션</a></li>
-        <li><a href="/services/equipment-rental/">장비렌탈</a></li>
         <li><a href="/about/">회사소개</a></li>
         <li><a href="/contact/">문의</a></li>
-        <li><a class="gnb-lang" href="/en/venue-system/" title="English site">EN</a></li>
-      </ul>
-    </nav>
-    <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+      </ul></nav>
+      <a class="lang-btn" href="/en/venue-system/" hreflang="en" lang="en" aria-label="English">EN</a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-  <div class="mnav-top">
-    <a href="/" class="logo">APEX<span>|</span>LITE</a>
-    <button class="mnav-close" type="button" aria-label="메뉴 닫기"></button>
-  </div>
-  <nav aria-label="주메뉴">
-    <ul>
-      <li><a href="/">홈</a></li>
-      <li><a href="/services/">서비스</a></li>
-      <li><a href="/projects/">포트폴리오</a></li>
-      <li><a href="/international/">해외 프로덕션</a></li>
-      <li><a href="/services/equipment-rental/">장비렌탈</a></li>
-      <li><a href="/about/">회사소개</a></li>
-      <li><a href="/contact/">문의</a></li>
-    </ul>
-  </nav>
-  <a class="mnav-lang" href="/en/venue-system/">EN</a>
+  <nav aria-label="모바일 메뉴"><ul>
+    <li><a href="/">홈</a></li>
+    <li><a href="/projects/">프로젝트</a></li>
+    <li><a href="/services/">서비스</a>
+      <ul class="mnav-sub"><li><a href="/services/equipment-rental/">장비렌탈</a></li><li><a href="/venue-system/" aria-current="page">공연장·공간 시스템</a></li></ul></li>
+    <li><a href="/international/">해외 프로덕션</a></li>
+    <li><a href="/about/">회사소개</a></li>
+    <li><a href="/contact/">문의</a></li>
+  </ul></nav>
   <div class="mnav-backdrop" aria-hidden="true"></div>
 </div>
 
@@ -75,64 +68,105 @@
 
   <section class="page-hero">
     <div class="page-hero__img">
-      <img src="/images/photos/hdr-venue.webp" alt="단양 수양개빛터널 상설 조명" fetchpriority="high">
+      <img src="/images/photos/hdr-venue.webp" alt="단양 수양개빛터널 상설 조명" width="1600" height="1168" fetchpriority="high">
     </div>
     <div class="page-hero__grad"></div>
+    <span class="cap">단양 수양개빛터널 · 초기 조명 디자인·시스템 구성 · 2017 (현재 상설 운영 중)</span>
     <div class="page-hero__inner">
-    <div class="wrap">
-      <p class="label">Venue System</p>
-      <h1 class="h-page">Venue System</h1>
-      <p class="lead">인프라가 없는 빈 공간에 조명 시스템을 처음부터 설계하고, 개관 후 실제로 운영되는 구조까지 만듭니다.</p>
+      <div class="wrap">
+        <p class="label">Venue System</p>
+        <h1 class="h-sec">공간과 운영 목적에 맞는<br>조명 시스템을 설계합니다.</h1>
+        <p class="lead">공연장 개관과 재개관부터 상설 전시·미디어 공간까지. 공간과 운영 목적에 맞춰 조명·제어 시스템을 검토하고, 실제 운영 가능한 환경으로 완성합니다.</p>
+      </div>
     </div>
-  </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="grid grid-3 reveal">
-        <article class="card">
-          <h3>공연장 개관 구축</h3>
-          <p>뮤지스땅스(2014–2016), 플랫폼창동61(2016–2018)에서 조명감독으로 개관 단계부터 구축에 참여했습니다.</p>
-        </article>
-        <article class="card">
-          <h3>상설 멀티미디어 공간</h3>
-          <p>단양 수양개빛터널. 200m 폐터널에 조명·영상·레이저를 타임코드로 통합해 2017년부터 운영 중입니다.</p>
-        </article>
-        <article class="card">
-          <h3>장기 전시 시스템</h3>
-          <p>국립중앙박물관 〈가야본성 — 칼과 현〉. 약 3개월 무인 반복 운영.</p>
-        </article>
+      <div class="sec-head reveal"><p class="label">Scope</p><h2 class="h-sec">조명 시스템 업무 범위</h2></div>
+      <div class="scope-grid">
+        <article class="card"><span class="num">01</span><h3>개관·재개관·리뉴얼</h3><p>공연장 개관과 재개관, 리뉴얼 과정에서 조명 시스템 사양과 구성을 검토합니다.</p></article>
+        <article class="card"><span class="num">02</span><h3>시스템 검토</h3><p>공간의 목적·운영 방식·도면·전원·리깅 조건을 검토합니다.</p></article>
+        <article class="card"><span class="num">03</span><h3>장비 구성</h3><p>조명기구·회로·배선·네트워크·DMX Universe 및 제어 구조를 설계합니다.</p></article>
+        <article class="card"><span class="num">04</span><h3>제어·프로그래밍</h3><p>콘솔·미디어서버·쇼컨트롤러·타임코드를 연동하고, 쇼파일 제작과 연동 테스트로 실제 운영 환경을 검증합니다.</p></article>
+        <article class="card"><span class="num">05</span><h3>운영·인수인계</h3><p>운영 매뉴얼·백업 데이터를 제공하고 담당자 교육, 개관 이후 기술 이슈 대응까지 지원합니다.</p></article>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
-    <div class="wrap reveal">
-      <p class="label">Scope</p>
-      <h2 class="h-sec">대상</h2>
-      <ul class="tags">
-        <li class="tag">공연장 신축·리모델링</li>
-        <li class="tag">전시관·박물관</li>
-        <li class="tag">상설 미디어아트 공간</li>
-        <li class="tag">브랜드 공간·라운지</li>
-      </ul>
+    <div class="wrap">
+      <div class="founder-split">
+        <figure class="media">
+          <img src="/images/photos/suyanggae.webp" alt="단양 수양개빛터널 거울 방 조명" width="1000" height="730" loading="lazy">
+          <figcaption class="cap">단양 수양개빛터널 · 초기 조명 디자인·시스템 구성 · 2017 (현재 상설 운영 중)</figcaption>
+        </figure>
+        <div>
+          <p class="label">대표 사례</p>
+          <h2 class="h-sec">단양 수양개빛터널</h2>
+          <p class="person-role">2017 초기 조명 디자인·시스템 구성 (현재 상설 운영 중)</p>
+          <p class="body-text">200m 폐터널에 조명·영상·레이저를 타임코드로 통합했습니다.</p>
+          <p class="body-text" style="margin-top:12px">쇼 컨트롤러, 미디어 서버, 조명 콘솔, 무빙헤드와 레이저를 하나의 타임코드로 묶어 무인 상설 운영되도록 구성했습니다.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <div class="callout reveal">
-        <p>에이펙스라이트는 조명 시스템의 설계·프로그래밍·운영 구조를 담당합니다. 전기·건축 공사는 해당 면허 업체와 협업해 진행합니다.</p>
+      <div class="sec-head reveal">
+        <p class="label">Track A — Venue</p>
+        <h2 class="h-sec">공연장 시스템 구축</h2>
+        <p class="lead">공연장은 하나의 작품을 위한 시스템이 아닙니다. 장르와 제작 규모가 다른 수많은 공연을 수용할 수 있도록, 앞으로 들어올 모든 작품을 기준으로 설계합니다.</p>
+      </div>
+      <div class="rows"><div class="row"><span class="yr">2014.09–2016.01</span><span class="t"><b>뮤지스땅스</b><span class="r">개관 조명 시스템 구축 참여 · 조명 파트 관리·감독 · 조명감독</span></span></div><div class="row"><span class="yr">2016.02–2018.04</span><span class="t"><b>플랫폼창동61</b><span class="r">개관 조명 시스템 구축 참여 · 조명 파트 관리·감독 · 조명감독</span></span></div><div class="row"><span class="yr">2018.05–2018.09</span><span class="t"><b>삼일로창고극장</b><span class="r">재개관 조명 시스템 구축 참여 · 조명 파트 관리·감독 · 조명감독</span></span></div></div>
+      <div class="grid grid-2" style="margin-top:36px">
+        <figure class="media"><img src="/images/photos/platform61.webp" alt="플랫폼창동61 공연장 조명" width="1000" height="658" loading="lazy"><figcaption class="cap">플랫폼창동61 · 조명감독·개관 구축 · 2016–2018</figcaption></figure>
+        <figure class="media"><img src="/images/photos/musistance.webp" alt="뮤지스땅스 공연장 조명" width="1000" height="738" loading="lazy"><figcaption class="cap">뮤지스땅스 · 조명감독·개관 구축 · 2014–2016</figcaption></figure>
       </div>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="wrap reveal">
-      <p class="label">Project Inquiry</p>
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="label">Track B — Permanent &amp; Long-run</p>
+        <h2 class="h-sec">상설·장기 운영 시스템</h2>
+      </div>
+      <div class="work-grid">
+        <a class="work-card" href="/projects/gaya-spirit/">
+        <span class="work-card__media"><img src="/images/photos/gaya.webp" alt="국립중앙박물관 특별전 가야본성 — 칼과 현 현장 조명" width="1000" height="750" loading="lazy"></span>
+        <span class="work-card__body"><span class="work-card__title">국립중앙박물관 특별전 〈가야본성 — 칼과 현〉</span><span class="work-card__meta">2019.12–2020.03 · 국립중앙박물관</span><span class="work-card__role">전시 조명 · 타임코드 기반 조명·미디어 시스템</span></span>
+      </a>
+        <a class="work-card" href="/projects/daebu-quarry/">
+        <span class="work-card__media"><img src="/images/photos/daebu.webp" alt="안산 대부광산 미디어파사드 하늘에서 떨어지는 별똥별 현장 조명" width="1000" height="629" loading="lazy"></span>
+        <span class="work-card__body"><span class="work-card__title">안산 대부광산 미디어파사드 〈하늘에서 떨어지는 별똥별〉</span><span class="work-card__meta">2022 · 안산 대부광산</span><span class="work-card__role">조명 디자인 · 현장 운영</span></span>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="quote">시공 전에 필요한 것은 장비 목록보다, 이 시스템이 실제 공연장에서 어떻게 쓰일지를 판단하는 일입니다.</p>
+      <div class="callout" style="margin-top:36px">
+        <p>에이펙스라이트는 조명 시스템의 설계·프로그래밍·운영 구조를 담당합니다. 전기·건축 공사는 해당 면허 업체와 협업해 진행합니다.</p>
+      </div>
+      <ul class="tags"><li class="tag">공연장 신축·리모델링</li><li class="tag">전시관·박물관</li><li class="tag">상설 미디어아트 공간</li><li class="tag">브랜드 공간·라운지</li></ul>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div class="wrap">
+      <p class="label">Contact</p>
       <h2>프로젝트를 이야기해 주세요.</h2>
       <p>확정되지 않은 단계여도 괜찮습니다. 일정, 장소, 필요한 범위만 알려주시면 가능한 구성을 제안드립니다.</p>
-      <div class="btn-row"><a class="btn btn-primary" href="/contact/">문의하기</a></div>
+      <div class="contact-list">
+        <a class="contact-item" href="tel:01087018119"><b>Phone</b><span>010-8701-8119</span></a>
+        <a class="contact-item" href="mailto:apexlite1@gmail.com"><b>Email</b><span>apexlite1@gmail.com</span></a>
+        <a class="contact-item" href="https://www.instagram.com/apexlitedesign/" target="_blank" rel="noopener"><b>Instagram</b><span>@apexlitedesign</span></a>
+      </div>
+      <div class="btn-row"><a class="btn btn-primary" href="/contact/">프로젝트 문의</a></div>
     </div>
   </section>
 
@@ -144,16 +178,10 @@
       <div class="footer-brand">
         <p class="fb-name">APEX LITE 에이펙스라이트</p>
         <p class="fb-tag">Lighting Design &amp; Technical Production Partner</p>
-        <p class="fb-svc">조명 디자인 · 조명 프로그래밍 · 기술 검토 · 공간 조명 시스템 · 장비 렌탈</p>
+        <p class="fb-svc">조명 디자인 · 기술 사전 협의·시스템 설계 · 프로그래밍·쇼 컨트롤 · 현장 조명 제작·운영</p>
       </div>
       <nav class="footer-links" aria-label="푸터 메뉴">
-        <ul>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/services/equipment-rental/">Equipment Rental</a></li>
-          <li><a href="/projects/">Projects</a></li>
-          <li><a href="/venue-system/">Venue System</a></li>
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
+        <ul><li><a href="/projects/">프로젝트</a></li><li><a href="/services/">서비스</a></li><li><a href="/services/equipment-rental/">장비렌탈</a></li><li><a href="/venue-system/">공연장·공간 시스템</a></li><li><a href="/international/">해외 프로덕션</a></li><li><a href="/about/">회사소개</a></li><li><a href="/contact/">문의</a></li></ul>
       </nav>
     </div>
     <div class="footer-bottom">

@@ -6,6 +6,12 @@
 
   var LANG = document.documentElement.lang === 'en' ? 'EN' : 'KR';
 
+  var store = {
+    get: function (k) { try { return window.sessionStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { window.sessionStorage.setItem(k, v); } catch (e) { /* storage blocked */ } },
+    del: function (k) { try { window.sessionStorage.removeItem(k); } catch (e) { /* storage blocked */ } }
+  };
+
   /* ── Header state on scroll ───────────────── */
   var header = document.getElementById('siteHeader');
   if (header) {
@@ -15,85 +21,75 @@
   }
 
   /* ── Mobile menu ──────────────────────────────
-     Every exit path closes it: the X, any link, ESC,
-     a tap on empty space, resizing to desktop, and
-     restoring the page from bfcache.                */
+     The header (logo · language · burger/close) stays on top of
+     the open menu. While open, everything behind it is inert and
+     Tab cycles between the header and the menu links. Closing it
+     from the burger, ESC or empty space returns focus to the burger. */
   var burger = document.getElementById('hamburger');
   var mnav = document.getElementById('mobileNav');
+  var isOpen = false;
 
-  function setNav(open) {
+  var background = function () {
+    return [document.getElementById('main'), document.querySelector('.site-footer'), document.querySelector('.skip-link')]
+      .filter(Boolean);
+  };
+
+  var focusables = function () {
+    var els = document.querySelectorAll('#siteHeader a, #siteHeader button, #mobileNav a');
+    return Array.prototype.filter.call(els, function (el) {
+      return el.getClientRects().length > 0 && window.getComputedStyle(el).visibility !== 'hidden';
+    });
+  };
+
+  function setNav(open, returnFocus) {
     if (!mnav || !burger) return;
+    var wasOpen = isOpen;
+    isOpen = open;
     mnav.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', String(open));
     mnav.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open
+      ? (LANG === 'EN' ? 'Close menu' : '메뉴 닫기')
+      : (LANG === 'EN' ? 'Open menu' : '메뉴 열기'));
     document.documentElement.classList.toggle('nav-open', open);
-    document.body.classList.toggle('nav-open', open);
+    background().forEach(function (el) {
+      if (open) el.setAttribute('inert', ''); else el.removeAttribute('inert');
+    });
     if (open) {
-      var first = mnav.querySelector('.mnav-close');
+      var first = mnav.querySelector('a');
       if (first) first.focus();
+    } else if (wasOpen && returnFocus) {
+      burger.focus();
     }
   }
 
   if (burger && mnav) {
     burger.addEventListener('click', function () {
-      setNav(burger.getAttribute('aria-expanded') !== 'true');
+      setNav(!isOpen, true);
     });
 
     mnav.addEventListener('click', function (e) {
-      // a link, the X button, or any empty area — all close
-      if (e.target.closest('a') || e.target.closest('.mnav-close') || e.target === mnav ||
-          e.target.classList.contains('mnav-backdrop') || e.target.closest('.mnav-top')) {
-        setNav(false);
-      }
+      if (e.target.closest('a')) { setNav(false, false); return; }
+      if (e.target === mnav || e.target.closest('.mnav-backdrop')) setNav(false, true);
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' || e.key === 'Esc') setNav(false);
+      if (!isOpen) return;
+      if (e.key === 'Escape' || e.key === 'Esc') { setNav(false, true); return; }
+      if (e.key !== 'Tab') return;
+      var list = focusables();
+      if (!list.length) return;
+      var i = list.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0) { e.preventDefault(); list[list.length - 1].focus(); }
+      else if (!e.shiftKey && (i === -1 || i === list.length - 1)) { e.preventDefault(); list[0].focus(); }
     });
 
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 940) setNav(false);
+      if (isOpen && window.innerWidth > 940) setNav(false, false);
     });
-
     // returning via the Back button must never restore an open menu
-    window.addEventListener('pageshow', function () { setNav(false); });
-    setNav(false);
-  }
-
-  /* ── Hero slideshow ───────────────────────── */
-  var hero = document.getElementById('heroSlides');
-  if (hero) {
-    var slides = hero.querySelectorAll('.hero__slide');
-    var dots = document.querySelectorAll('#heroDots button');
-    var idx = 0, timer = null;
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    var show = function (n) {
-      idx = (n + slides.length) % slides.length;
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].classList.toggle('active', i === idx);
-      }
-      for (var j = 0; j < dots.length; j++) {
-        dots[j].setAttribute('aria-selected', String(j === idx));
-      }
-    };
-    var start = function () {
-      if (reduce || slides.length < 2) return;
-      stop();
-      timer = setInterval(function () { show(idx + 1); }, 5000);
-    };
-    var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
-
-    for (var d = 0; d < dots.length; d++) {
-      (function (n) {
-        dots[n].addEventListener('click', function () { show(n); start(); });
-      })(d);
-    }
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) stop(); else start();
-    });
-    show(0);
-    start();
+    window.addEventListener('pageshow', function () { setNav(false, false); });
+    setNav(false, false);
   }
 
   /* ── Reveal on scroll ─────────────────────── */
@@ -114,36 +110,73 @@
     }
   }
 
+  /* ── Return-to-list flag (detail pages) ───── */
+  var RETURN_KEY = 'apx-projects-return';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-return-projects]'), function (a) {
+    a.addEventListener('click', function () { store.set(RETURN_KEY, '1'); });
+  });
+
   /* ── Project filters ──────────────────────── */
   var filterBar = document.getElementById('projectFilters');
-  if (filterBar) {
-    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-cat]'));
+  var grid = document.getElementById('projectGrid');
+  if (filterBar && grid) {
+    var STATE_KEY = 'apx-projects-state';
+    var items = Array.prototype.slice.call(grid.querySelectorAll('[data-cat]'));
     var buttons = Array.prototype.slice.call(filterBar.querySelectorAll('.filter-btn'));
+    var empty = document.getElementById('filterEmpty');
+    var counter = document.getElementById('filterCount');
+    var current = 'all';
 
-    // a filter with nothing behind it is a dead end — hide the button
-    buttons.forEach(function (b) {
-      var cat = b.getAttribute('data-filter');
-      if (cat === 'all') return;
-      var n = cards.filter(function (c) {
-        return c.getAttribute('data-cat').split(' ').indexOf(cat) !== -1;
-      }).length;
-      if (n === 0) b.hidden = true;
-    });
+    var apply = function (cat) {
+      if (!buttons.some(function (b) { return b.getAttribute('data-filter') === cat; })) cat = 'all';
+      current = cat;
+      var shown = 0;
+      items.forEach(function (item) {
+        var match = cat === 'all' || item.getAttribute('data-cat') === cat;
+        item.hidden = !match;
+        if (match) shown++;
+      });
+      buttons.forEach(function (b) {
+        var on = b.getAttribute('data-filter') === cat;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
+      if (empty) empty.hidden = shown > 0;
+      if (counter) counter.textContent = LANG === 'EN' ? shown + ' projects' : shown + '개 프로젝트';
+    };
+
+    var save = function () {
+      store.set(STATE_KEY, JSON.stringify({ path: location.pathname, filter: current, y: window.scrollY }));
+    };
 
     filterBar.addEventListener('click', function (e) {
       var btn = e.target.closest('.filter-btn');
       if (!btn) return;
-      var cat = btn.getAttribute('data-filter');
-      buttons.forEach(function (b) {
-        var on = b === btn;
-        b.classList.toggle('active', on);
-        b.setAttribute('aria-pressed', String(on));
-      });
-      cards.forEach(function (card) {
-        var match = cat === 'all' || card.getAttribute('data-cat').split(' ').indexOf(cat) !== -1;
-        card.hidden = !match;
-      });
+      apply(btn.getAttribute('data-filter'));
+      save();
     });
+    grid.addEventListener('click', function (e) { if (e.target.closest('a')) save(); });
+    window.addEventListener('pagehide', save);
+
+    var state = null;
+    try { state = JSON.parse(store.get(STATE_KEY)); } catch (e) { state = null; }
+    var navEntry = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+    var cameBack = (navEntry && navEntry.type === 'back_forward') || store.get(RETURN_KEY) === '1';
+    store.del(RETURN_KEY);
+
+    if (state && state.path === location.pathname && cameBack) {
+      apply(state.filter);
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      var restore = function () {
+        try { window.scrollTo({ top: state.y, left: 0, behavior: 'instant' }); }
+        catch (e) { window.scrollTo(0, state.y); }
+      };
+      restore();
+      window.requestAnimationFrame(restore);
+      window.addEventListener('load', restore);
+    } else {
+      apply('all');
+    }
   }
 
   /* ── Contact form (EmailJS) ───────────────── */
@@ -153,12 +186,12 @@
       sending: 'Sending…', submit: 'Send Inquiry',
       ok: "Thank you. We'll review your inquiry and get back to you.",
       err: 'Sending failed. Please email us directly at apexlite1@gmail.com.',
-      required: 'Please fill in all required fields.'
+      required: 'Please fill in your name, email and message.'
     } : {
       sending: '전송 중…', submit: '문의 보내기',
       ok: '문의가 접수되었습니다. 검토 후 연락드리겠습니다.',
       err: '전송에 실패했습니다. apexlite1@gmail.com 으로 직접 연락해 주세요.',
-      required: '필수 항목을 모두 입력해 주세요.'
+      required: '담당자, 이메일, 문의 내용을 입력해 주세요.'
     };
 
     var btn = document.getElementById('inquirySubmit');

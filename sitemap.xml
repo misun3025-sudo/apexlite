@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
   <url>
     <loc>https://apexlight.co.kr/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/"/>
@@ -10,6 +9,78 @@
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/xo-kitty/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/xo-kitty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/xo-kitty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/xo-kitty/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/paradise-art-night/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/paradise-art-night/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/paradise-art-night/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/paradise-art-night/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/broken-valentine-five/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/broken-valentine-five/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/broken-valentine-five/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/broken-valentine-five/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/japan-tour/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/japan-tour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/japan-tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/japan-tour/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/daebu-quarry/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/daebu-quarry/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/daebu-quarry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/daebu-quarry/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/gaya-spirit/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/gaya-spirit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/gaya-spirit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/gaya-spirit/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/projects/gumi-festival/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/gumi-festival/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/gumi-festival/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/gumi-festival/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://apexlight.co.kr/services/</loc>
@@ -39,15 +110,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://apexlight.co.kr/projects/</loc>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/"/>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://apexlight.co.kr/venue-system/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/venue-system/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/venue-system/"/>
@@ -63,7 +125,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/about/"/>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://apexlight.co.kr/contact/</loc>
@@ -74,7 +136,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://apexlight.co.kr/en/</loc>
     <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/"/>
@@ -83,6 +144,78 @@
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/xo-kitty/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/xo-kitty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/xo-kitty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/xo-kitty/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/paradise-art-night/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/paradise-art-night/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/paradise-art-night/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/paradise-art-night/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/broken-valentine-five/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/broken-valentine-five/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/broken-valentine-five/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/broken-valentine-five/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/japan-tour/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/japan-tour/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/japan-tour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/japan-tour/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/daebu-quarry/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/daebu-quarry/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/daebu-quarry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/daebu-quarry/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/gaya-spirit/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/gaya-spirit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/gaya-spirit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/gaya-spirit/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://apexlight.co.kr/en/projects/gumi-festival/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/gumi-festival/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/gumi-festival/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/gumi-festival/"/>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://apexlight.co.kr/en/services/</loc>
@@ -107,15 +240,6 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/international/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/international/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/international/"/>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://apexlight.co.kr/en/projects/</loc>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://apexlight.co.kr/projects/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://apexlight.co.kr/en/projects/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/projects/"/>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -145,7 +269,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apexlight.co.kr/contact/"/>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-
 </urlset>
